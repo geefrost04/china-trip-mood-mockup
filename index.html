@@ -874,6 +874,9 @@
     .photo-mini-mark{position:absolute;right:5px;bottom:5px;display:grid;place-items:center;width:21px;height:21px;background:#163d36e8;color:#fff;border-radius:6px;font-size:14px}
     .card-more{margin-top:5px}.card-more summary{color:#2b694a;font-size:10px;font-weight:800;cursor:pointer;list-style:none}.card-more summary::-webkit-details-marker{display:none}.card-more summary:after{content:' ▾'}.card-more[open] summary:after{content:' ▴'}.card-more p{margin:6px 0 0}.card-more .step-badge-row{margin-top:6px}
     .overview-card.is-transit .card-details{margin-top:4px}
+    .stay-budget{display:inline-block;margin-top:8px;padding:5px 9px;border-radius:9px;background:#eaf5ee;color:#205e3c;font-size:11px;font-weight:850}
+    .stay-budget.pending{background:#fff2e5;color:#975319}
+    .budget-status{margin:12px 0 0;padding:10px 12px;border:1px solid #f0ddbd;border-radius:11px;background:#fff9ef;color:#70522d;font-size:11px;line-height:1.5}
     @media(max-width:360px){.mood-selector .city-mood{flex-basis:160px}.mood-selector .city-mood b{font-size:13px}.flow-action{font-size:9px}.overview-card{grid-template-columns:minmax(0,1fr) 76px}.overview-card .card-media-box{width:76px;height:76px}.overview-card .card-title{font-size:12px}}
   </style>
 </head>
@@ -898,7 +901,7 @@
 
     <section class="section" data-day7><div class="heading"><h3>คืนนี้ไปต่อแบบไหนดี</h3><span>จุดเด่นตาม mood</span></div><div id="night-card"></div></section>
     <section class="section" data-day7><div class="note"><b>ควรรู้ก่อนเลือก</b><span id="warning"></span></div></section>
-    <details class="credit"><summary>เครดิตภาพและแหล่งข้อมูล</summary><p>สรุปเมืองและวันที่อิงจาก Excel; วันที่ 7 ธ.ค. มี Route แบบละเอียดที่ปรับจุดแวะตาม mood และโซนฮิต จุดที่เพิ่มหรือสลับลำดับเป็นข้อเสนอของไกด์ ภาพถ่ายต่างวันและมีการย่อ/ครอปเพื่อแสดงบนมือถือ</p><p>ภาพเมืองบนหน้าเลือก: <a href="https://commons.wikimedia.org/wiki/File:CR200J_in_Chengdu_East_Railway_Station.jpg" target="_blank" rel="noopener">ChasingAir (CC0, สถานี Chengdu East)</a>, <a href="https://commons.wikimedia.org/wiki/File:%E8%A5%BF%E5%B2%AD%E9%9B%AA%E5%B1%B1.jpg" target="_blank" rel="noopener">Lzylove (CC BY-SA 4.0, ย่อภาพ)</a>, <a href="https://commons.wikimedia.org/wiki/File:Hongyadong_night_lights_Chongqing.jpg" target="_blank" rel="noopener">Lianguanlun (CC BY 4.0, ย่อภาพ)</a>. ภาพ mood ซีหลิง: <a href="https://commons.wikimedia.org/wiki/File:%E5%9C%A8%E6%88%90%E9%83%BD%E9%81%A5%E6%9C%9B%E9%9B%AA%E5%B1%B1_%E8%A5%BF%E5%B2%AD%E9%9B%AA%E5%B1%B1%E4%B8%BB%E5%B3%B0%E5%A4%A7%E9%9B%AA%E5%A1%98_Chengdu_skyline_with_a_view_of_Da_Xue_Tang_(Chengdu_peak).jpg" target="_blank" rel="noopener">书剑飘零 (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:%E8%A5%BF%E5%B2%AD%E9%9B%AA%E5%B1%B1_-_panoramio.jpg" target="_blank" rel="noopener">landagent (CC BY-SA 3.0)</a>. ภาพ mood ฉงชิ่ง: <a href="https://commons.wikimedia.org/wiki/File:A_train_of_Chongqing_Rail_Transit_Line_2_coming_through_a_residential_building_at_Liziba.jpg" target="_blank" rel="noopener">Chen Hualin (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Street_in_the_Old_Town_of_Ciqikou.jpg" target="_blank" rel="noopener">Willi Weasel (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chongqing_Three_Gorges_Museum_China.JPG" target="_blank" rel="noopener">Eng.Justus Byebirooha (CC BY-SA 3.0)</a>. ภาพอื่นจาก Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Sleeping_panda_in_Chengdu_Panda_Base.jpg" target="_blank" rel="noopener">MspreilsCN (CC BY 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AChengdu_Dongjiao_Memory_%2855562889075%29.jpg" target="_blank" rel="noopener">Person-with-No Name (CC BY 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AChengdu_Jinli-Stra%C3%9Fe_01.jpg" target="_blank" rel="noopener">&lt;a href=&quot;//commons.wikimedia.org/wiki/User:Zairon&quot; title=&quot;User:Zairon&quot;&gt;Zairon&lt;/a&gt; (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AEntry_-_Du_Fu_Thatched_Cottage_-_Chengdu%2C_Sichuan%2C_China_-_DSC04875.jpg" target="_blank" rel="noopener">&lt;a href=&quot;//commons.wikimedia.org/wiki/User:Daderot&quot; title=&quot;User:Daderot&quot;&gt;Daderot&lt;/a&gt; (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AKuanzhaixiangzi_Alleys%2C_201907%2C_01.jpg" target="_blank" rel="noopener">Jimmyshjj (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AChengdu_Wuhou_ci.jpg" target="_blank" rel="noopener">User:Gisling (CC BY 2.5)</a>, <a href="https://commons.wikimedia.org/wiki/File%3ATea_in_People%27s_Park_-_Chengdu%2C_China_-_DSC05362.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AAnglers_and_Tudor_Houses_-_Lake%2C_%E6%B5%A3%E8%8A%B1%E6%BA%AA%E5%85%AC%E5%9B%AD_Huanhuaxi_Park_%281616360108%29.jpg" target="_blank" rel="noopener">Alpha from Melbourne, Australia (CC BY-SA 2.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Wangping_Street.jpg" target="_blank" rel="noopener">TFUshkjasjk (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Sino-Ocean_Taikoo_Li_Chengdu_10.jpg" target="_blank" rel="noopener">EditQ (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:IFS_Chengdu_Tower_and_I_AM_HERE_Panda_Statue.jpg" target="_blank" rel="noopener">来斤小仓鼠吧 (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Anshun_Bridge_at_night.jpg" target="_blank" rel="noopener">Travel Coffee Book (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chengdu_monastery.jpg" target="_blank" rel="noopener">Charles Haynes (CC BY-SA 2.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_01.jpg" target="_blank" rel="noopener">Jimmyshjj (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Hall_-_Wenshu_Monastery_-_Chengdu,_China_-_DSC05060.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Street_scene_-_Kuanzhai_Alleys_-_Chengdu,_China_-_DSC05311.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:20250516_Dongjiao_Jiyi.jpg" target="_blank" rel="noopener">Yumeto (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:The_panda_at_IFS_Chengdu_from_Hongxing_Road.jpg" target="_blank" rel="noopener">David Xuang (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Anshun_Bridge_Night.jpg" target="_blank" rel="noopener">Limesave (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Gateway_-_Wuhou_Shrine_-_Chengdu,_China_-_DSC05423.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chengdu_Jinli-Stra%C3%9Fe_bei_Nacht_02.jpg" target="_blank" rel="noopener">Zairon (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:People%27s_Park_(Chengdu)_20260513-1.jpg" target="_blank" rel="noopener">Suicasmo (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Corridor_-_Du_Fu_Thatched_Cottage_-_Chengdu,_Sichuan,_China_-_DSC04905.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Father_and_Daughter_-_Lake,_Huanhuaxi_Park_(1616352004).jpg" target="_blank" rel="noopener">Alpha from Melbourne, Australia (CC BY-SA 2.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Sino-Ocean_Taikoo_Li_Chengdu_13.jpg" target="_blank" rel="noopener">EditQ (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Narrow_Lane_of_Chengdu.jpg" target="_blank" rel="noopener">AlexHe34 (CC BY-SA 3.0)</a></p><p>แนวจัดโซนและจุดเที่ยวกลางคืน: <a href="https://www.gochengdu.cn/en/article/column_164618479376578/919" target="_blank" rel="noopener">GoChengdu ย่านพัก</a>, <a href="https://www.gochengdu.cn/en/article/happy_life_in_chengdu/4776" target="_blank" rel="noopener">GoChengdu เที่ยวกลางคืน</a>, <a href="https://www.cnto.org.uk/wp-content/uploads/2025/04/%E7%B2%BE%E5%93%81%E7%BA%BF%E8%B7%AF%E4%B8%8B.pdf" target="_blank" rel="noopener">China National Tourist Office</a>. ระยะทาง: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors (ODbL)</a>.</p><p>ฐานพักและการต่อรถหลังซีหลิง: <a href="https://www.xiling.cn/website/survey/traffic" target="_blank" rel="noopener">เว็บทางการซีหลิง · การเดินทาง</a>, <a href="https://www.xiling.cn/website/survey/stay" target="_blank" rel="noopener">เว็บทางการซีหลิง · ที่พัก</a>, <a href="https://www.metroman.cn/en/cities/chengdu/lines/line-2" target="_blank" rel="noopener">สถานีสาย 2 เฉิงตู</a>, <a href="https://www.trip.com/hotels/chengdu-hotel-detail-80916797/vienna-international-hotel/" target="_blank" rel="noopener">Trip.com · Vienna International Hotel</a>. เวลาเดิน ราคาห้อง และรอบรถอาจเปลี่ยน ต้องตรวจอีกครั้งก่อนจอง</p></details>
+    <details class="credit"><summary>เครดิตภาพและแหล่งข้อมูล</summary><p>สรุปเมืองและวันที่อิงจาก Excel; วันที่ 7 ธ.ค. มี Route แบบละเอียดที่ปรับจุดแวะตาม mood และโซนฮิต จุดที่เพิ่มหรือสลับลำดับเป็นข้อเสนอของไกด์ ภาพถ่ายต่างวันและมีการย่อ/ครอปเพื่อแสดงบนมือถือ</p><p>ภาพเมืองบนหน้าเลือก: <a href="https://commons.wikimedia.org/wiki/File:CR200J_in_Chengdu_East_Railway_Station.jpg" target="_blank" rel="noopener">ChasingAir (CC0, สถานี Chengdu East)</a>, <a href="https://commons.wikimedia.org/wiki/File:%E8%A5%BF%E5%B2%AD%E9%9B%AA%E5%B1%B1.jpg" target="_blank" rel="noopener">Lzylove (CC BY-SA 4.0, ย่อภาพ)</a>, <a href="https://commons.wikimedia.org/wiki/File:Hongyadong_night_lights_Chongqing.jpg" target="_blank" rel="noopener">Lianguanlun (CC BY 4.0, ย่อภาพ)</a>. ภาพ mood ซีหลิง: <a href="https://commons.wikimedia.org/wiki/File:%E5%9C%A8%E6%88%90%E9%83%BD%E9%81%A5%E6%9C%9B%E9%9B%AA%E5%B1%B1_%E8%A5%BF%E5%B2%AD%E9%9B%AA%E5%B1%B1%E4%B8%BB%E5%B3%B0%E5%A4%A7%E9%9B%AA%E5%A1%98_Chengdu_skyline_with_a_view_of_Da_Xue_Tang_(Chengdu_peak).jpg" target="_blank" rel="noopener">书剑飘零 (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:%E8%A5%BF%E5%B2%AD%E9%9B%AA%E5%B1%B1_-_panoramio.jpg" target="_blank" rel="noopener">landagent (CC BY-SA 3.0)</a>. ภาพ mood ฉงชิ่ง: <a href="https://commons.wikimedia.org/wiki/File:A_train_of_Chongqing_Rail_Transit_Line_2_coming_through_a_residential_building_at_Liziba.jpg" target="_blank" rel="noopener">Chen Hualin (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Street_in_the_Old_Town_of_Ciqikou.jpg" target="_blank" rel="noopener">Willi Weasel (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chongqing_Three_Gorges_Museum_China.JPG" target="_blank" rel="noopener">Eng.Justus Byebirooha (CC BY-SA 3.0)</a>. ภาพอื่นจาก Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Sleeping_panda_in_Chengdu_Panda_Base.jpg" target="_blank" rel="noopener">MspreilsCN (CC BY 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AChengdu_Dongjiao_Memory_%2855562889075%29.jpg" target="_blank" rel="noopener">Person-with-No Name (CC BY 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AChengdu_Jinli-Stra%C3%9Fe_01.jpg" target="_blank" rel="noopener">&lt;a href=&quot;//commons.wikimedia.org/wiki/User:Zairon&quot; title=&quot;User:Zairon&quot;&gt;Zairon&lt;/a&gt; (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AEntry_-_Du_Fu_Thatched_Cottage_-_Chengdu%2C_Sichuan%2C_China_-_DSC04875.jpg" target="_blank" rel="noopener">&lt;a href=&quot;//commons.wikimedia.org/wiki/User:Daderot&quot; title=&quot;User:Daderot&quot;&gt;Daderot&lt;/a&gt; (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AKuanzhaixiangzi_Alleys%2C_201907%2C_01.jpg" target="_blank" rel="noopener">Jimmyshjj (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AChengdu_Wuhou_ci.jpg" target="_blank" rel="noopener">User:Gisling (CC BY 2.5)</a>, <a href="https://commons.wikimedia.org/wiki/File%3ATea_in_People%27s_Park_-_Chengdu%2C_China_-_DSC05362.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AAnglers_and_Tudor_Houses_-_Lake%2C_%E6%B5%A3%E8%8A%B1%E6%BA%AA%E5%85%AC%E5%9B%AD_Huanhuaxi_Park_%281616360108%29.jpg" target="_blank" rel="noopener">Alpha from Melbourne, Australia (CC BY-SA 2.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Wangping_Street.jpg" target="_blank" rel="noopener">TFUshkjasjk (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Sino-Ocean_Taikoo_Li_Chengdu_10.jpg" target="_blank" rel="noopener">EditQ (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:IFS_Chengdu_Tower_and_I_AM_HERE_Panda_Statue.jpg" target="_blank" rel="noopener">来斤小仓鼠吧 (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Anshun_Bridge_at_night.jpg" target="_blank" rel="noopener">Travel Coffee Book (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chengdu_monastery.jpg" target="_blank" rel="noopener">Charles Haynes (CC BY-SA 2.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_01.jpg" target="_blank" rel="noopener">Jimmyshjj (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Hall_-_Wenshu_Monastery_-_Chengdu,_China_-_DSC05060.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Street_scene_-_Kuanzhai_Alleys_-_Chengdu,_China_-_DSC05311.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:20250516_Dongjiao_Jiyi.jpg" target="_blank" rel="noopener">Yumeto (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:The_panda_at_IFS_Chengdu_from_Hongxing_Road.jpg" target="_blank" rel="noopener">David Xuang (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Anshun_Bridge_Night.jpg" target="_blank" rel="noopener">Limesave (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Gateway_-_Wuhou_Shrine_-_Chengdu,_China_-_DSC05423.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chengdu_Jinli-Stra%C3%9Fe_bei_Nacht_02.jpg" target="_blank" rel="noopener">Zairon (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:People%27s_Park_(Chengdu)_20260513-1.jpg" target="_blank" rel="noopener">Suicasmo (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Corridor_-_Du_Fu_Thatched_Cottage_-_Chengdu,_Sichuan,_China_-_DSC04905.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Father_and_Daughter_-_Lake,_Huanhuaxi_Park_(1616352004).jpg" target="_blank" rel="noopener">Alpha from Melbourne, Australia (CC BY-SA 2.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Sino-Ocean_Taikoo_Li_Chengdu_13.jpg" target="_blank" rel="noopener">EditQ (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Narrow_Lane_of_Chengdu.jpg" target="_blank" rel="noopener">AlexHe34 (CC BY-SA 3.0)</a></p><p>แนวจัดโซนและจุดเที่ยวกลางคืน: <a href="https://www.gochengdu.cn/en/article/column_164618479376578/919" target="_blank" rel="noopener">GoChengdu ย่านพัก</a>, <a href="https://www.gochengdu.cn/en/article/happy_life_in_chengdu/4776" target="_blank" rel="noopener">GoChengdu เที่ยวกลางคืน</a>, <a href="https://www.cnto.org.uk/wp-content/uploads/2025/04/%E7%B2%BE%E5%93%81%E7%BA%BF%E8%B7%AF%E4%B8%8B.pdf" target="_blank" rel="noopener">China National Tourist Office</a>. ระยะทาง: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors (ODbL)</a>.</p><p>ฐานพักและการต่อรถหลังซีหลิง: <a href="https://www.xiling.cn/website/survey/traffic" target="_blank" rel="noopener">เว็บทางการซีหลิง · การเดินทาง</a>, <a href="https://www.xiling.cn/website/survey/stay" target="_blank" rel="noopener">เว็บทางการซีหลิง · ที่พัก</a>, <a href="https://www.metroman.cn/en/cities/chengdu/lines/line-2" target="_blank" rel="noopener">สถานีสาย 2 เฉิงตู</a>, <a href="https://www.trip.com/hotels/chengdu-hotel-detail-109497790/yupuhermit-culture-hotel/" target="_blank" rel="noopener">Trip.com · Yupu</a>, <a href="https://www.trip.com/hotels/chengdu-hotel-detail-125692488/hao-ke-jing-xuan-jiu-dian/" target="_blank" rel="noopener">Trip.com · Haoke</a>, <a href="https://www.trip.com/hotels/chongqing-hotel-detail-124124363/k-k-designer-hotel/" target="_blank" rel="noopener">Trip.com · K·K</a>, <a href="https://www.trip.com/hotels/dayi-hotel-detail-1585463/xiling-xueshan-yangguang-holiday-hotel/" target="_blank" rel="noopener">Trip.com · Yangguang</a>. เวลาเดิน ราคาห้อง และรอบรถอาจเปลี่ยน ต้องตรวจอีกครั้งก่อนจอง</p></details>
   </main>
   <div class="nav"><button class="budget-modal-btn" id="open-budget-modal" aria-label="คำนวณงบประมาณทั้งทริป">💰 สรุปงบทริป</button><button class="save" id="save">♡ เก็บแผน</button><button class="share" id="share" aria-label="แชร์ลิงก์แผน">↗</button></div><div class="toast" id="toast" role="status"></div>
   
@@ -918,13 +921,13 @@
       <!-- Grand Total Summary Card -->
       <div class="grand-budget-summary">
         <div class="grand-summary-left">
-          <span class="grand-label">ยอดรวมทั้งทริป (2 ท่าน)</span>
-          <div class="grand-cny" id="grand-total-cny">≈ ¥3,650</div>
-          <div class="grand-thb" id="grand-total-thb">(~18,250 บาท)</div>
+          <span class="grand-label">งบวางแผนทั้งทริป (2 ท่าน)</span>
+          <div class="grand-cny" id="grand-total-cny">≈ ¥2,850</div>
+          <div class="grand-thb" id="grand-total-thb">(~14,250 บาท)</div>
         </div>
         <div class="grand-summary-right">
           <span class="per-person-label">เฉลี่ยตกคนละ</span>
-          <div class="per-person-val" id="grand-per-person">~9,125 ฿</div>
+          <div class="per-person-val" id="grand-per-person">~5,945 ฿</div>
           <small class="per-person-note">พักคู่ 1 ห้องตลอดทริป</small>
         </div>
       </div>
@@ -933,9 +936,9 @@
       <div class="category-breakdown-grid">
         <div class="cat-card">
           <span class="cat-icon">🏨</span>
-          <span class="cat-title">ที่พัก 6 คืน (1 ห้อง)</span>
-          <strong id="cat-hotel-val">¥2,120</strong>
-          <small id="cat-hotel-thb">~10,600 ฿</small>
+          <span class="cat-title">ที่พัก 6 คืน (1 ห้อง · คืนซีหลิงเป็นเพดาน)</span>
+          <strong id="cat-hotel-val">¥1,320</strong>
+          <small id="cat-hotel-thb">~6,600 ฿</small>
         </div>
         <div class="cat-card">
           <span class="cat-icon">🚖</span>
@@ -950,6 +953,7 @@
           <small id="cat-ticket-thb">~1,750 ฿</small>
         </div>
       </div>
+      <p class="budget-status">🏨 งบที่พักเป็นแผนสำหรับห้องเดียว 2 คน ไม่ใช่ยอดจองแล้ว: ราคาเฉิงตูและฉงชิ่งอ้างอิงห้องที่เห็นบน Trip.com วันที่ 22 ต.ค. 2026; คืนซีหลิงตั้งเพดานไว้ ¥450 แต่โรงแรมบนเขายังไม่เปิดให้จองวันที่ 8–9 ธ.ค. หากราคาเกินเพดาน ยอดรวมจะเกินตามจริง</p>
 
       <div class="modal-instruction">
         <span>💡 เลือกโปรแกรม / Mood แต่ละวันด้านล่าง ตัวเลขจะคำนวณใหม่ทันที:</span>
@@ -1175,7 +1179,7 @@
           ]}
         ],
         caution:'วันเครื่องลง เผื่อเวลาผ่าน ตม. และเดินทางจาก TFU; ไม่ต้องฝืนเก็บทุกจุด',
-        budget:{hotel:{name:'โรงแรมย่านชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'Metro สาย 18 จาก TFU (¥20) + Metro ในเมือง (¥15)',cny:35},tickets:{desc:'Taikoo Li, IFS, สะพานอันซุ่น (เข้าชมฟรีทุกจุด)',cny:0}},
+        budget:{hotel:{name:'Yupu·Hermit Culture Hotel (ห้องคู่)',cny:155},transit:{desc:'Metro สาย 18 จาก TFU (¥20) + Metro ในเมือง (¥15)',cny:35},tickets:{desc:'Taikoo Li, IFS, สะพานอันซุ่น (เข้าชมฟรีทุกจุด)',cny:0}},
       },
       
       'chengdu-7': {
@@ -1190,7 +1194,7 @@
         default: 'A',
         options: [
           {
-            id: 'A', name: 'แพนด้า & เมืองเก่า', note: 'เดินค่อนข้างมาก · ออกเช้า', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ไปศูนย์แพนด้า + DiDi กลับวัดเหวินซู + ในเมือง',cny:75},tickets:{desc:'ตั๋วเข้าศูนย์แพนด้า (¥55 × 2 ท่าน)',cny:110}},
+            id: 'A', name: 'แพนด้า & เมืองเก่า', note: 'เดินค่อนข้างมาก · ออกเช้า', budget:{hotel:{name:'Yupu·Hermit Culture Hotel (ห้องคู่)',cny:155},transit:{desc:'DiDi ไปศูนย์แพนด้า + DiDi กลับวัดเหวินซู + ในเมือง',cny:75},tickets:{desc:'ตั๋วเข้าศูนย์แพนด้า (¥55 × 2 ท่าน)',cny:110}},
             stops: [
               {time: '08:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ออกเดินทางแต่เช้าเพื่อไปถึงศูนย์แพนด้าก่อน 09:00 น.', place: 'base', transit: true},
               {time: '09:00', title: 'ศูนย์อนุรักษ์แพนด้าเฉิงตู', cn: '成都大熊猫繁育研究基地', note: 'ชมแพนด้ากินไผ่ตอนเช้า แพนด้าแดง และเดินสวนไผ่ร่มรื่น (เผื่อ 2.5–3.5 ชม.)', place: 'panda', food: 'ไอศกรีม 3D รูปหน้าแพนด้า & ชาผลไม้สด'},
@@ -1201,7 +1205,7 @@
             ]
           },
           {
-            id: 'B', name: 'อาร์ต คาเฟ่ & แสงเมือง', note: 'เดินกลาง · ชิลล์และโรแมนติก', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ไป Eastern Suburb + DiDi หวังผิง + กลับที่พัก',cny:42},tickets:{desc:'Eastern Suburb, หวังผิง, Taikoo Li, สะพานอันซุ่น (ฟรี)',cny:0}},
+            id: 'B', name: 'อาร์ต คาเฟ่ & แสงเมือง', note: 'เดินกลาง · ชิลล์และโรแมนติก', budget:{hotel:{name:'Yupu·Hermit Culture Hotel (ห้องคู่)',cny:155},transit:{desc:'DiDi ไป Eastern Suburb + DiDi หวังผิง + กลับที่พัก',cny:42},tickets:{desc:'Eastern Suburb, หวังผิง, Taikoo Li, สะพานอันซุ่น (ฟรี)',cny:0}},
             stops: [
               {time: '10:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ตื่นสายได้สบายๆ จิบกาแฟเช้าแบบไม่เร่งรีบ', place: 'base', transit: true},
               {time: '10:45', title: 'Eastern Suburb Memory (东郊记忆)', cn: '东郊记忆', note: 'โรงงานหลอดอิเล็กทรอนิกส์เก่ากลายเป็นย่านศิลปะ คาเฟ่วินเทจ และกราฟิตี', place: 'creative', food: 'กาแฟ Specialty คั่วบดสด & เบเกอรีโฮมเมดในโกดังเก่า'},
@@ -1212,7 +1216,7 @@
             ]
           },
           {
-            id: 'C', name: 'สามก๊ก & เมืองเก่า', note: 'ประวัติศาสตร์กับซอยเก่า · เดินกลาง', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ศาลเจ้าสามก๊ก + สวนประชาชน + กลับที่พัก',cny:36},tickets:{desc:'ตั๋วเข้าศาลเจ้าสามก๊ก (¥50 × 2 ท่าน)',cny:100}},
+            id: 'C', name: 'สามก๊ก & เมืองเก่า', note: 'ประวัติศาสตร์กับซอยเก่า · เดินกลาง', budget:{hotel:{name:'Yupu·Hermit Culture Hotel (ห้องคู่)',cny:155},transit:{desc:'DiDi ศาลเจ้าสามก๊ก + สวนประชาชน + กลับที่พัก',cny:36},tickets:{desc:'ตั๋วเข้าศาลเจ้าสามก๊ก (¥50 × 2 ท่าน)',cny:100}},
             stops: [
               {time: '09:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ออกเดินทางมุ่งหน้าสู่โซนประวัติศาสตร์', place: 'base', transit: true},
               {time: '09:30', title: 'ศาลเจ้าสามก๊ก (Wuhou Shrine)', cn: '武侯祠', note: 'ศาลเจ้าเล่าปี่-ขงเบ้ง เดินชมกำแพงแดงโค้งและดงไผ่เขียวชอุ่มอันเป็นเอกลักษณ์', place: 'wuhou', food: 'เนื้อวัวสามก๊กจางเฟย (Zhangfei Beef)'},
@@ -1223,7 +1227,7 @@
             ]
           },
           {
-            id: 'D', name: 'สวนจีน & บทกวี', note: 'เดินสบาย · ไม่เร่งเก็บจุด', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi บ้านตู้ฝู่ + สวนประชาชน + สะพานอันซุ่น',cny:46},tickets:{desc:'ตั๋วเข้าบ้านตู้ฝู่ (¥50 × 2 ท่าน)',cny:100}},
+            id: 'D', name: 'สวนจีน & บทกวี', note: 'เดินสบาย · ไม่เร่งเก็บจุด', budget:{hotel:{name:'Yupu·Hermit Culture Hotel (ห้องคู่)',cny:155},transit:{desc:'DiDi บ้านตู้ฝู่ + สวนประชาชน + สะพานอันซุ่น',cny:46},tickets:{desc:'ตั๋วเข้าบ้านตู้ฝู่ (¥50 × 2 ท่าน)',cny:100}},
             stops: [
               {time: '09:30', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'เริ่มวันแบบสโลว์ไลฟ์', place: 'base', transit: true},
               {time: '10:00', title: 'กระท่อมมหากวีตู้ฝู่ (Du Fu Thatched Cottage)', cn: '杜甫草堂', note: 'สวนโบราณร่มรื่น สระน้ำ ศาลากลางน้ำ และประวัติศาสตร์กวีเอกของจีน', place: 'garden', food: 'จิบชาสมุนไพรในศาลาโบราณ & ขนมเปี๊ยะดอกกุ้ยฮวา'},
@@ -1279,7 +1283,7 @@
         heroPhoto:'chengdueast',
         morning:'เดินทางลงจากเขาซีหลิง มุ่งหน้ากลับสู่เฉิงตู',
         milestone:'🚌 16:30 น. ถึงสถานีขนส่ง Chadianzi ในเฉิงตู · ต่อ Metro สาย 2 ตรงยาวสู่ Chengdu East',
-        evening:'เช็กอินโรงแรม Vienna International ใกล้สถานี Chengdu East มื้อค่ำพักผ่อนสบายๆ',
+        evening:'เช็กอินโรงแรม Haoke Collection ใกล้สถานี Chengdu East มื้อค่ำพักผ่อนสบายๆ',
         tomorrow:'พรุ่งนี้ (10 ธ.ค.): เช้าแวะช้อปปิ้งของฝาก Taikoo Li · 14:00 น. รถไฟความเร็วสูงสู่ฉงชิ่ง!',
         nextCity:'chengdu_return',nextDay:'10',nextBtnLabel:'ดูแผนวันพรุ่งนี้ (10 ธ.ค. - ช้อปปิ้ง & ข้ามสู่ฉงชิ่ง) →',
         stops:[
@@ -1332,7 +1336,7 @@
           ]}
         ],
         caution:'ที่พักใกล้ Chengdu East ช่วยวันขึ้นรถไฟ แต่การเที่ยวใจกลางเมืองเช้านี้ต้องนั่งรถไปกลับ; เผื่อรับกระเป๋าและตรวจตั๋วก่อนออก',
-        budget:{hotel:{name:'โรงแรมย่าน Jiefangbei ฉงชิ่ง (คืนที่ 1)',cny:320},transit:{desc:'Metro สาย 2 ไป-กลับ (¥12) + รถไฟความเร็วสูง Fuxinghao (¥308) + CRT (¥8)',cny:328},tickets:{desc:'Taikoo Li, IFS, Jiefangbei, Hongyadong (เข้าชมฟรีทุกจุด)',cny:0}},
+        budget:{hotel:{name:'K·K Designer Hotel (คืนที่ 1)',cny:176},transit:{desc:'Metro สาย 2 ไป-กลับ (¥12) + รถไฟความเร็วสูง Fuxinghao (¥308) + CRT (¥8)',cny:328},tickets:{desc:'Taikoo Li, IFS, Jiefangbei, Hongyadong (เข้าชมฟรีทุกจุด)',cny:0}},
       },
       'chengdu-10':{
         title:'เฉิงตูครึ่งวันก่อนขึ้นรถไฟ',
@@ -1354,7 +1358,7 @@
           ]}
         ],
         caution:'ที่พักใกล้ Chengdu East ช่วยวันขึ้นรถไฟ แต่การเที่ยวใจกลางเมืองเช้านี้ต้องนั่งรถไปกลับ; เผื่อรับกระเป๋าและตรวจตั๋วก่อนออก',
-        budget:{hotel:{name:'โรงแรมย่าน Jiefangbei ฉงชิ่ง (คืนที่ 1)',cny:320},transit:{desc:'Metro สาย 2 ไป-กลับ (¥12) + รถไฟความเร็วสูง Fuxinghao (¥308) + CRT (¥8)',cny:328},tickets:{desc:'Taikoo Li, IFS, Jiefangbei, Hongyadong (เข้าชมฟรีทุกจุด)',cny:0}},
+        budget:{hotel:{name:'K·K Designer Hotel (คืนที่ 1)',cny:176},transit:{desc:'Metro สาย 2 ไป-กลับ (¥12) + รถไฟความเร็วสูง Fuxinghao (¥308) + CRT (¥8)',cny:328},tickets:{desc:'Taikoo Li, IFS, Jiefangbei, Hongyadong (เข้าชมฟรีทุกจุด)',cny:0}},
       },
       'chongqing-10':{
         title:'คืนแรกในฉงชิ่ง',
@@ -1445,7 +1449,7 @@
           ]}
         ],
         caution:'Hongyadong อาจซ้ำกับคืนวันที่ 10; เส้นทางที่ดูใกล้บนแผนที่อาจต้องขึ้นลงบันได',
-        budget:{hotel:{name:'โรงแรมย่าน Jiefangbei ฉงชิ่ง (คืนที่ 2)',cny:320},transit:{desc:'CRT โมโนเรลสาย 2 + DiDi เดินทางในเมือง 3-4 เที่ยว',cny:48},tickets:{desc:'Shancheng Trail, Shibati, Kuixinglou, Liziba, Hongyadong (ฟรี)',cny:0}},
+        budget:{hotel:{name:'K·K Designer Hotel (คืนที่ 2)',cny:176},transit:{desc:'CRT โมโนเรลสาย 2 + DiDi เดินทางในเมือง 3-4 เที่ยว',cny:48},tickets:{desc:'Shancheng Trail, Shibati, Kuixinglou, Liziba, Hongyadong (ฟรี)',cny:0}},
       },
       'chongqing-12':{
         title:'ออกจากฉงชิ่งกลับบ้าน',
@@ -1515,7 +1519,7 @@
         default: 'A',
         options: [
           {
-            id: 'A', name: 'แพนด้า & เมืองเก่า', note: 'เดินค่อนข้างมาก · ออกเช้า', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ไปศูนย์แพนด้า + DiDi กลับวัดเหวินซู + ในเมือง',cny:75},tickets:{desc:'ตั๋วเข้าศูนย์แพนด้า (¥55 × 2 ท่าน)',cny:110}},
+            id: 'A', name: 'แพนด้า & เมืองเก่า', note: 'เดินค่อนข้างมาก · ออกเช้า', budget:{hotel:{name:'Yupu·Hermit Culture Hotel (ห้องคู่)',cny:155},transit:{desc:'DiDi ไปศูนย์แพนด้า + DiDi กลับวัดเหวินซู + ในเมือง',cny:75},tickets:{desc:'ตั๋วเข้าศูนย์แพนด้า (¥55 × 2 ท่าน)',cny:110}},
             stops: [
               {time: '08:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ออกเดินทางแต่เช้าเพื่อไปถึงศูนย์แพนด้าก่อน 09:00 น.', place: 'base', transit: true},
               {time: '09:00', title: 'ศูนย์อนุรักษ์แพนด้าเฉิงตู', cn: '成都大熊猫繁育研究基地', note: 'ชมแพนด้ากินไผ่ตอนเช้า แพนด้าแดง และเดินสวนไผ่ร่มรื่น (เผื่อ 2.5–3.5 ชม.)', place: 'panda', food: 'ไอศกรีม 3D รูปหน้าแพนด้า & ชาผลไม้สด'},
@@ -1526,7 +1530,7 @@
             ]
           },
           {
-            id: 'B', name: 'อาร์ต คาเฟ่ & แสงเมือง', note: 'เดินกลาง · ชิลล์และโรแมนติก', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ไป Eastern Suburb + DiDi หวังผิง + กลับที่พัก',cny:42},tickets:{desc:'Eastern Suburb, หวังผิง, Taikoo Li, สะพานอันซุ่น (ฟรี)',cny:0}},
+            id: 'B', name: 'อาร์ต คาเฟ่ & แสงเมือง', note: 'เดินกลาง · ชิลล์และโรแมนติก', budget:{hotel:{name:'Yupu·Hermit Culture Hotel (ห้องคู่)',cny:155},transit:{desc:'DiDi ไป Eastern Suburb + DiDi หวังผิง + กลับที่พัก',cny:42},tickets:{desc:'Eastern Suburb, หวังผิง, Taikoo Li, สะพานอันซุ่น (ฟรี)',cny:0}},
             stops: [
               {time: '10:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ตื่นสายได้สบายๆ จิบกาแฟเช้าแบบไม่เร่งรีบ', place: 'base', transit: true},
               {time: '10:45', title: 'Eastern Suburb Memory (东郊记忆)', cn: '东郊记忆', note: 'โรงงานหลอดอิเล็กทรอนิกส์เก่ากลายเป็นย่านศิลปะ คาเฟ่วินเทจ และกราฟิตี', place: 'creative', food: 'กาแฟ Specialty คั่วบดสด & เบเกอรีโฮมเมดในโกดังเก่า'},
@@ -1537,7 +1541,7 @@
             ]
           },
           {
-            id: 'C', name: 'สามก๊ก & เมืองเก่า', note: 'ประวัติศาสตร์กับซอยเก่า · เดินกลาง', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ศาลเจ้าสามก๊ก + สวนประชาชน + กลับที่พัก',cny:36},tickets:{desc:'ตั๋วเข้าศาลเจ้าสามก๊ก (¥50 × 2 ท่าน)',cny:100}},
+            id: 'C', name: 'สามก๊ก & เมืองเก่า', note: 'ประวัติศาสตร์กับซอยเก่า · เดินกลาง', budget:{hotel:{name:'Yupu·Hermit Culture Hotel (ห้องคู่)',cny:155},transit:{desc:'DiDi ศาลเจ้าสามก๊ก + สวนประชาชน + กลับที่พัก',cny:36},tickets:{desc:'ตั๋วเข้าศาลเจ้าสามก๊ก (¥50 × 2 ท่าน)',cny:100}},
             stops: [
               {time: '09:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ออกเดินทางมุ่งหน้าสู่โซนประวัติศาสตร์', place: 'base', transit: true},
               {time: '09:30', title: 'ศาลเจ้าสามก๊ก (Wuhou Shrine)', cn: '武侯祠', note: 'ศาลเจ้าเล่าปี่-ขงเบ้ง เดินชมกำแพงแดงโค้งและดงไผ่เขียวชอุ่มอันเป็นเอกลักษณ์', place: 'wuhou', food: 'เนื้อวัวสามก๊กจางเฟย (Zhangfei Beef)'},
@@ -1548,7 +1552,7 @@
             ]
           },
           {
-            id: 'D', name: 'สวนจีน & บทกวี', note: 'เดินสบาย · ไม่เร่งเก็บจุด', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi บ้านตู้ฝู่ + สวนประชาชน + สะพานอันซุ่น',cny:46},tickets:{desc:'ตั๋วเข้าบ้านตู้ฝู่ (¥50 × 2 ท่าน)',cny:100}},
+            id: 'D', name: 'สวนจีน & บทกวี', note: 'เดินสบาย · ไม่เร่งเก็บจุด', budget:{hotel:{name:'Yupu·Hermit Culture Hotel (ห้องคู่)',cny:155},transit:{desc:'DiDi บ้านตู้ฝู่ + สวนประชาชน + สะพานอันซุ่น',cny:46},tickets:{desc:'ตั๋วเข้าบ้านตู้ฝู่ (¥50 × 2 ท่าน)',cny:100}},
             stops: [
               {time: '09:30', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'เริ่มวันแบบสโลว์ไลฟ์', place: 'base', transit: true},
               {time: '10:00', title: 'กระท่อมมหากวีตู้ฝู่ (Du Fu Thatched Cottage)', cn: '杜甫草堂', note: 'สวนโบราณร่มรื่น สระน้ำ ศาลากลางน้ำ และประวัติศาสตร์กวีเอกของจีน', place: 'garden', food: 'จิบชาสมุนไพรในศาลาโบราณ & ขนมเปี๊ยะดอกกุ้ยฮวา'},
@@ -1716,13 +1720,13 @@
         chongqing:{A:'เดินทางไป Liziba ด้วยรถไฟฟ้า แล้วกลับมาย่านกินข้าวกลางเมือง',B:'สะดวกกับ Hongyadong และถนนอาหารยามค่ำ',C:'ใช้รถไฟฟ้าไป Ciqikou และฝั่งริมแม่น้ำ',D:'ต่อรถไปพิพิธภัณฑ์และ Eling ได้จากศูนย์กลาง'}
       };
       const base={
-        chengdu:{name:'Chunxi Road · ชุนซีลู่',meta:'ก่อนขึ้นซีหลิง · 2 คืน (6–8 ธ.ค.)',note:'เช็กเอาต์เช้าวันที่ 8 และวางแผนขนกระเป๋าไปโรงแรมใหม่หลังลงซีหลิง; ถ้าฝากกระเป๋าไว้ที่นี่ต้องกลับมารับ',links:`<a href="${tripSearchUrl(stayPeriods[0])}" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">ค้นหาที่พักชุนซีลู่ 6–8 ธ.ค.</span><span class="trip-arrow">↗</span></a>`},
-        chengdu_return:{name:'Chengdu East · ฝั่ง West Square',meta:'หลังลงซีหลิง · 1 คืน (9–10 ธ.ค.)',suggestion:'Vienna International Hotel (West Square)',note:'โรงแรมระบุว่าเดินจากสถานีราว 5–8 นาที; ยังไม่ได้เช็กราคาและห้องว่าง 9–10 ธ.ค. และต้องยืนยันว่าสถานีรถไฟตรงกับตั๋ว',links:'<a href="https://www.trip.com/hotels/chengdu-hotel-detail-80916797/vienna-international-hotel/" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">Vienna International Hotel</span><span class="trip-arrow">↗</span></a><a href="https://www.trip.com/hotels/chengdu-chengdu-east-railway-station/hotels-c28r2469079/" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">โรงแรมรอบ Chengdu East</span><span class="trip-arrow">↗</span></a>'},
-        xiling:{name:'โซนลานสกีซีหลิง · Yingxue Plaza',meta:'พักบนเขา · 1 คืน (8–9 ธ.ค.)',note:'ขึ้นกระเช้าตามรอบเปิดจริง; ตรวจจุดขึ้นกระเช้าของโรงแรมก่อนจอง',links:'<a href="https://us.trip.com/hotels/dayi-xiling-snow-mountain/hotels-c7716m24268413/" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">ค้นหาที่พักใกล้ซีหลิง</span><span class="trip-arrow">↗</span></a>'},
-        chongqing:{name:'Jiefangbei · เจี่ยฟ่างเป่ย',meta:'โรงแรมเดียว · 2 คืน (10–12 ธ.ค.)',note:'อยู่กลางเมือง ใกล้ร้านอาหาร; เส้นทางฉงชิ่งมีบันไดและต่างระดับ แม้ดูใกล้บนแผนที่',links:'<a href="https://www.trip.com/hotels/chongqing-liberation-stele-pedestrian-street/hotels-c4m4197113/" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">โรงแรมใกล้ Jiefangbei</span><span class="trip-arrow">↗</span></a>'}
+        chengdu:{name:'Chunxi Road · ชุนซีลู่',meta:'ก่อนขึ้นซีหลิง · 2 คืน (6–8 ธ.ค.)',suggestion:'Yupu·Hermit Culture Hotel · ห้อง Superior Big Bed',budget:'พบ ¥155/คืน · 2 คืน ~¥310',note:'ห้องราคาต่ำสุด ¥136 ไม่มีหน้าต่าง จึงเลือกห้อง Superior ที่มีวิว; ตรวจคำว่า “มีหน้าต่าง” และที่อยู่จุดเช็กอินก่อนจอง',links:'<a href="https://www.trip.com/hotels/chengdu-hotel-detail-109497790/yupuhermit-culture-hotel/?checkIn=2026-12-06&checkOut=2026-12-08&crn=1&adult=2&children=0&curr=CNY" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">ดูห้อง Yupu · 6–8 ธ.ค.</span><span class="trip-arrow">↗</span></a>'},
+        chengdu_return:{name:'Chengdu East · ฝั่ง West Square',meta:'หลังลงซีหลิง · 1 คืน (9–10 ธ.ค.)',suggestion:'Haoke Collection Hotel · Boutique Queen',budget:'พบ ¥208/คืน · 1 คืน',note:'อยู่ราว 700 ม. จากสถานี Chengdu East แต่โรงแรมอยู่ชั้น 29 ของอาคาร A และห้องราคานี้เป็นหน้าต่างเล็ก/อนุญาตสูบ; เช็กประเภทห้องและสถานีบนตั๋วรถไฟ',links:'<a href="https://www.trip.com/hotels/chengdu-hotel-detail-125692488/hao-ke-jing-xuan-jiu-dian/?checkIn=2026-12-09&checkOut=2026-12-10&crn=1&adult=2&children=0&curr=CNY" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">ดูห้อง Haoke · 9–10 ธ.ค.</span><span class="trip-arrow">↗</span></a>'},
+        xiling:{name:'โซนลานสกีซีหลิง · Yingxue Plaza',meta:'พักบนเขา · 1 คืน (8–9 ธ.ค.)',suggestion:'Yangguang Holiday Hotel / Yingxue Hotel · รอเปิดขายวันที่จริง',budget:'เพดานวางแผน ≤ ¥450 · ยังไม่มีราคาจอง',pending:true,note:'Trip.com ยังแสดงว่าโรงแรมบนเขาที่เช็กไม่รับจอง 8–9 ธ.ค. อย่าใช้ราคาเริ่มต้นของเดือนอื่นยืนยันงบ; ต้องเช็กห้องและรอบกระเช้าก่อนจอง',links:'<a href="https://www.trip.com/hotels/dayi-hotel-detail-1585463/xiling-xueshan-yangguang-holiday-hotel/?checkIn=2026-12-08&checkOut=2026-12-09&crn=1&adult=2&children=0&curr=CNY" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">เช็ก Yangguang · 8–9 ธ.ค.</span><span class="trip-arrow">↗</span></a><a href="https://www.trip.com/hotels/dayi-hotel-detail-436652/yingxue-hotel/?checkIn=2026-12-08&checkOut=2026-12-09&crn=1&adult=2&children=0&curr=CNY" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">เช็ก Yingxue · 8–9 ธ.ค.</span><span class="trip-arrow">↗</span></a>'},
+        chongqing:{name:'Jiefangbei · เจี่ยฟ่างเป่ย',meta:'โรงแรมเดียว · 2 คืน (10–12 ธ.ค.)',suggestion:'K·K Designer Hotel · ห้อง Jinghe Double Bed',budget:'พบ ¥176/คืน · 2 คืน ~¥352',note:'ห้อง Jinghe มีหน้าต่าง อยู่โซนเจี่ยฟ่างเป่ย แต่ระบุว่าอนุญาตสูบ; ขอห้องปลอดบุหรี่และยืนยันกับโรงแรมก่อนจอง',links:'<a href="https://www.trip.com/hotels/chongqing-hotel-detail-124124363/k-k-designer-hotel/?checkIn=2026-12-10&checkOut=2026-12-12&crn=1&adult=2&children=0&curr=CNY" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">ดูห้อง K·K · 10–12 ธ.ค.</span><span class="trip-arrow">↗</span></a>'}
       }[selectedCity];
       const transfer=selectedCity==='chengdu_return'?'<p><b>จากซีหลิง:</b> ถ้ารถกลับลง Chadianzi ให้นั่ง Metro สาย 2 ไป Chengdu East ได้โดยไม่เปลี่ยนสาย; รอบรถและจุดลงขากลับต้องยืนยันก่อนเดินทาง</p><p><b>ข้อแลกเปลี่ยน:</b> ต้องย้ายและขนกระเป๋า แต่เช้าวันขึ้นรถไฟจะอยู่ใกล้สถานี</p>':'';
-      $('city-stay').innerHTML=`<div class="city-stay-card"><div class="stay-overline">${selectedCity==='chengdu_return'?'ที่พักใหม่หลังกลับจากซีหลิง':'ฐานพักที่แนะนำสำหรับ '+mood.name}</div><strong>📍 ${base.name}</strong><span class="city-stay-meta">${base.meta}</span>${base.suggestion?`<p class="city-stay-pick"><b>โรงแรมที่แนะนำให้เช็ก:</b> ${base.suggestion}</p>`:''}<p>${reasons[selectedCity][mood.id]}</p>${transfer}<div class="city-stay-links">${base.links}</div><div class="city-stay-small">${base.note} · โปรดตรวจวันและตำแหน่งอีกครั้งก่อนจอง</div></div>`;
+      $('city-stay').innerHTML=`<div class="city-stay-card"><div class="stay-overline">${selectedCity==='chengdu_return'?'ที่พักใหม่หลังกลับจากซีหลิง':'ฐานพักที่แนะนำสำหรับ '+mood.name}</div><strong>📍 ${base.name}</strong><span class="city-stay-meta">${base.meta}</span>${base.suggestion?`<p class="city-stay-pick"><b>โรงแรมที่แนะนำให้เช็ก:</b> ${base.suggestion}</p>`:''}<span class="stay-budget ${base.pending?'pending':''}">${base.budget}</span><p>${reasons[selectedCity][mood.id]}</p>${transfer}<div class="city-stay-links">${base.links}</div><div class="city-stay-small">${base.note} · ราคาที่พบ ณ 22 ต.ค. 2026 อาจเปลี่ยนก่อนจอง</div></div>`;
     }
     let lastMoodStripCity=null;
     function renderNavigation(){
@@ -1870,7 +1874,7 @@
         day: '6',
         city: 'chengdu',
         label: '6 ธ.ค. (เฉิงตู วันแรก)',
-        hotel: {name: 'โรงแรมชุนซีลู่', cny: 280},
+        hotel: {name: 'Yupu·Hermit Culture Hotel', cny: 155},
         options: [
           {id: 'A', name: 'แลนด์มาร์ก Taikoo Li & IFS', note: 'เดินเล่นช้อปปิ้งใจกลางเมือง', transitCny: 35, ticketsCny: 0},
           {id: 'B', name: 'วัดเหวินซู & ตรอกสงบ', note: 'ไหว้พระวัดเซนโบราณ', transitCny: 35, ticketsCny: 0},
@@ -1882,7 +1886,7 @@
         day: '7',
         city: 'chengdu',
         label: '7 ธ.ค. (เฉิงตู เต็มวัน)',
-        hotel: {name: 'โรงแรมชุนซีลู่', cny: 280},
+        hotel: {name: 'Yupu·Hermit Culture Hotel', cny: 155},
         options: [
           {id: 'A', name: '🐼 แพนด้า & วัดเหวินซู', note: 'ตั๋วศูนย์แพนด้า ¥110 + DiDi ไป-กลับ', transitCny: 75, ticketsCny: 110},
           {id: 'B', name: '🎨 Eastern Suburb & คาเฟ่ริมน้ำ', note: 'อาร์ตสเปซ & แสงเมือง (เข้าฟรี)', transitCny: 42, ticketsCny: 0},
@@ -1894,7 +1898,7 @@
         day: '8',
         city: 'xiling',
         label: '8 ธ.ค. (ขึ้นเขาซีหลิง ค้างบนเขา)',
-        hotel: {name: 'รีสอร์ตบนเขาหิมะซีหลิง', cny: 680},
+        hotel: {name: 'ซีหลิง: เพดานรอเช็กราคาห้อง', cny: 450},
         options: [
           {id: 'A', name: '🏔️ บัส + กระเช้าใหญ่ + สกีลานหิมะ', note: 'ตั๋วอุทยาน ¥240 + กระเช้าไป-กลับ ¥240 + บัส ¥70', transitCny: 310, ticketsCny: 240}
         ]
@@ -1903,7 +1907,7 @@
         day: '9',
         city: 'chengdu_return',
         label: '9 ธ.ค. (ซีหลิง ➔ พัก Chengdu East)',
-        hotel: {name: 'Vienna Hotel West Square', cny: 240},
+        hotel: {name: 'Haoke Collection Hotel', cny: 208},
         options: [
           {id: 'A', name: '🚠 กระเช้าช่วง 2 ทะเลหมอก ➔ รถกลับเฉิงตู', note: 'กระเช้าช่วง 2 ¥160 + บัสกลับ ¥70 + Metro ¥10', transitCny: 240, ticketsCny: 0}
         ]
@@ -1912,7 +1916,7 @@
         day: '10',
         city: 'chengdu_return',
         label: '10 ธ.ค. (เฉิงตู ➔ รถไฟความเร็วสูง ➔ ฉงชิ่ง)',
-        hotel: {name: 'โรงแรมเจี่ยฟ่างเป่ย (คืนที่ 1)', cny: 320},
+        hotel: {name: 'K·K Designer Hotel (คืนที่ 1)', cny: 176},
         options: [
           {id: 'B', name: '🚄 Taikoo Li + รถไฟหัวกระสุน Fuxinghao', note: 'ตั๋วรถไฟความเร็วสูง 2 ที่นั่ง ¥308 + Metro ¥20', transitCny: 328, ticketsCny: 0},
           {id: 'A', name: '🚄 วัดเหวินซู + รถไฟหัวกระสุน Fuxinghao', note: 'ตั๋วรถไฟความเร็วสูง 2 ที่นั่ง ¥308 + Metro ¥20', transitCny: 328, ticketsCny: 0}
@@ -1922,7 +1926,7 @@
         day: '11',
         city: 'chongqing',
         label: '11 ธ.ค. (ฉงชิ่ง 8D เต็มวัน)',
-        hotel: {name: 'โรงแรมเจี่ยฟ่างเป่ย (คืนที่ 2)', cny: 320},
+        hotel: {name: 'K·K Designer Hotel (คืนที่ 2)', cny: 176},
         options: [
           {id: 'B', name: '🏙️ บันไดสือปาที 18 ขั้น & หงหยาต้ง', note: 'CRT โมโนเรล + DiDi ในเมือง (เข้าชมฟรีทุกจุด)', transitCny: 48, ticketsCny: 0},
           {id: 'A', name: '🚝 รถไฟทะลุตึก Liziba & สวนเอ๋อหลิง', note: 'CRT โมโนเรล + DiDi ในเมือง (เข้าชมฟรีทุกจุด)', transitCny: 48, ticketsCny: 0},
