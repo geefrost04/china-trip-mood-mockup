@@ -1,0 +1,194 @@
+{
+  "panda": {
+    "file": "assets/panda.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Sleeping_panda_in_Chengdu_Panda_Base.jpg",
+    "license": "CC BY 4.0",
+    "artist": "MspreilsCN"
+  },
+  "creative": {
+    "file": "assets/creative.webp",
+    "source": "https://commons.wikimedia.org/wiki/File%3AChengdu_Dongjiao_Memory_%2855562889075%29.jpg",
+    "license": "CC BY 4.0",
+    "artist": "Person-with-No Name"
+  },
+  "jinli": {
+    "file": "assets/jinli.webp",
+    "source": "https://commons.wikimedia.org/wiki/File%3AChengdu_Jinli-Stra%C3%9Fe_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Zairon\" title=\"User:Zairon\">Zairon</a>"
+  },
+  "garden": {
+    "file": "assets/garden.webp",
+    "source": "https://commons.wikimedia.org/wiki/File%3AEntry_-_Du_Fu_Thatched_Cottage_-_Chengdu%2C_Sichuan%2C_China_-_DSC04875.jpg",
+    "license": "CC0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Daderot\" title=\"User:Daderot\">Daderot</a>"
+  },
+  "kuanzhai": {
+    "file": "assets/kuanzhai.webp",
+    "source": "https://commons.wikimedia.org/wiki/File%3AKuanzhaixiangzi_Alleys%2C_201907%2C_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Jimmyshjj"
+  },
+  "wuhou": {
+    "file": "assets/wuhou.webp",
+    "source": "https://commons.wikimedia.org/wiki/File%3AChengdu_Wuhou_ci.jpg",
+    "license": "CC BY 2.5",
+    "artist": "User:Gisling"
+  },
+  "tea": {
+    "file": "assets/tea.webp",
+    "source": "https://commons.wikimedia.org/wiki/File%3ATea_in_People%27s_Park_-_Chengdu%2C_China_-_DSC05362.jpg",
+    "license": "CC0",
+    "artist": "Daderot"
+  },
+  "huanhuaxi": {
+    "file": "assets/huanhuaxi.webp",
+    "source": "https://commons.wikimedia.org/wiki/File%3AAnglers_and_Tudor_Houses_-_Lake%2C_%E6%B5%A3%E8%8A%B1%E6%BA%AA%E5%85%AC%E5%9B%AD_Huanhuaxi_Park_%281616360108%29.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Alpha from Melbourne, Australia"
+  },
+  "wangping": {
+    "file": "assets/wangping.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Wangping_Street.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "TFUshkjasjk"
+  },
+  "taikoo": {
+    "file": "assets/taikoo.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Sino-Ocean_Taikoo_Li_Chengdu_10.jpg",
+    "license": "CC0",
+    "artist": "EditQ"
+  },
+  "ifs": {
+    "file": "assets/ifs.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:IFS_Chengdu_Tower_and_I_AM_HERE_Panda_Statue.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "来斤小仓鼠吧"
+  },
+  "anshun": {
+    "file": "assets/anshun.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Anshun_Bridge_at_night.jpg",
+    "license": "CC0",
+    "artist": "Travel Coffee Book"
+  },
+  "wenshu": {
+    "file": "assets/wenshu.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Chengdu_monastery.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Charles Haynes"
+  },
+  "panda2": {
+    "file": "assets/panda2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Jimmyshjj"
+  },
+  "wenshu2": {
+    "file": "assets/wenshu2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Hall_-_Wenshu_Monastery_-_Chengdu,_China_-_DSC05060.jpg",
+    "license": "CC0",
+    "artist": "Daderot"
+  },
+  "kuanzhai2": {
+    "file": "assets/kuanzhai2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Street_scene_-_Kuanzhai_Alleys_-_Chengdu,_China_-_DSC05311.jpg",
+    "license": "CC0",
+    "artist": "Daderot"
+  },
+  "creative2": {
+    "file": "assets/creative2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:20250516_Dongjiao_Jiyi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Yumeto"
+  },
+  "ifs2": {
+    "file": "assets/ifs2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:The_panda_at_IFS_Chengdu_from_Hongxing_Road.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "David Xuang"
+  },
+  "anshun2": {
+    "file": "assets/anshun2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Anshun_Bridge_Night.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Limesave"
+  },
+  "wuhou2": {
+    "file": "assets/wuhou2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Gateway_-_Wuhou_Shrine_-_Chengdu,_China_-_DSC05423.jpg",
+    "license": "CC0",
+    "artist": "Daderot"
+  },
+  "jinli2": {
+    "file": "assets/jinli2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Chengdu_Jinli-Stra%C3%9Fe_bei_Nacht_02.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Zairon"
+  },
+  "tea2": {
+    "file": "assets/tea2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:People%27s_Park_(Chengdu)_20260513-1.jpg",
+    "license": "CC0",
+    "artist": "Suicasmo"
+  },
+  "garden2": {
+    "file": "assets/garden2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Corridor_-_Du_Fu_Thatched_Cottage_-_Chengdu,_Sichuan,_China_-_DSC04905.jpg",
+    "license": "CC0",
+    "artist": "Daderot"
+  },
+  "huanhuaxi2": {
+    "file": "assets/huanhuaxi2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Father_and_Daughter_-_Lake,_Huanhuaxi_Park_(1616352004).jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Alpha from Melbourne, Australia"
+  },
+  "taikoo2": {
+    "file": "assets/taikoo2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Sino-Ocean_Taikoo_Li_Chengdu_13.jpg",
+    "license": "CC0",
+    "artist": "EditQ"
+  },
+  "kuanzhaiNight": {
+    "file": "assets/kuanzhaiNight.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Narrow_Lane_of_Chengdu.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "AlexHe34"
+  },
+  "liziba": {
+    "file": "assets/liziba.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:A_train_of_Chongqing_Rail_Transit_Line_2_coming_through_a_residential_building_at_Liziba.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Chen Hualin"
+  },
+  "ciqikou": {
+    "file": "assets/ciqikou.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Street_in_the_Old_Town_of_Ciqikou.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Willi Weasel"
+  },
+  "museumcq": {
+    "file": "assets/museumcq.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Chongqing_Three_Gorges_Museum_China.JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "Eng.Justus Byebirooha"
+  },
+  "xiling-peak": {
+    "file": "assets/xiling-peak.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:在成都遥望雪山_西岭雪山主峰大雪塘_Chengdu_skyline_with_a_view_of_Da_Xue_Tang_(Chengdu_peak).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "书剑飘零"
+  },
+  "xiling-snow": {
+    "file": "assets/xiling-snow.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:西岭雪山_-_panoramio.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "landagent"
+  },
+  "chengdu-east": {
+    "file": "assets/chengdu-east.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:CR200J_in_Chengdu_East_Railway_Station.jpg",
+    "license": "CC0 1.0",
+    "artist": "ChasingAir"
+  }
+}

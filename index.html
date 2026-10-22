@@ -1,0 +1,2107 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f2ec">
+  <title>Our China Trip · Route mood mockup</title>
+  <style>
+    :root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Noto Sans Thai",sans-serif;color:#222a28;background:#f5f2ec;font-synthesis:none}
+    *{box-sizing:border-box}body{margin:0}button{font:inherit}a{color:inherit}.app{max-width:480px;margin:auto;min-height:100dvh;background:#f5f2ec;padding-bottom:calc(94px + env(safe-area-inset-bottom));box-shadow:0 0 50px #20332d12}
+    .top{padding:calc(20px + env(safe-area-inset-top)) 20px 14px;display:flex;justify-content:space-between;align-items:center}.brand{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.brand-mark{width:29px;height:29px;border-radius:50%;background:#173e39;color:#f0d5a4;display:grid;place-items:center;font-family:Georgia,serif;font-size:17px}.avatar{width:35px;height:35px;border-radius:50%;background:#e8b8af;display:grid;place-items:center;font-size:16px;border:2px solid #fff;box-shadow:0 2px 9px #0001}
+    .intro{padding:8px 20px 15px}.eyebrow{color:#789089;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.intro h1{font-family:Georgia,"Noto Serif Thai",serif;font-weight:500;font-size:31px;letter-spacing:-.04em;line-height:1.28;margin:11px 0 7px}.sub{font-size:13px;color:#78837c}.date-strip{display:flex;gap:7px;overflow-x:auto;padding:0 20px 16px;scrollbar-width:none}.date-strip::-webkit-scrollbar{display:none}.day{flex:0 0 auto;border:1px solid #e0e2d9;background:#fff;color:#6c7670;border-radius:14px;min-width:62px;padding:9px 11px;text-align:left}.day b{display:block;font-size:12px}.day span{font-size:10px}.day.active{background:#173e39;color:#fff;border-color:#173e39}.day:disabled{opacity:.55}
+    .hero{position:relative;height:min(94vw,450px);min-height:355px;overflow:hidden;background:#24443d}.hero img{width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;transition:opacity .28s ease, transform .45s ease;transform:scale(1.01)}.hero.switch img{opacity:.55;transform:scale(1.04)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 38%,#031d19ce 100%)}.hero-content{position:absolute;z-index:1;bottom:0;color:#fff;padding:26px 20px 25px;width:100%}.location{font-size:11px;font-weight:800;letter-spacing:.14em;opacity:.88;text-transform:uppercase}.hero h2{font-family:Georgia,"Noto Serif Thai",serif;font-weight:500;font-size:34px;line-height:1.17;margin:7px 0 7px;text-wrap:balance}.hero p{margin:0;font-size:12px;opacity:.86;line-height:1.6}.photo-tag{position:absolute;z-index:2;right:12px;top:12px;border-radius:20px;background:#102e2bb8;color:#fff;padding:6px 9px;font-size:10px;backdrop-filter:blur(8px)}
+    .section{padding:21px 20px 0}.heading{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:13px}.heading h3{font-size:18px;margin:0;letter-spacing:-.035em}.heading span{color:#85918a;font-size:11px}.choices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.choice{position:relative;display:block;padding:0;background:#fff;border:2px solid transparent;border-radius:16px;overflow:hidden;text-align:left;box-shadow:0 3px 14px #15352c0a;cursor:pointer;min-width:0}.choice.active{border-color:#173e39}.choice img{width:100%;height:78px;object-fit:cover;display:block}.choice-body{padding:8px 6px 9px}.choice b{font-size:12px;display:block;color:#1b4039}.choice small{font-size:10px;color:#66736b;line-height:1.3;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.check{position:absolute;top:5px;right:5px;background:#173e39;color:white;border-radius:50%;width:18px;height:18px;display:none;place-items:center;font-size:12px}.choice.active .check{display:grid}
+    .mood{background:#fff;border:1px solid #e7e9df;border-radius:18px;padding:16px;display:flex;align-items:center;gap:13px}.mood-icon{width:39px;height:39px;border-radius:13px;background:#eaf1e9;display:grid;place-items:center;font-size:19px;flex:none}.mood div:nth-child(2){flex:1}.mood strong{display:block;font-size:13px}.mood small{font-size:11px;color:#6c7870;display:block;margin-top:3px}.pill{border-radius:50px;background:#f2f4ee;color:#476157;padding:6px 8px;font-size:10px;font-weight:800;white-space:nowrap}
+    .route{margin-top:12px;background:#fff;border:1px solid #e7e9df;border-radius:19px;padding:18px 16px 9px}.route-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.route-head strong{font-size:14px}.route-head small{color:#79857c;font-size:11px}.stop{display:flex;gap:12px;position:relative;min-height:69px}.stop:not(:last-child):before{content:"";position:absolute;left:12px;top:27px;bottom:0;width:1px;background:#cad8cf}.dot{position:relative;z-index:1;width:25px;height:25px;border:1px solid #b6cfc1;border-radius:50%;background:#f0f6f0;display:grid;place-items:center;color:#356d59;font-size:10px;font-weight:800;flex:none}.stop-content{padding-bottom:15px;min-width:0}.stop-time{font-size:10px;font-weight:800;color:#9a7869;margin-bottom:2px}.stop-title{font-size:13px;font-weight:750}.stop-cn{font-size:11px;color:#8a958c;margin-top:2px}.stop-desc{font-size:11px;color:#66736a;margin-top:4px;line-height:1.45}
+    .note{margin-top:12px;background:#f7ece5;border:1px solid #edd8c9;border-radius:15px;padding:13px 14px;font-size:11px;line-height:1.6;color:#7e5849}.note b{display:block;color:#805746;font-size:11px;margin-bottom:2px}.credit{padding:20px;color:#7e8982;font-size:10px;line-height:1.6}.credit a{text-decoration:underline}.nav{position:fixed;z-index:10;bottom:0;left:50%;transform:translateX(-50%);width:min(480px,100%);padding:10px 20px calc(10px + env(safe-area-inset-bottom));background:#f5f2eced;backdrop-filter:blur(14px);border-top:1px solid #e1e3da;display:flex;gap:10px}.nav button{border:0;border-radius:13px;min-height:48px;cursor:pointer}.nav .save{flex:1;background:#173e39;color:#fff;font-size:13px;font-weight:800}.nav .share{width:50px;background:#e5ebe3;color:#24473c;font-size:20px}.toast{position:fixed;z-index:20;bottom:95px;left:50%;transform:translateX(-50%);background:#173e39;color:#fff;padding:10px 14px;border-radius:12px;font-size:12px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}.toast.show{opacity:1}
+    .hotel-panel{background:#fff;border:1px solid #e7e9df;border-radius:19px;padding:16px}.hotel-overline{font-size:10px;font-weight:850;letter-spacing:.1em;color:#699078;text-transform:uppercase}.hotel-name{font-size:18px;font-weight:800;margin:3px 0}.hotel-reason{font-size:12px;line-height:1.55;color:#627268;margin:4px 0 11px}.hotel-points{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}.hotel-point{border-radius:11px;background:#f4f7f1;padding:9px;font-size:11px;line-height:1.5;color:#52665a}.hotel-point.down{background:#fbf2ed;color:#8b6c5b}.hotel-point b{display:block;font-size:10px;margin-bottom:3px}.hotel-foot{font-size:10px;line-height:1.55;color:#87938a;margin:10px 0 0}.trip-link{display:flex;justify-content:center;align-items:center;min-height:41px;background:#e7f0e7;border-radius:10px;color:#1a5545;font-size:12px;font-weight:800;text-decoration:none}.distance-note{font-size:10px;color:#7d8b80;line-height:1.5;margin:9px 2px 0}.leg{display:flex;align-items:center;gap:5px;margin:0 0 10px 37px;font-size:10px;color:#587266;background:#f2f6f0;padding:6px 8px;border-radius:8px}.leg b{color:#244d3f}.stop-photo{margin-left:auto;flex:0 0 74px;width:74px;height:74px;border:0;border-radius:13px;padding:0;overflow:hidden;background:#e5eae1;cursor:pointer;position:relative}.stop-photo img{width:100%;height:100%;object-fit:cover;display:block}.stop-photo:after{content:'↗';position:absolute;right:4px;bottom:4px;background:#183b35c9;color:white;border-radius:5px;padding:2px 4px;font-size:10px}.stop-content{flex:1}.hotel-disclaimer{font-size:10px;color:#7e8982;line-height:1.55;margin:8px 2px 0}
+    .night-card{width:100%;border:1px solid #dacbbd;border-radius:17px;background:#211f20;color:#fff;display:flex;gap:12px;text-align:left;padding:10px;align-items:center;cursor:pointer}.night-card img{width:92px;height:84px;object-fit:cover;border-radius:11px;flex:none}.night-card b{display:block;font-size:13px}.night-card small{display:block;color:#d9c8bd;font-size:11px;line-height:1.45;margin:5px 0}.night-card em{font-style:normal;color:#efcaa9;font-size:10px;font-weight:750}.photo-count{position:absolute;right:3px;bottom:4px;background:#183b35d9;color:#fff;border-radius:5px;padding:2px 4px;font-size:9px;line-height:1.2}.stop-photo:after{display:none}
+    .lightbox{position:fixed;z-index:30;inset:0;background:#071d1bea;display:none;align-items:center;justify-content:center;padding:10px}.lightbox.open{display:flex}.lightbox-card{width:calc(100vw - 20px);max-width:520px;min-width:0;max-height:calc(100dvh - 20px);background:#f9f8f5;border-radius:17px;overflow:auto;color:#23302a;position:relative;overscroll-behavior:contain}.lightbox-media{position:relative;background:#071d1b;overflow:hidden}.lightbox-media img{width:100%;height:min(46dvh,440px);object-fit:contain;display:block}.lightbox-close{position:absolute;z-index:3;right:10px;top:10px;background:#06211de8;color:#fff;border:0;border-radius:50%;width:36px;height:36px;font-size:22px;cursor:pointer}.lightbox-arrow{position:absolute;top:50%;transform:translateY(-50%);width:35px;height:43px;border:0;background:#0b2926c9;color:#fff;font-size:28px;cursor:pointer}.lightbox-arrow.prev{left:0;border-radius:0 9px 9px 0}.lightbox-arrow.next{right:0;border-radius:9px 0 0 9px}.lightbox-counter{position:absolute;bottom:10px;right:10px;background:#082720c9;color:#fff;border-radius:7px;padding:4px 7px;font-size:10px}.lightbox-caption{padding:14px 16px 18px}.lightbox-caption strong{display:block;font-size:17px;line-height:1.3}.lightbox-slide{font-size:11px;color:#708076;margin:4px 0 10px}.lightbox-story{display:grid;grid-template-columns:1fr 1fr;gap:8px}.lightbox-story div{padding:10px;background:#eaf0e8;border-radius:10px}.lightbox-story div:last-child{background:#f6ece5}.lightbox-story b{font-size:10px;color:#35634c}.lightbox-story div:last-child b{color:#8c624d}.lightbox-story p{margin:3px 0 0;font-size:11px;line-height:1.55}.lightbox-tip{font-size:10px;color:#849087;line-height:1.5;margin:11px 0}.lightbox-caption a{font-size:11px;color:#24614b;display:inline-block;text-decoration:underline}.lightbox-thumbs{display:flex;gap:7px;margin-top:11px;overflow-x:auto}.lightbox-thumbs button{width:48px;height:43px;border:2px solid transparent;border-radius:7px;padding:0;overflow:hidden;background:#eee;flex:none}.lightbox-thumbs button.active{border-color:#276247}.lightbox-thumbs img{width:100%;height:100%;object-fit:cover}.credit summary{cursor:pointer;font-weight:800;color:#557263}
+    .brand-mark{width:29px;height:29px;background:none;color:#2e7957}.brand-mark svg{width:29px;height:29px;display:block;filter:drop-shadow(0 2px 3px #245b3530)}
+    .intro h1{font-size:clamp(18px,5.25vw,26px);letter-spacing:-.055em;white-space:nowrap;line-height:1.3}
+    .trip-link{background:#1269d3;color:#fff;box-shadow:0 3px 9px #1269d32b}.trip-link:focus-visible,.trip-link:hover{background:#0757b3;outline:2px solid #91bfff;outline-offset:2px}.trip-links-label{font-size:11px;font-weight:800;color:#53665c;margin:12px 0 7px}.trip-links{display:grid;grid-template-columns:1fr 1fr;gap:8px}.trip-links .trip-link{min-height:57px;display:flex;flex-direction:column;gap:2px;text-align:center;padding:9px 5px}.trip-link small{font-size:10px;font-weight:600;color:#e8f3ff}
+    .stay-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.stay-head .hotel-name{margin:4px 0 0}.stay-count{flex:none;background:#e4f0e6;color:#266449;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:850}.stay-one-line{margin:8px 0 14px;color:#65746a;font-size:12px;line-height:1.5}.stay-timeline{display:grid;grid-template-columns:1fr .83fr 1fr;gap:6px;align-items:stretch}.stay-date{padding:10px 7px;border:1px solid #dce8dd;background:#f2f7f1;border-radius:11px;text-align:center;min-width:0}.stay-date b,.stay-date small{display:block}.stay-date b{font-size:12px;color:#24553e}.stay-date small{margin-top:3px;font-size:10px;color:#697c6e;line-height:1.35}.stay-date.away{background:#f8efe6;border-color:#eedbc7}.stay-date.away b{color:#91644a}.stay-date.away small{color:#997763}.stay-details{border-top:1px solid #e7eae3;margin-top:14px;padding-top:12px;color:#65746a;font-size:11px;line-height:1.55}.stay-details summary{cursor:pointer;color:#315c46;font-weight:800;list-style:none;display:flex;align-items:center;justify-content:space-between}.stay-details summary::-webkit-details-marker{display:none}.stay-details summary:after{content:'⌄';font-size:19px;line-height:.5;transition:transform .2s}.stay-details[open] summary:after{transform:rotate(180deg)}.stay-details p{margin:10px 0 0}.stay-details b{color:#345b47}
+    .stop{gap:9px;min-height:91px;padding-bottom:17px}.stop:not(:last-child):before{left:12px;bottom:-1px}.stop-content{padding-bottom:0}.stop-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:5px}.stop-time{display:inline-flex;align-items:center;gap:4px;width:max-content;margin:0;padding:4px 7px;border-radius:7px;background:#f8f1e7;color:#94663c;line-height:1.2;font-size:10px}.stop-time.day{background:#fff4dc;color:#89631d}.stop-time.evening{background:#fbeadf;color:#9b5948}.stop-time.night{background:#ece9f5;color:#62517e}.stop-time.return{background:#eaf1ed;color:#4d6e5b}.time-icon{font-size:12px;line-height:1}.stop-distance{display:inline-flex;align-items:center;gap:2px;border-radius:7px;padding:4px 6px;background:#eaf2ee;color:#245d46;font-size:10px;font-weight:800;line-height:1.2;white-space:nowrap}.stop-travel{margin-top:5px;color:#50715f;font-size:10px;line-height:1.35}.stop-photo{flex-basis:70px;width:70px;height:70px}.distance-note{margin-top:3px}
+
+    [hidden]{display:none!important}.city-selector{padding:0 20px 12px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.city-card{height:154px;position:relative;border:2px solid transparent;border-radius:17px;overflow:hidden;padding:0;text-align:left;color:#fff;background:#163a34;cursor:pointer;box-shadow:0 6px 18px #173c3221;min-width:0}.city-card.active{border-color:#a3d6af;box-shadow:0 0 0 2px #24593b,0 6px 18px #173c3221}.city-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.city-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#00000004 15%,#071c18d9 100%)}.city-card .city-copy{position:absolute;z-index:1;left:10px;right:7px;bottom:10px}.city-card b{display:block;font-size:16px;line-height:1.1}.city-card small{display:block;font-size:10px;margin-top:5px;line-height:1.3;color:#e4ebe4}.city-card .city-index{position:absolute;z-index:1;top:8px;left:9px;border-radius:7px;padding:3px 5px;background:#102c27a8;color:#fff;font-size:10px;font-weight:800}.city-hint{margin:0 20px 16px;padding:11px 13px;border-radius:12px;background:#e9efe7;color:#557160;font-size:11px;line-height:1.5}.city-hint[hidden]{display:none}.date-strip[hidden]{display:none}.date-strip{padding-bottom:14px}.day{min-width:86px;cursor:pointer}.day b{font-size:13px}.day span{font-size:10px}.day:focus-visible,.city-card:focus-visible,.overview-choice:focus-visible{outline:3px solid #77b28c;outline-offset:2px}.overview-head{margin:2px 20px 0;border-radius:19px;background:#fff;border:1px solid #e2e7dc;overflow:hidden}.overview-photo{height:230px;position:relative;background:#24443d}.overview-photo img{width:100%;height:100%;object-fit:cover}.overview-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,#09241d85)}.overview-photo span{position:absolute;z-index:1;bottom:10px;left:13px;color:#fff;background:#102d26a8;border-radius:8px;padding:5px 7px;font-size:10px}.overview-copy{padding:16px}.overview-copy .eyebrow{letter-spacing:.08em}.overview-copy h2{font-size:23px;line-height:1.25;margin:6px 0 7px}.overview-copy p{font-size:12px;line-height:1.55;color:#65736a;margin:0}.overview-section{padding:18px 20px 0}.overview-section h3{font-size:17px;margin:0 0 10px}.overview-choices{display:grid;grid-template-columns:1fr 1fr;gap:8px}.overview-choice{border:1px solid #dee6db;background:#fff;border-radius:13px;min-height:65px;padding:9px 11px;text-align:left;cursor:pointer}.overview-choice.active{border-color:#27634a;background:#edf6ef}.overview-choice b{display:block;color:#22523d;font-size:12px}.overview-choice small{display:block;color:#66776c;font-size:10px;line-height:1.3;margin-top:3px}.overview-route{background:#fff;border:1px solid #e2e7dc;border-radius:15px;padding:14px;margin-top:10px}.overview-route strong{font-size:14px}.overview-route .overview-line{margin:10px 0 0;display:grid;gap:7px}.day-briefing{background:#fff;border:1px solid #dfe5dc;border-radius:16px;padding:12px 13px;display:grid;gap:8px;margin-bottom:14px;box-shadow:0 2px 10px rgba(21,53,44,0.03)}
+    .brief-item{display:flex;align-items:flex-start;gap:9px;font-size:12px;line-height:1.45}
+    .brief-item.highlight{background:#fdf6ea;border:1px solid #eed9b7;border-radius:11px;padding:9px 11px;margin-top:2px}
+    .brief-tag{flex:none;font-size:9.5px;font-weight:800;border-radius:6px;padding:3px 6px;letter-spacing:.02em;white-space:nowrap}
+    .brief-tag.origin{background:#eef6ed;color:#276346}
+    .brief-tag.milestone{background:#c88628;color:#fff}
+    .brief-text{color:#25382f;font-size:11.5px;font-weight:550}
+    .brief-item.highlight .brief-text{color:#5c3912;font-weight:600}
+    .overview-line{margin:12px 0 0;display:grid;gap:9px;position:relative}
+    .overview-line:before{content:"";position:absolute;left:27px;top:18px;bottom:18px;width:2px;background:#d8e2d8}
+    .overview-route .overview-step{display:flex;gap:11px;align-items:center;position:relative;z-index:1;background:#fff;border:1px solid #e2e8e0;border-radius:15px;padding:9px 12px;box-shadow:0 2px 8px rgba(21,53,44,0.04);transition:transform .12s ease}
+    .overview-route .overview-step.is-transit{background:#f7f9f6;border:1px dashed #cad5cb;box-shadow:none;padding:7px 11px}
+    .overview-route .overview-step.is-transit .step-time{background:#4b6e5f}
+    .overview-route .overview-step.is-transit .step-title{color:#485e51;font-weight:650;font-size:12px}
+    .overview-route .overview-step.is-transit .step-note{color:#76877c;font-size:10px}
+    .step-time{flex:none;min-width:52px;padding:4px 6px;border-radius:8px;background:#173e39;color:#fff;font-size:10.5px;font-weight:800;text-align:center;letter-spacing:.02em;box-shadow:0 2px 6px #173e3922}
+    .step-main{flex:1;min-width:0}
+    .step-title{font-size:12.5px;font-weight:750;color:#1c392e;line-height:1.35}
+    .step-note{font-size:10.5px;color:#65776d;margin-top:2px;line-height:1.35}
+    .step-photo-btn{flex:0 0 62px;width:62px;height:62px;border:none;border-radius:11px;padding:0;overflow:hidden;background:#e8ece5;cursor:pointer;position:relative;margin-left:auto;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:transform .12s ease}
+    .step-photo-btn:active{transform:scale(0.95)}
+    .step-photo-btn img{width:100%;height:100%;object-fit:cover;display:block}
+    .step-photo-btn:after{display:none!important}
+    .next-day-card{margin-top:16px;background:linear-gradient(135deg,#173e39 0%,#204f47 100%);color:#fff;border-radius:16px;padding:15px 16px;box-shadow:0 4px 18px rgba(23,62,57,0.18)}
+    .next-day-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+    .next-day-tag{font-size:10px;font-weight:800;letter-spacing:.08em;color:#b4cebe;text-transform:uppercase}
+    .next-day-title{font-size:13px;font-weight:700;line-height:1.4;color:#fff;margin-bottom:4px}
+    .next-day-sub{font-size:11px;color:#d0ded6;line-height:1.45;margin-bottom:12px}
+    .next-day-btn{width:100%;min-height:38px;border:none;border-radius:10px;background:#f0d5a4;color:#173e39;font-size:11.5px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:transform .12s ease,background .12s ease}
+    .next-day-btn:active{transform:scale(0.98);background:#e4c690}.overview-note{background:#f7efe7;border-radius:12px;padding:10px 12px;color:#816548;font-size:11px;line-height:1.5;margin-top:10px}.overview-source{font-size:10px;color:#8b958d;line-height:1.5;margin:10px 1px 0}
+    .city-selector{display:flex;flex-direction:column;gap:9px}.city-card{width:100%;height:105px}.city-card img{object-position:center 42%}.city-card:after{background:linear-gradient(90deg,#071c18d8 0%,#071c1855 54%,#00000005 100%)}.city-card .city-copy{left:48px;right:12px;top:28px;bottom:auto}.city-card b{font-size:20px}.city-card small{font-size:11px}.city-card .city-index{top:31px;left:12px;padding:5px 7px}.city-return{min-height:68px;width:calc(100% - 17px);margin:-1px 0 2px 17px;border:1px solid #bdd6c4;border-left:3px solid #6caa80;border-radius:0 13px 13px 13px;background:#eaf3e9;color:#2d6043;text-align:left;display:flex;align-items:center;gap:8px;padding:9px 10px;cursor:pointer}.city-return.active{background:#dceede;border-color:#37885a}.city-return .return-mark{font-size:22px;flex:none}.city-return b{display:block;font-size:12px;line-height:1.35}.city-return small{display:block;font-size:10px;line-height:1.4;color:#657b68;margin-top:2px}.city-return .return-arrow{font-size:25px;margin-left:auto}.city-return:focus-visible{outline:3px solid #77b28c;outline-offset:2px}
+    .city-selector{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.city-card{width:100%;height:154px}.city-card img{object-position:center}.city-card:after{background:linear-gradient(180deg,#00000004 15%,#071c18d9 100%)}.city-card .city-copy{left:10px;right:7px;top:auto;bottom:10px}.city-card b{font-size:16px}.city-card small{font-size:10px}.city-card .city-index{top:8px;left:9px;padding:3px 5px}.city-return{grid-column:1/-1;min-height:46px;width:100%;margin:1px 0 0;border:1px solid #bdd6c4;border-left:3px solid #6caa80;border-radius:10px;padding:7px 10px}.city-return .return-mark{font-size:18px}.city-return small{font-size:10px}.city-return b{font-size:11px}.city-moods{display:flex;gap:9px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 20px 8px;margin:0 -20px}.city-moods::-webkit-scrollbar{display:none}.city-mood{flex:0 0 158px;scroll-snap-align:start;border:2px solid transparent;border-radius:15px;background:#fff;padding:0;overflow:hidden;text-align:left;cursor:pointer;min-width:0}.city-mood.active{border-color:#26724f;background:#f2f7f0}.city-mood img{width:100%;height:88px;display:block;object-fit:cover}.city-mood span{display:block;padding:9px 9px 10px}.city-mood b{display:block;color:#24523c;font-size:12px;line-height:1.3}.city-mood small{display:block;color:#718076;font-size:10px;margin-top:3px}.city-mood:focus-visible{outline:3px solid #77b28c;outline-offset:2px}.city-stay-card{border:1px solid #e0e8dc;border-radius:16px;background:#fff;padding:14px}.city-stay-card .stay-overline{font-size:10px;font-weight:850;letter-spacing:.06em;color:#688b73}.city-stay-card strong{display:block;font-size:18px;margin-top:4px}.city-stay-card p{font-size:11px;color:#647368;line-height:1.55;margin:7px 0 0}.city-stay-meta{display:inline-block;border-radius:999px;background:#e9f3e9;color:#306648;padding:5px 8px;font-size:10px;font-weight:800;margin-top:10px}.city-stay-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.city-stay-links a.trip-link{flex:1 1 calc(50% - 4px);min-height:42px;border-radius:12px;background:linear-gradient(135deg,#0f294d 0%,#153768 100%);color:#fff;display:flex;align-items:center;justify-content:space-between;text-decoration:none;padding:8px 11px;box-shadow:0 3px 10px rgba(15,41,77,0.18);border:1px solid rgba(255,255,255,0.1);transition:transform .12s ease,box-shadow .12s ease}
+.city-stay-links a.trip-link:active{transform:scale(0.98)}
+.trip-brand{display:inline-flex;align-items:center;background:rgba(255,255,255,0.14);border-radius:6px;padding:3px 6px;font-size:10.5px;font-weight:800;letter-spacing:-.02em;color:#fff;flex:none}
+.trip-brand b{color:#ff7d00;font-weight:900}
+.trip-btn-label{font-size:10.5px;font-weight:700;color:#fff;margin-left:7px;margin-right:auto;line-height:1.3;text-align:left}
+.trip-arrow{font-size:12px;color:#ffb86c;margin-left:4px;flex:none}.city-stay-small{font-size:10px;color:#8a948a;margin-top:8px;line-height:1.5}.date-strip{padding-top:14px}.overview-choices{display:none}
+    @media(max-width:360px){.stop-photo{flex-basis:60px;width:60px;height:66px}.stop{gap:7px}.stop-time,.stop-distance{font-size:9px;padding:4px 5px}.intro h1{font-size:clamp(16px,5.2vw,19px)}}
+    .city-mood-media{position:relative}.city-mood-media em{position:absolute;left:5px;right:5px;bottom:5px;background:#102b24c9;color:#fff;border-radius:5px;padding:3px 4px;font-size:8px;font-style:normal;line-height:1.25}.city-stay-card p{font-size:12px}.city-stay-small{font-size:11px}.city-stay-card .city-stay-pick{background:#eef6ed;color:#285e41;border-radius:9px;padding:8px 9px;font-size:12px;margin-top:10px}
+    .city-selector{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.city-card{height:136px}.city-card .city-copy{left:12px;right:9px;bottom:11px}.city-card b{font-size:17px;line-height:1.18}.city-card small{font-size:10px}.city-card .city-index{top:9px;left:10px}.city-card[data-city="chengdu_return"] img{object-position:center 54%}.date-prompt{padding:15px 20px 9px;display:flex;align-items:center;gap:9px;scroll-margin-top:18px}.date-prompt span{background:#dceede;color:#276346;border-radius:999px;padding:5px 8px;font-size:10px;font-weight:800}.date-prompt strong{font-size:15px;color:#193f35}.date-strip{padding-top:0}
+    @media(min-width:700px){body{background:#e6e9e2}.app{margin:30px auto;border-radius:24px;overflow:hidden;min-height:calc(100dvh - 60px)}.nav{bottom:0}}
+  
+    .step-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .badge-food {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #92400e;
+      background: #fef3c7;
+      border: 1px solid #fde68a;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.2px;
+    }
+    .badge-night {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #3730a3;
+      background: #e0e7ff;
+      border: 1px solid #c7d2fe;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.2px;
+    }
+    .lightbox-highlight {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+    .lightbox-highlight.food {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      color: #78350f;
+    }
+    .lightbox-highlight.food b {
+      display: block;
+      color: #92400e;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+    .lightbox-highlight.night {
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      color: #312e81;
+    }
+    .lightbox-highlight.night b {
+      display: block;
+      color: #3730a3;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+  
+    /* Grand Card & Transit Connector UI */
+    .overview-line {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+    .overview-card {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid #e1e7dc;
+      padding: 14px 15px;
+      box-shadow: 0 4px 16px rgba(22,58,52,0.06);
+      position: relative;
+      transition: transform .12s ease;
+    }
+    .overview-card.is-transit {
+      background: rgba(255,255,255,0.65);
+      border: 1.5px dashed #cbd5cc;
+      box-shadow: none;
+      padding: 10px 14px;
+    }
+    .card-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .card-time {
+      flex: none;
+      padding: 4px 8px;
+      border-radius: 8px;
+      background: #173e39;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      box-shadow: 0 2px 6px rgba(23,62,57,0.18);
+    }
+    .card-time.night {
+      background: #312e81;
+      box-shadow: 0 2px 6px rgba(49,46,129,0.22);
+    }
+    .card-title-wrap {
+      flex: 1;
+      min-width: 0;
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #173e39;
+      line-height: 1.3;
+    }
+    .card-cn {
+      font-size: 10.5px;
+      color: #798b80;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-top: 1px;
+    }
+
+    /* Grand Photo Box inside Card */
+    .card-media-box {
+      width: 100%;
+      height: 168px;
+      border-radius: 13px;
+      overflow: hidden;
+      position: relative;
+      margin: 9px 0 10px;
+      cursor: pointer;
+      background: #1a3c35;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+    .card-media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .35s ease;
+    }
+    .card-media-box:active img {
+      transform: scale(1.03);
+    }
+    .card-media-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 24px 12px 10px;
+      background: linear-gradient(180deg, transparent 0%, rgba(10,30,25,0.85) 100%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .photo-expand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      color: #173e39;
+      font-size: 11px;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .card-media-hint {
+      font-size: 9.5px;
+      color: #d1ded6;
+      font-weight: 600;
+    }
+
+    .card-details {
+      font-size: 11.5px;
+      color: #4b6255;
+      line-height: 1.45;
+    }
+    .card-note {
+      margin: 0;
+    }
+
+    /* Dedicated Transit Connector Between A and B */
+    .transit-connector {
+      display: flex;
+      align-items: stretch;
+      gap: 12px;
+      margin: 6px 0 6px 8px;
+      position: relative;
+    }
+    .connector-track {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 22px;
+      flex: none;
+      padding: 4px 0;
+    }
+    .connector-track .track-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #739485;
+      box-shadow: 0 0 0 2px rgba(115,148,133,0.25);
+    }
+    .connector-track .track-line {
+      flex: 1;
+      width: 2px;
+      background: repeating-linear-gradient(to bottom, #739485 0, #739485 4px, transparent 4px, transparent 8px);
+      margin: 4px 0;
+    }
+    .connector-track .track-arrow {
+      font-size: 11px;
+      color: #739485;
+      line-height: 1;
+      font-weight: 900;
+      margin: 1px 0;
+    }
+    .connector-bubble {
+      flex: 1;
+      min-width: 0;
+      background: #f4f8f5;
+      border: 1px solid #dbe6de;
+      border-radius: 13px;
+      padding: 9px 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+    .connector-headline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+    .connector-mode-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .01em;
+    }
+    .connector-mode-pill.didi {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+    }
+    .connector-mode-pill.metro {
+      background: #e0e7ff;
+      color: #3730a3;
+      border: 1px solid #c7d2fe;
+    }
+    .connector-mode-pill.walk {
+      background: #e6f4ea;
+      color: #137333;
+      border: 1px solid #ceead6;
+    }
+    .connector-mode-pill.train {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+    .connector-metrics {
+      font-size: 11px;
+      font-weight: 750;
+      color: #556e61;
+    }
+    .connector-advice {
+      font-size: 11.5px;
+      color: #274033;
+      line-height: 1.4;
+      font-weight: 550;
+    }
+    .connector-alt {
+      margin-top: 3px;
+      font-size: 10.5px;
+      color: #61776b;
+      line-height: 1.35;
+    }
+
+  
+    /* Budget Calculator Card */
+    .budget-card {
+      margin-top: 18px;
+      background: #ffffff;
+      border: 1px solid #dce5df;
+      border-radius: 18px;
+      padding: 16px 18px;
+      box-shadow: 0 4px 16px rgba(22,58,52,0.06);
+    }
+    .budget-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #edf2ee;
+    }
+    .budget-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      color: #245d46;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .budget-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #173e39;
+      line-height: 1.3;
+      margin: 0;
+    }
+    .budget-total-badge {
+      flex: none;
+      text-align: right;
+      background: #eef6f1;
+      border: 1px solid #cce3d4;
+      border-radius: 10px;
+      padding: 5px 10px;
+    }
+    .budget-total-cny {
+      display: block;
+      font-size: 15px;
+      font-weight: 900;
+      color: #173e39;
+      line-height: 1.1;
+    }
+    .budget-total-thb {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      color: #4f6e5e;
+      margin-top: 2px;
+    }
+    .budget-items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 12px 0 10px;
+    }
+    .budget-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .budget-icon {
+      flex: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #f4f8f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+    }
+    .budget-desc {
+      flex: 1;
+      min-width: 0;
+    }
+    .budget-desc strong {
+      display: block;
+      font-size: 12px;
+      font-weight: 750;
+      color: #254033;
+      line-height: 1.25;
+    }
+    .budget-desc small {
+      display: block;
+      font-size: 10.5px;
+      color: #6c7f73;
+      line-height: 1.35;
+      margin-top: 1px;
+    }
+    .budget-cost {
+      flex: none;
+      text-align: right;
+    }
+    .budget-cost .cny {
+      display: block;
+      font-size: 13px;
+      font-weight: 800;
+      color: #173e39;
+    }
+    .budget-cost .thb {
+      display: block;
+      font-size: 10px;
+      color: #708477;
+      font-weight: 600;
+    }
+    .budget-footer {
+      border-top: 1px solid #edf2ee;
+      padding-top: 10px;
+      margin-top: 2px;
+    }
+    .budget-note {
+      font-size: 10px;
+      color: #798b80;
+      line-height: 1.45;
+    }
+
+  
+    /* Budget Modal & Navigation Enhancements */
+    .nav {
+      gap: 8px;
+    }
+    .budget-modal-btn {
+      flex: 1.15;
+      min-height: 48px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #f3dbb3 0%, #e6c58e 100%);
+      color: #153831;
+      font-size: 13px;
+      font-weight: 850;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(230,197,142,0.4);
+      transition: transform .12s ease, filter .12s ease;
+    }
+    .budget-modal-btn:active {
+      transform: scale(0.97);
+      filter: brightness(0.95);
+    }
+
+    .budget-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+    }
+    .budget-modal[hidden] {
+      display: none!important;
+    }
+    .budget-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 22, 18, 0.68);
+      backdrop-filter: blur(5px);
+      animation: fadeIn .2s ease;
+    }
+    .budget-modal-sheet {
+      position: relative;
+      background: #f8faf8;
+      border-radius: 24px 24px 0 0;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 -8px 32px rgba(0,0,0,0.28);
+      animation: slideUp .25s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    .modal-drag-bar {
+      width: 40px;
+      height: 4px;
+      border-radius: 999px;
+      background: #cbd8cf;
+      margin: 10px auto 4px;
+    }
+    .budget-modal-head {
+      padding: 8px 16px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e5ede7;
+    }
+    .budget-modal-head > div {
+      flex: 1;
+      min-width: 0;
+    }
+    .budget-modal-tag {
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      color: #245d46;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .budget-modal-title {
+      font-size: 15.5px;
+      font-weight: 850;
+      color: #173e39;
+      margin: 0;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .budget-modal-close {
+      flex: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      background: #e9f0eb;
+      color: #2e4a3d;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      line-height: 1;
+      margin-left: 10px;
+    }
+
+    /* Grand Total Card in Modal */
+    .grand-budget-summary {
+      margin: 10px 14px 8px;
+      background: linear-gradient(135deg, #173e39 0%, #22564e 100%);
+      color: #fff;
+      border-radius: 16px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(23,62,57,0.22);
+      box-sizing: border-box;
+    }
+    .grand-summary-left {
+      flex: 1;
+      min-width: 0;
+    }
+    .grand-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #c0d8cb;
+      display: block;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .grand-cny {
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.1;
+      color: #f7dfb6;
+    }
+    .grand-thb {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #e2ede7;
+      margin-top: 2px;
+    }
+    .grand-summary-right {
+      flex: none;
+      text-align: right;
+      border-left: 1px solid rgba(255,255,255,0.18);
+      padding-left: 12px;
+    }
+    .per-person-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: #b7cebf;
+      display: block;
+    }
+    .per-person-val {
+      font-size: 17px;
+      font-weight: 900;
+      color: #fff;
+      margin: 2px 0 1px;
+    }
+    .per-person-note {
+      font-size: 9.5px;
+      color: #a7c4b2;
+      display: block;
+    }
+
+    /* 3 Category Cards Grid */
+    .category-breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+      margin: 0 14px 8px;
+    }
+    .cat-card {
+      background: #ffffff;
+      border: 1px solid #dce6de;
+      border-radius: 12px;
+      padding: 8px 6px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      min-width: 0;
+    }
+    .cat-icon {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .cat-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #556c5e;
+      display: block;
+      line-height: 1.2;
+    }
+    .cat-card strong {
+      font-size: 13px;
+      font-weight: 850;
+      color: #173e39;
+      display: block;
+      margin-top: 3px;
+    }
+    .cat-card small {
+      font-size: 9.5px;
+      color: #798d82;
+      display: block;
+    }
+
+    .modal-instruction {
+      padding: 0 14px 6px;
+      font-size: 11px;
+      font-weight: 750;
+      color: #274b3d;
+    }
+
+    /* Day by Day Selectors List */
+    .modal-day-selectors {
+      flex: 1;
+      overflow-y: auto;
+      padding: 4px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .modal-day-block {
+      background: #ffffff;
+      border: 1px solid #dce6df;
+      border-radius: 15px;
+      padding: 10px 12px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.03);
+    }
+    .modal-day-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .modal-day-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11.5px;
+      font-weight: 850;
+      color: #173e39;
+    }
+    .modal-day-subtotal {
+      font-size: 11px;
+      font-weight: 800;
+      color: #245d46;
+      background: #eaf3ed;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+    .modal-pills-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .modal-pill-btn {
+      width: 100%;
+      text-align: left;
+      border: 1.5px solid #dbe5de;
+      background: #fbfdfb;
+      border-radius: 10px;
+      padding: 7px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: border-color .15s ease, background .15s ease;
+    }
+    .modal-pill-btn.active {
+      border-color: #245d46;
+      background: #edf6f0;
+      box-shadow: 0 2px 8px rgba(36,93,70,0.12);
+    }
+    .modal-pill-left {
+      flex: 1;
+      min-width: 0;
+      padding-right: 6px;
+    }
+    .modal-pill-name {
+      font-size: 12px;
+      font-weight: 800;
+      color: #1c3d33;
+      display: block;
+    }
+    .modal-pill-note {
+      font-size: 10px;
+      color: #6a7e72;
+      display: block;
+      margin-top: 1px;
+    }
+    .modal-pill-cost {
+      flex: none;
+      text-align: right;
+      padding-left: 8px;
+    }
+    .modal-pill-cost b {
+      font-size: 11.5px;
+      font-weight: 850;
+      color: #173e39;
+      display: block;
+    }
+    .modal-pill-cost small {
+      font-size: 9px;
+      color: #798d82;
+      display: block;
+    }
+
+    .modal-action-footer {
+      padding: 10px 14px 16px;
+      background: #ffffff;
+      border-top: 1px solid #e5ede7;
+    }
+    .modal-sync-btn {
+      width: 100%;
+      min-height: 44px;
+      border: none;
+      border-radius: 12px;
+      background: #173e39;
+      color: #ffffff;
+      font-size: 13.5px;
+      font-weight: 850;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(23,62,57,0.25);
+      transition: transform .12s ease, background .12s ease;
+    }
+    .modal-sync-btn:active {
+      transform: scale(0.98);
+      background: #112d29;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="top"><div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 28.2 4.1 17.1C-2.4 11 6.1.2 13.6 6.4L16 8.5l2.4-2.1C25.9.2 34.4 11 27.9 17.1L16 28.2Z"/></svg></span> Gee × Gaeun</div><div class="avatar" aria-label="ทริปของเราสองคน">♡</div></header>
+    <div class="intro"><div class="eyebrow">Our China Trip · Dec 2026</div><h1>ทริปนี้ไปเมืองไหนกัน?</h1><div class="sub">เลือกเมือง → เลือก mood → ดูย่านพัก → เลือกวัน</div></div>
+    <div class="city-selector" id="city-selector" aria-label="เลือกเมือง"></div>
+    <div class="city-hint" id="city-hint">เลือกเมืองที่อยากดูก่อน แล้ววันที่ของเมืองนั้นจะปรากฏ</div>
+    <section class="section" id="city-mood-section" hidden><div class="heading"><h3 id="city-mood-title">เลือก mood</h3><span>ปัดซ้ายดูเพิ่ม →</span></div><div class="city-moods" id="city-moods"></div></section>
+    <section class="section" id="city-stay-section" hidden><div class="heading"><h3>ย่านพักที่ใช้เป็นฐาน</h3><span>ตามเมือง</span></div><div id="city-stay"></div></section>
+    <div class="date-prompt" id="date-prompt" hidden><span>ขั้นต่อไป</span><strong>เลือกวันที่เที่ยว ↓</strong></div>
+    <div class="date-strip" id="date-strip" aria-label="เลือกวันที่ในเมือง" hidden></div>
+    <div id="overview" hidden></div>
+    <section class="hero" id="hero" data-day7><img id="hero-image" src="assets/garden.webp" alt="ภาพถ่ายจริงของบ้านตู้ฝู่ในเฉิงตู"><div class="photo-tag">ภาพสถานที่จริง · ไม่ใช่สภาพวันเดินทาง</div><div class="hero-content"><div class="location">07 DEC · CHENGDU</div><h2 id="hero-title">สวนจีน &amp; งานศิลป์</h2><p id="hero-subtitle">วันสบาย ๆ เดินสวน นั่งชา และค่อย ๆ มองเมือง</p></div></section>
+    <section class="section" data-day7>
+      <div id="day7-briefing"></div>
+      <div class="mood"><div class="mood-icon" id="mood-icon">🍃</div><div><strong id="mood-title">ช้า ๆ ในสวนจีน</strong><small id="mood-detail">เหมาะกับวันที่อยากเดินสบาย ไม่เร่งเก็บจุด</small></div><span class="pill" id="effort">เดินกลาง</span></div>
+      <div class="route"><div class="route-head"><strong>เส้นทางวันนี้</strong><small id="route-count">5 จุด · เวลาแบบยืดหยุ่น</small></div><div id="stops"></div><p class="distance-note">ระยะเป็นเส้นตรงโดยประมาณจาก OpenStreetMap; จุดที่พักอ้างอิง IFS ใกล้ Chunxi Road ระยะเดิน/รถจริงจะเปลี่ยนตามโรงแรมที่เลือก</p></div>
+      <div id="day7-next-card"></div>
+    </section>
+
+    <section class="section" data-day7><div class="heading"><h3>คืนนี้ไปต่อแบบไหนดี</h3><span>จุดเด่นตาม mood</span></div><div id="night-card"></div></section>
+    <section class="section" data-day7><div class="note"><b>ควรรู้ก่อนเลือก</b><span id="warning"></span></div></section>
+    <details class="credit"><summary>เครดิตภาพและแหล่งข้อมูล</summary><p>สรุปเมืองและวันที่อิงจาก Excel; วันที่ 7 ธ.ค. มี Route แบบละเอียดที่ปรับจุดแวะตาม mood และโซนฮิต จุดที่เพิ่มหรือสลับลำดับเป็นข้อเสนอของไกด์ ภาพถ่ายต่างวันและมีการย่อ/ครอปเพื่อแสดงบนมือถือ</p><p>ภาพเมืองบนหน้าเลือก: <a href="https://commons.wikimedia.org/wiki/File:CR200J_in_Chengdu_East_Railway_Station.jpg" target="_blank" rel="noopener">ChasingAir (CC0, สถานี Chengdu East)</a>, <a href="https://commons.wikimedia.org/wiki/File:%E8%A5%BF%E5%B2%AD%E9%9B%AA%E5%B1%B1.jpg" target="_blank" rel="noopener">Lzylove (CC BY-SA 4.0, ย่อภาพ)</a>, <a href="https://commons.wikimedia.org/wiki/File:Hongyadong_night_lights_Chongqing.jpg" target="_blank" rel="noopener">Lianguanlun (CC BY 4.0, ย่อภาพ)</a>. ภาพ mood ซีหลิง: <a href="https://commons.wikimedia.org/wiki/File:%E5%9C%A8%E6%88%90%E9%83%BD%E9%81%A5%E6%9C%9B%E9%9B%AA%E5%B1%B1_%E8%A5%BF%E5%B2%AD%E9%9B%AA%E5%B1%B1%E4%B8%BB%E5%B3%B0%E5%A4%A7%E9%9B%AA%E5%A1%98_Chengdu_skyline_with_a_view_of_Da_Xue_Tang_(Chengdu_peak).jpg" target="_blank" rel="noopener">书剑飘零 (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:%E8%A5%BF%E5%B2%AD%E9%9B%AA%E5%B1%B1_-_panoramio.jpg" target="_blank" rel="noopener">landagent (CC BY-SA 3.0)</a>. ภาพ mood ฉงชิ่ง: <a href="https://commons.wikimedia.org/wiki/File:A_train_of_Chongqing_Rail_Transit_Line_2_coming_through_a_residential_building_at_Liziba.jpg" target="_blank" rel="noopener">Chen Hualin (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Street_in_the_Old_Town_of_Ciqikou.jpg" target="_blank" rel="noopener">Willi Weasel (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chongqing_Three_Gorges_Museum_China.JPG" target="_blank" rel="noopener">Eng.Justus Byebirooha (CC BY-SA 3.0)</a>. ภาพอื่นจาก Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Sleeping_panda_in_Chengdu_Panda_Base.jpg" target="_blank" rel="noopener">MspreilsCN (CC BY 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AChengdu_Dongjiao_Memory_%2855562889075%29.jpg" target="_blank" rel="noopener">Person-with-No Name (CC BY 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AChengdu_Jinli-Stra%C3%9Fe_01.jpg" target="_blank" rel="noopener">&lt;a href=&quot;//commons.wikimedia.org/wiki/User:Zairon&quot; title=&quot;User:Zairon&quot;&gt;Zairon&lt;/a&gt; (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AEntry_-_Du_Fu_Thatched_Cottage_-_Chengdu%2C_Sichuan%2C_China_-_DSC04875.jpg" target="_blank" rel="noopener">&lt;a href=&quot;//commons.wikimedia.org/wiki/User:Daderot&quot; title=&quot;User:Daderot&quot;&gt;Daderot&lt;/a&gt; (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AKuanzhaixiangzi_Alleys%2C_201907%2C_01.jpg" target="_blank" rel="noopener">Jimmyshjj (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AChengdu_Wuhou_ci.jpg" target="_blank" rel="noopener">User:Gisling (CC BY 2.5)</a>, <a href="https://commons.wikimedia.org/wiki/File%3ATea_in_People%27s_Park_-_Chengdu%2C_China_-_DSC05362.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File%3AAnglers_and_Tudor_Houses_-_Lake%2C_%E6%B5%A3%E8%8A%B1%E6%BA%AA%E5%85%AC%E5%9B%AD_Huanhuaxi_Park_%281616360108%29.jpg" target="_blank" rel="noopener">Alpha from Melbourne, Australia (CC BY-SA 2.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Wangping_Street.jpg" target="_blank" rel="noopener">TFUshkjasjk (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Sino-Ocean_Taikoo_Li_Chengdu_10.jpg" target="_blank" rel="noopener">EditQ (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:IFS_Chengdu_Tower_and_I_AM_HERE_Panda_Statue.jpg" target="_blank" rel="noopener">来斤小仓鼠吧 (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Anshun_Bridge_at_night.jpg" target="_blank" rel="noopener">Travel Coffee Book (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chengdu_monastery.jpg" target="_blank" rel="noopener">Charles Haynes (CC BY-SA 2.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_01.jpg" target="_blank" rel="noopener">Jimmyshjj (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Hall_-_Wenshu_Monastery_-_Chengdu,_China_-_DSC05060.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Street_scene_-_Kuanzhai_Alleys_-_Chengdu,_China_-_DSC05311.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:20250516_Dongjiao_Jiyi.jpg" target="_blank" rel="noopener">Yumeto (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:The_panda_at_IFS_Chengdu_from_Hongxing_Road.jpg" target="_blank" rel="noopener">David Xuang (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Anshun_Bridge_Night.jpg" target="_blank" rel="noopener">Limesave (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Gateway_-_Wuhou_Shrine_-_Chengdu,_China_-_DSC05423.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Chengdu_Jinli-Stra%C3%9Fe_bei_Nacht_02.jpg" target="_blank" rel="noopener">Zairon (CC BY-SA 4.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:People%27s_Park_(Chengdu)_20260513-1.jpg" target="_blank" rel="noopener">Suicasmo (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Corridor_-_Du_Fu_Thatched_Cottage_-_Chengdu,_Sichuan,_China_-_DSC04905.jpg" target="_blank" rel="noopener">Daderot (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Father_and_Daughter_-_Lake,_Huanhuaxi_Park_(1616352004).jpg" target="_blank" rel="noopener">Alpha from Melbourne, Australia (CC BY-SA 2.0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Sino-Ocean_Taikoo_Li_Chengdu_13.jpg" target="_blank" rel="noopener">EditQ (CC0)</a>, <a href="https://commons.wikimedia.org/wiki/File:Narrow_Lane_of_Chengdu.jpg" target="_blank" rel="noopener">AlexHe34 (CC BY-SA 3.0)</a></p><p>แนวจัดโซนและจุดเที่ยวกลางคืน: <a href="https://www.gochengdu.cn/en/article/column_164618479376578/919" target="_blank" rel="noopener">GoChengdu ย่านพัก</a>, <a href="https://www.gochengdu.cn/en/article/happy_life_in_chengdu/4776" target="_blank" rel="noopener">GoChengdu เที่ยวกลางคืน</a>, <a href="https://www.cnto.org.uk/wp-content/uploads/2025/04/%E7%B2%BE%E5%93%81%E7%BA%BF%E8%B7%AF%E4%B8%8B.pdf" target="_blank" rel="noopener">China National Tourist Office</a>. ระยะทาง: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors (ODbL)</a>.</p><p>ฐานพักและการต่อรถหลังซีหลิง: <a href="https://www.xiling.cn/website/survey/traffic" target="_blank" rel="noopener">เว็บทางการซีหลิง · การเดินทาง</a>, <a href="https://www.xiling.cn/website/survey/stay" target="_blank" rel="noopener">เว็บทางการซีหลิง · ที่พัก</a>, <a href="https://www.metroman.cn/en/cities/chengdu/lines/line-2" target="_blank" rel="noopener">สถานีสาย 2 เฉิงตู</a>, <a href="https://www.trip.com/hotels/chengdu-hotel-detail-80916797/vienna-international-hotel/" target="_blank" rel="noopener">Trip.com · Vienna International Hotel</a>. เวลาเดิน ราคาห้อง และรอบรถอาจเปลี่ยน ต้องตรวจอีกครั้งก่อนจอง</p></details>
+  </main>
+  <div class="nav"><button class="budget-modal-btn" id="open-budget-modal" aria-label="คำนวณงบประมาณทั้งทริป">💰 สรุปงบทริป</button><button class="save" id="save">♡ เก็บแผน</button><button class="share" id="share" aria-label="แชร์ลิงก์แผน">↗</button></div><div class="toast" id="toast" role="status"></div>
+  
+  <!-- Trip Budget Planner & Calculator Modal -->
+  <div class="budget-modal" id="budget-modal" role="dialog" aria-modal="true" aria-label="คำนวณงบประมาณทั้งทริป" hidden>
+    <div class="budget-modal-backdrop" id="budget-modal-backdrop"></div>
+    <div class="budget-modal-sheet">
+      <div class="modal-drag-bar"></div>
+      <div class="budget-modal-head">
+        <div>
+          <span class="budget-modal-tag">✨ CHINA TRIP BUDGET (GEE × GAEUN)</span>
+          <h2 class="budget-modal-title">คำนวณงบประมาณทั้งทริป (7 วัน)</h2>
+        </div>
+        <button class="budget-modal-close" id="budget-modal-close" aria-label="ปิดหน้าต่างสรุปงบ">×</button>
+      </div>
+
+      <!-- Grand Total Summary Card -->
+      <div class="grand-budget-summary">
+        <div class="grand-summary-left">
+          <span class="grand-label">ยอดรวมทั้งทริป (2 ท่าน)</span>
+          <div class="grand-cny" id="grand-total-cny">≈ ¥3,650</div>
+          <div class="grand-thb" id="grand-total-thb">(~18,250 บาท)</div>
+        </div>
+        <div class="grand-summary-right">
+          <span class="per-person-label">เฉลี่ยตกคนละ</span>
+          <div class="per-person-val" id="grand-per-person">~9,125 ฿</div>
+          <small class="per-person-note">พักคู่ 1 ห้องตลอดทริป</small>
+        </div>
+      </div>
+
+      <!-- Category Breakdown Pills -->
+      <div class="category-breakdown-grid">
+        <div class="cat-card">
+          <span class="cat-icon">🏨</span>
+          <span class="cat-title">ที่พัก 6 คืน (1 ห้อง)</span>
+          <strong id="cat-hotel-val">¥2,120</strong>
+          <small id="cat-hotel-thb">~10,600 ฿</small>
+        </div>
+        <div class="cat-card">
+          <span class="cat-icon">🚖</span>
+          <span class="cat-title">เดินทาง 2 คน</span>
+          <strong id="cat-transit-val">¥1,180</strong>
+          <small id="cat-transit-thb">~5,900 ฿</small>
+        </div>
+        <div class="cat-card">
+          <span class="cat-icon">🎟️</span>
+          <span class="cat-title">ค่าเข้า 2 คน</span>
+          <strong id="cat-ticket-val">¥350</strong>
+          <small id="cat-ticket-thb">~1,750 ฿</small>
+        </div>
+      </div>
+
+      <div class="modal-instruction">
+        <span>💡 เลือกโปรแกรม / Mood แต่ละวันด้านล่าง ตัวเลขจะคำนวณใหม่ทันที:</span>
+      </div>
+
+      <!-- Day by Day Mood Selector (Clean, No Image Bloat) -->
+      <div class="modal-day-selectors" id="modal-day-selectors"></div>
+
+      <!-- Modal Footer Action -->
+      <div class="modal-action-footer">
+        <button class="modal-sync-btn" id="modal-apply-btn">✓ ใช้แผนนี้ & ซิงค์กลับหน้าหลัก</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="ภาพและบรรยากาศของสถานที่"><div class="lightbox-card"><button class="lightbox-close" id="lightbox-close" aria-label="ปิดภาพ">×</button><div class="lightbox-media" id="lightbox-media"><img id="lightbox-image" alt=""><button class="lightbox-arrow prev" id="photo-prev" aria-label="ภาพก่อนหน้า">‹</button><button class="lightbox-arrow next" id="photo-next" aria-label="ภาพถัดไป">›</button><span class="lightbox-counter" id="lightbox-counter"></span></div><div class="lightbox-caption"><strong id="lightbox-title"></strong><div class="lightbox-slide" id="lightbox-slide"></div><div class="lightbox-story"><div><b>ไปแล้วเจออะไร</b><p id="lightbox-see"></p></div><div><b>ฟีลประมาณไหน</b><p id="lightbox-vibe"></p></div></div>
+      <div id="lightbox-food-box" class="lightbox-highlight food" hidden><b>⭐ เมนูเด็ดต้องลอง</b><p id="lightbox-food"></p></div>
+      <div id="lightbox-night-box" class="lightbox-highlight night" hidden><b>🌙 ไฮไลต์กลางคืน & บรรยากาศ</b><p id="lightbox-night"></p></div><p class="lightbox-tip" id="lightbox-tip"></p><a id="lightbox-source" href="#" target="_blank" rel="noopener">ดูต้นฉบับและเครดิตภาพ ↗</a><div class="lightbox-thumbs" id="lightbox-thumbs"></div></div></div></div>
+  <script>
+    const routes={
+      A:{title:'แพนด้า & เมืองเก่า',subtitle:'ไอคอนเฉิงตูตอนเช้า แล้วค่อยเดินวัดและซอยเก่า',photo:'panda',alt:'ภาพถ่ายจริงของแพนด้าในศูนย์อนุรักษ์แพนด้าเฉิงตู',icon:'🐼',mood:'ไอคอนเฉิงตู',detail:'แพนด้าไว้เช้า แล้วไล่กลับเข้าเมืองทางวัดเหวินซู',effort:'เดินค่อนข้างมาก',warning:'วันนี้มี 4 จุดเที่ยว รวมศูนย์แพนด้าที่ใช้เวลาหลายชั่วโมง ควรออกเช้าและตัดวัดเหวินซูได้ถ้าเริ่มเหนื่อย',stops:[['เช้า','โรงแรมโซนชุนซีลู่','春熙路商圈酒店','ออกเดินทางแต่เช้า'],['เช้า','ศูนย์อนุรักษ์แพนด้าเฉิงตู','成都大熊猫繁育研究基地','เผื่อ 2.5–4 ชม.'],['กลางวัน','วัดเหวินซู','文殊院','เดินวัดและหาอาหารกลางวันแถวนี้'],['บ่าย','ซอยกว้างซอยแคบ','宽窄巷子','บ้านเก่า ร้านชา และร้านเล็ก ๆ'],['ค่ำ','ถนนคุยซิงโหลว','奎星楼街','มื้อค่ำและบรรยากาศถนนอาหาร'],['เมื่อพร้อมกลับ','กลับโรงแรม','春熙路商圈酒店','กลับที่พัก']]},
+      B:{title:'ครีเอทีฟ & แสงเมือง',subtitle:'โรงงานเก่า คาเฟ่ รูปปั้นแพนด้า IFS และสะพานยามค่ำ',photo:'creative',alt:'ภาพถ่ายจริงของย่าน Eastern Suburb Memory เฉิงตู',icon:'🌃',mood:'ศิลปะ คาเฟ่ และเมืองกลางคืน',detail:'ไล่จากฝั่งตะวันออกเข้าศูนย์กลาง แล้วจบที่สะพานยามค่ำ',effort:'เดินกลาง',warning:'สะพานอันซุ่นเหมาะกับช่วงหลังฟ้ามืด ถ้าไม่อยากเที่ยวดึก ตัดจุดนี้แล้วกลับจาก IFS ได้',stops:[['สาย','โรงแรมโซนชุนซีลู่','春熙路商圈酒店','เริ่มแบบไม่ต้องรีบ'],['สาย–บ่าย','Eastern Suburb Memory','东郊记忆','ย่านโรงงานเก่า คาเฟ่และศิลปะ'],['บ่าย','ถนนหวังผิง','望平街','เดินเล่นและพักคาเฟ่ริมน้ำ'],['เย็น','IFS แพนด้าปีนตึก','成都IFS','ถ่ายรูปแลนด์มาร์กใจกลางเมือง'],['ค่ำ','สะพานอันซุ่น','安顺廊桥','เดินชมสะพานและริมแม่น้ำยามค่ำ'],['เมื่อพร้อมกลับ','กลับโรงแรม','春熙路商圈酒店','กลับที่พัก']]},
+      C:{title:'สามก๊ก & เมืองเก่า',subtitle:'เรื่องเล่าโบราณ จิ่นหลี่ ชาในสวน และซอยยอดนิยม',photo:'jinli',alt:'ภาพถ่ายจริงของถนนจิ่นหลี่ในเฉิงตู',icon:'🏮',mood:'ประวัติศาสตร์กับซอยเก่า',detail:'ศาลเจ้ากับจิ่นหลี่อยู่ติดกัน แล้วค่อยเข้ากลางเมือง',effort:'เดินกลาง',warning:'ถ้าเลือกเส้นทางนี้ ไม่ควรเลือก C10-A ในวันที่ 10 ธ.ค. เพราะศาลเจ้าสามก๊กและจิ่นหลี่จะซ้ำ',stops:[['เช้า','โรงแรมโซนชุนซีลู่','春熙路商圈酒店','ออกไปโซนประวัติศาสตร์'],['เช้า','ศาลเจ้าสามก๊ก','武侯祠博物馆','เผื่อ 1.5–2.5 ชม.'],['กลางวัน','ถนนโบราณจิ่นหลี่','锦里古街','เดินต่อจากศาลเจ้าได้'],['บ่าย','สวนประชาชน / ร้านชา','人民公园 / 鹤鸣茶社','นั่งจิบชาและพักขา'],['ค่ำ','ซอยกว้างซอยแคบ','宽窄巷子','เดินซอยเก่าและหาอาหารยามค่ำ'],['เมื่อพร้อมกลับ','กลับโรงแรม','春熙路商圈酒店','กลับที่พัก']]},
+      D:{title:'สวนจีน & งานศิลป์',subtitle:'บ้านตู้ฝู่ ทางเดินในสวน และชาสไตล์เฉิงตู',photo:'garden',alt:'ภาพถ่ายจริงของบ้านตู้ฝู่ในเฉิงตู',icon:'🍃',mood:'ช้า ๆ ในสวนจีน',detail:'สวนกับร้านชาในตอนกลางวัน แล้วเลือกเดินดูโคมไฟยามค่ำ',effort:'เดินกลาง',warning:'จิ่นหลี่ยามค่ำเป็นทางเลือก ถ้าอยากพักเร็ว ตัดจุดนี้แล้วกลับจากสวนประชาชนได้',stops:[['เช้า','โรงแรมโซนชุนซีลู่','春熙路商圈酒店','ออกไปโซนตะวันตก'],['เช้า','พิพิธภัณฑ์บ้านตู้ฝู่','杜甫草堂博物馆','เผื่อ 1.5–2.5 ชม.'],['กลางวัน–บ่าย','สวนหวนฮวาซี','浣花溪公园','ทางเดินร่มไม้ ถ่ายรูป'],['บ่าย','สวนประชาชน / ร้านชา','人民公园 / 鹤鸣茶社','นั่งชาและพักขา'],['ค่ำ','ถนนโบราณจิ่นหลี่','锦里古街','เดินดูโคมไฟและร้านอาหารก่อนกลับ'],['เมื่อพร้อมกลับ','กลับโรงแรม','春熙路商圈酒店','รถไฟฟ้าหรือ DiDi']]}
+    };
+    const photoSources={"panda":"https://commons.wikimedia.org/wiki/File:Sleeping_panda_in_Chengdu_Panda_Base.jpg","creative":"https://commons.wikimedia.org/wiki/File%3AChengdu_Dongjiao_Memory_%2855562889075%29.jpg","jinli":"https://commons.wikimedia.org/wiki/File%3AChengdu_Jinli-Stra%C3%9Fe_01.jpg","garden":"https://commons.wikimedia.org/wiki/File%3AEntry_-_Du_Fu_Thatched_Cottage_-_Chengdu%2C_Sichuan%2C_China_-_DSC04875.jpg","kuanzhai":"https://commons.wikimedia.org/wiki/File%3AKuanzhaixiangzi_Alleys%2C_201907%2C_01.jpg","wuhou":"https://commons.wikimedia.org/wiki/File%3AChengdu_Wuhou_ci.jpg","tea":"https://commons.wikimedia.org/wiki/File%3ATea_in_People%27s_Park_-_Chengdu%2C_China_-_DSC05362.jpg","huanhuaxi":"https://commons.wikimedia.org/wiki/File%3AAnglers_and_Tudor_Houses_-_Lake%2C_%E6%B5%A3%E8%8A%B1%E6%BA%AA%E5%85%AC%E5%9B%AD_Huanhuaxi_Park_%281616360108%29.jpg","wangping":"https://commons.wikimedia.org/wiki/File:Wangping_Street.jpg","taikoo":"https://commons.wikimedia.org/wiki/File:Sino-Ocean_Taikoo_Li_Chengdu_10.jpg","ifs":"https://commons.wikimedia.org/wiki/File:IFS_Chengdu_Tower_and_I_AM_HERE_Panda_Statue.jpg","anshun":"https://commons.wikimedia.org/wiki/File:Anshun_Bridge_at_night.jpg","wenshu":"https://commons.wikimedia.org/wiki/File:Chengdu_monastery.jpg","panda2":"https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_01.jpg","wenshu2":"https://commons.wikimedia.org/wiki/File:Hall_-_Wenshu_Monastery_-_Chengdu,_China_-_DSC05060.jpg","kuanzhai2":"https://commons.wikimedia.org/wiki/File:Street_scene_-_Kuanzhai_Alleys_-_Chengdu,_China_-_DSC05311.jpg","creative2":"https://commons.wikimedia.org/wiki/File:20250516_Dongjiao_Jiyi.jpg","ifs2":"https://commons.wikimedia.org/wiki/File:The_panda_at_IFS_Chengdu_from_Hongxing_Road.jpg","anshun2":"https://commons.wikimedia.org/wiki/File:Anshun_Bridge_Night.jpg","wuhou2":"https://commons.wikimedia.org/wiki/File:Gateway_-_Wuhou_Shrine_-_Chengdu,_China_-_DSC05423.jpg","jinli2":"https://commons.wikimedia.org/wiki/File:Chengdu_Jinli-Stra%C3%9Fe_bei_Nacht_02.jpg","tea2":"https://commons.wikimedia.org/wiki/File:People%27s_Park_(Chengdu)_20260513-1.jpg","garden2":"https://commons.wikimedia.org/wiki/File:Corridor_-_Du_Fu_Thatched_Cottage_-_Chengdu,_Sichuan,_China_-_DSC04905.jpg","huanhuaxi2":"https://commons.wikimedia.org/wiki/File:Father_and_Daughter_-_Lake,_Huanhuaxi_Park_(1616352004).jpg","taikoo2":"https://commons.wikimedia.org/wiki/File:Sino-Ocean_Taikoo_Li_Chengdu_13.jpg","kuanzhaiNight":"https://commons.wikimedia.org/wiki/File:Narrow_Lane_of_Chengdu.jpg"};
+    const stay={name:'Chunxi Road · ชุนซีลู่',short:'โซนชุนซีลู่',cn:'春熙路商圈酒店',why:'ใช้โรงแรมเดียวเป็นฐานสำหรับทุก mood อยู่ในย่านกลางเมืองตามไฟล์ทริป และใกล้ IFS กับ Taikoo Li',pro:'ไม่ต้องเลือกที่พักใหม่ทุกครั้งที่เปลี่ยน Route; คุมงบที่พักเป็นรายการเดียว',con:'บาง Route ต้องนั่งรถไปจุดแรก; ราคาและห้องว่างของโรงแรมจริงยังต้องตรวจ'};
+    const tripLandmark={id:4195316,name:'Chunxi Road',place:'base'};
+    const stayPeriods=[
+      {checkin:'2026-12-06',checkout:'2026-12-08',label:'6–8 ธ.ค. 2026',nights:'2 คืน'}
+    ];
+    
+    const transitDatabase = {
+      'shancheng_shibati': {dist:'0.7 กม.', time:'~10 นาที', mode:'🚶 เดินลงบันไดเชื่อมต่อ', type:'walk', detail:'เดินจากทางเดินไม้ลอยฟ้าเลียบหน้าผาลงตามบันไดหินโบราณสือปาที 18 ขั้น', alt:null},
+      'base_panda': {dist:'10.9 กม.', time:'~25 นาที', mode:'🚖 DiDi แนะนำ', type:'didi', detail:'เรียกรถ DiDi ตรงจากโรงแรมชุนซีลู่ (~25–30 หยวน) สะดวกและไวที่สุด', alt:'🚇 ทางเลือก: Metro สาย 3 ลงสถานี Panda Avenue แล้วต่อบัสชัตเติล (~45 นาที)'},
+      'panda_wenshu': {dist:'9.4 กม.', time:'~20 นาที', mode:'🚖 DiDi แนะนำ', type:'didi', detail:'เรียก DiDi จากศูนย์แพนด้าตรงสู่วัดเหวินซู (~22–26 หยวน)', alt:'🚇 ทางเลือก: บัสหน้าศูนย์ต่อ Metro สาย 1 ลงสถานี Wenshu Monastery (~40 นาที)'},
+      'wenshu_kuanzhai': {dist:'2.4 กม.', time:'~8 นาที', mode:'🚖 DiDi สะดวก', type:'didi', detail:'DiDi สั้นๆ (~10–12 หยวน) รวดเร็วที่สุด หรือนั่ง Metro สาย 1 เปลี่ยนสาย 2', alt:'🚶 ทางเลือก: เดินเรื่อยๆ ชมบ้านเรือนโบราณ (~25 นาที)'},
+      'kuanzhai_kuixing': {dist:'0.6 กม.', time:'~7 นาที', mode:'🚶 เดินชิลล์', type:'walk', detail:'เดินทะลุซอยด้านหลัง Kuanzhai เข้าสู่ถนนอาหาร Kuixinglou ได้เลย ใกล้มาก', alt:null},
+      'kuixing_base': {dist:'2.2 กม.', time:'~8 นาที', mode:'🚖 DiDi หรือ 🚇 Metro', type:'didi', detail:'เรียก DiDi กลับโรงแรมโซนชุนซีลู่ (~10–12 หยวน) หรือ Metro สาย 4', alt:null},
+      'base_creative': {dist:'5.5 กม.', time:'~15 นาที', mode:'🚖 DiDi แนะนำ', type:'didi', detail:'DiDi ตรงจากที่พักสู่ Eastern Suburb Memory (~16–18 หยวน)', alt:'🚇 ทางเลือก: Metro สาย 8 ลงสถานี Dongjiao Memory (~25 นาที)'},
+      'creative_wangping': {dist:'3.8 กม.', time:'~10 นาที', mode:'🚖 DiDi เลียบน้ำ', type:'didi', detail:'DiDi เลียบแม่น้ำจินเจียงมุ่งหน้าถนนคาเฟ่หวังผิง (~12 หยวน)', alt:'🚇 ทางเลือก: Metro สาย 6 ลงสถานี Wangping Street (~20 นาที)'},
+      'wangping_ifs': {dist:'1.4 กม.', time:'~15 นาที', mode:'🚶 เดินชิลล์ริมน้ำ', type:'walk', detail:'เดินเลียบแม่น้ำตัดเข้าสู่ย่านช้อปปิ้งใจกลางเมือง หรือ DiDi ~5 นาที', alt:null},
+      'ifs_anshun': {dist:'1.8 กม.', time:'~18 นาที', mode:'🚶 เดินเลียบแม่น้ำ', type:'walk', detail:'เดินเลียบแม่น้ำจินเจียงรับลมหนาวช่วงค่ำสู่สะพานอันซุ่น บรรยากาศโรแมนติก', alt:'🚖 ทางเลือก: DiDi สั้นๆ (~6 นาที / 10 หยวน)'},
+      'anshun_base': {dist:'1.6 กม.', time:'~18 นาที', mode:'🚶 เดินกลับ หรือ 🚖 DiDi', type:'walk', detail:'เดินกลับโรงแรมชุนซีลู่ หรือเรียกรถ DiDi (~6 นาที / 10 หยวน)', alt:null},
+      'base_wuhou': {dist:'3.5 กม.', time:'~12 นาที', mode:'🚖 DiDi หรือ 🚇 Metro', type:'didi', detail:'DiDi ตรงสู่ศาลเจ้าสามก๊ก (~12–14 หยวน) หรือ Metro สาย 3 ลงสถานี Gaoshengqiao', alt:null},
+      'wuhou_jinli': {dist:'0.1 กม.', time:'~2 นาที', mode:'🚶 เดินเชื่อมต่อ', type:'walk', detail:'ประตูทางออกของศาลเจ้าสามก๊กเปิดทะลุเข้าถนนโบราณจิ่นหลี่ได้ทันที', alt:null},
+      'jinli_tea': {dist:'1.8 กม.', time:'~15 นาที', mode:'🚶 เดิน หรือ 🚖 DiDi', type:'walk', detail:'เดินชมเมืองเรื่อยๆ หรือเรียก DiDi (~6 นาที / 10 หยวน) สู่โรงน้ำชาเหมากง', alt:null},
+      'tea_kuanzhai': {dist:'1.1 กม.', time:'~12 นาที', mode:'🚶 เดินชิลล์', type:'walk', detail:'เดินสบายผ่านถนนต้นไม้ร่มรื่นเข้าสู่ซอยกว้างซอยแคบ', alt:null},
+      'base_garden': {dist:'4.8 กม.', time:'~15 นาที', mode:'🚖 DiDi แนะนำ', type:'didi', detail:'DiDi ตรงสู่บ้านตู้ฝู่ (~15–18 หยวน) หรือ Metro สาย 4 ลงสถานี Caotang Road North', alt:null},
+      'garden_huanhuaxi': {dist:'0.2 กม.', time:'~3 นาที', mode:'🚶 เดินในสวน', type:'walk', detail:'เดินทะลุสวนสาธารณะหวนฮวาซีที่อยู่ติดกัน ร่มรื่นริมน้ำ', alt:null},
+      'huanhuaxi_tea': {dist:'2.5 กม.', time:'~8 นาที', mode:'🚖 DiDi สะดวก', type:'didi', detail:'DiDi มุ่งหน้าสู่สวนประชาชนและโรงน้ำชาเหมากง (~10 หยวน)', alt:null},
+      'base_taikoo': {dist:'0.4 กม.', time:'~5 นาที', mode:'🚶 เดินข้ามถนน', type:'walk', detail:'ข้ามถนนจากโซนชุนซีลู่เข้าสู่ Taikoo Li ได้ทันที', alt:null},
+      'taikoo_ifs': {dist:'0.2 กม.', time:'~3 นาที', mode:'🚶 เดินเชื่อมต่อ', type:'walk', detail:'อยู่ติดกัน เดินข้ามทางม้าลายหรือทางเชื่อมใต้ดิน', alt:null},
+      'chengdueast_taikoo': {dist:'7.5 กม.', time:'~15 นาที', mode:'🚇 Metro สาย 2 ตรง', type:'metro', detail:'นั่ง Metro สาย 2 จาก Chengdu East ตรงยาว 6 สถานีลง Chunxi Road (ไม่ต้องเปลี่ยนสาย)', alt:'🚖 ทางเลือก: DiDi ~20 นาที (~20 หยวน)'},
+      'taikoo_chengdueast': {dist:'7.5 กม.', time:'~15 นาที', mode:'🚇 Metro สาย 2 ตรง', type:'metro', detail:'นั่ง Metro สาย 2 ย้อนกลับสู่สถานี Chengdu East เตรียมขึ้นรถไฟความเร็วสูง', alt:null},
+      'chengdueast_chongqing': {dist:'310 กม.', time:'~1 ชม. 25 นาที', mode:'🚄 รถไฟความเร็วสูง Fuxinghao', type:'train', detail:'รถไฟหัวกระสุนความเร็ว 350 km/h วิ่งตรงจากเฉิงตูสู่สถานี Chongqing North', alt:null},
+      'jiefangbei_shibati': {dist:'0.6 กม.', time:'~8 นาที', mode:'🚶 เดินลงเนิน', type:'walk', detail:'เดินจากหอนาฬิกาเจี่ยฟ่างเป่ยลงตามบันไดเมืองโบราณสือปาที 18 ขั้น', alt:null},
+      'shibati_raffles': {dist:'1.5 กม.', time:'~18 นาที', mode:'🚶 เดินเลียบแม่น้ำ หรือ 🚖 DiDi', type:'walk', detail:'เดินเลียบแม่น้ำเจียหลิงชมวิวสะพาน หรือเรียก DiDi (~6 นาที / 10 หยวน)', alt:null},
+      'raffles_hotpot': {dist:'1.2 กม.', time:'~14 นาที', mode:'🚶 เดิน หรือ 🚖 DiDi', type:'walk', detail:'เดินมุ่งหน้าสู่ร้านหม้อไฟในถ้ำหลบภัยสงครามแถว Jiefangbei', alt:null},
+      'hotpot_hongyadong': {dist:'0.8 กม.', time:'~10 นาที', mode:'🚶 เดินชิลล์', type:'walk', detail:'เดินต่อไปยังหน้าผาหงหยาต้ง แนะนำเดินขึ้นสะพานเฉียนซื่อเหมินเพื่อชมวิวมุมสูง', alt:null},
+      'hongyadong_jiefangbei': {dist:'0.7 กม.', time:'~8 นาที', mode:'🚶 เดินข้ามระดับ', type:'walk', detail:'ขึ้นลิฟต์จากชั้น 1 หงหยาต้งขึ้นสู่ชั้น 11 (ซึ่งเปิดออกสู่ถนนใหญ่ระดับเมืองบน!) แล้วเดินเข้าโรงแรม', alt:null},
+      'jiefangbei_liziba': {dist:'4.8 กม.', time:'~12 นาที', mode:'🚇 CRT โมโนเรลสาย 2', type:'metro', detail:'ขึ้นโมโนเรลสาย 2 จากสถานี Jiaochangkou วิ่งเลียบหน้าผาแล้วแล่นทะลุตึกหลี่จื่อป้า', alt:'🚖 ทางเลือก: DiDi ~15 นาที (~16 หยวน)'},
+      'liziba_creative': {dist:'1.2 กม.', time:'~15 นาที', mode:'🚶 เดินขึ้นเนิน หรือ 🚖 DiDi', type:'walk', detail:'เดินขึ้นเนินสัมผัสความเป็นเมืองบันได หรือเรียก DiDi สั้นๆ (~5 นาที / 10 หยวน)', alt:null},
+      'creative_eling': {dist:'0.8 กม.', time:'~10 นาที', mode:'🚶 เดินในสวน', type:'walk', detail:'เดินเชื่อมเข้าสู่สวนสาธารณะเอ๋อหลิงเพื่อชมวิวพาโนรามาสองแม่น้ำ', alt:null},
+      'jiefangbei_ciqikou': {dist:'14.0 กม.', time:'~30 นาที', mode:'🚇 CRT สาย 1 ตรง', type:'metro', detail:'ขึ้น CRT สาย 1 จากสถานี Xiaoshizi ตรงสู่สถานี Ciqikou สะดวกและไม่ติดไฟแดง', alt:'🚖 ทางเลือก: DiDi ~25 นาที (~35 หยวน)'},
+      'jiefangbei_tfu': {dist:'26.0 กม.', time:'~35 นาที', mode:'🚖 DiDi สะดวกสุด', type:'didi', detail:'เรียกรถ DiDi ตรงสู่ CKG Terminal 3 (~55–65 หยวน) ขนสัมภาระสบายที่สุดในตอนเช้า', alt:'🚇 ทางเลือก: CRT สาย 10 ตรงสู่สนามบิน CKG T3 (~45 นาที)'},
+      'chengdu_xiling': {dist:'115 กม.', time:'~2.5 ชม.', mode:'🚌 รถบัสท่องเที่ยวตรง', type:'train', detail:'รถบัสตรงจากสถานี Chadianzi สู่ศูนย์บริการนักท่องเที่ยวซีหลิง', alt:null},
+      'xiling_xiling_snow': {dist:'2.5 กม.', time:'~10 นาที', mode:'🚠 กระเช้าลอยฟ้าช่วง 1', type:'train', detail:'นั่งกระเช้าใหญ่ข้ามป่าสนและลำธารสู่ลานสกี Yingxue Plaza', alt:null},
+      'xiling_snow_xiling_peak': {dist:'3.0 กม.', time:'~12 นาที', mode:'🚠 กระเช้าลอยฟ้าช่วง 2', type:'train', detail:'นั่งกระเช้าช่วงที่สองทะลุหมอกสู่ยอดเขา日月坪 (Riyueping 3,250 ม.)', alt:null}
+    };
+
+    function getTransitDetails(fromKey, toKey) {
+      if (!fromKey || !toKey || fromKey === toKey) return null;
+      const key = `${fromKey}_${toKey}`;
+      const revKey = `${toKey}_${fromKey}`;
+      if (transitDatabase[key]) return transitDatabase[key];
+      if (transitDatabase[revKey]) return transitDatabase[revKey];
+
+      // Fallback calculation using coordinates
+      if (places[fromKey] && places[toKey]) {
+        const km = distance(fromKey, toKey);
+        const distStr = km < 0.1 ? 'ใกล้กัน' : `${km.toFixed(1)} กม.`;
+        const timeStr = km < 1 ? '~8–12 นาที' : km < 3 ? '~10–15 นาที' : km < 7 ? '~15–20 นาที' : '~25–35 นาที';
+        const isPanda = fromKey==='panda'||toKey==='panda';
+        const modeStr = isPanda ? '🚖 DiDi แนะนำ' : km < 1.2 ? '🚶 เดินชิลล์' : km < 3.5 ? '🚇 Metro หรือ 🚖 DiDi' : '🚇 Metro ตรง หรือ 🚖 DiDi';
+        const typeStr = isPanda ? 'didi' : km < 1.2 ? 'walk' : 'metro';
+        const detailStr = isPanda ? 'เรียกรถ DiDi สะดวกที่สุดตรงสู่จุดหมาย ไม่ต้องต่อรถ' : km < 1.2 ? 'เดินชมบรรยากาศเมืองเรื่อยๆ ทางเรียบเดินสบาย' : 'นั่ง Metro สายตรง หรือเรียก DiDi ถ้ารีบ/เมื่อยขา';
+        return {dist: distStr, time: timeStr, mode: modeStr, type: typeStr, detail: detailStr, alt: null};
+      }
+      return {dist: 'ในเมือง', time: '~10–15 นาที', mode: '🚇 Metro หรือ 🚖 DiDi', type: 'metro', detail: 'เดินทางสะดวกด้วยรถไฟฟ้าหรือแท็กซี่ DiDi', alt: null};
+    }
+
+    const places={
+      shancheng:[29.5540,106.5750],
+      base:[30.657469,104.077667],kuanzhai:[30.6677721,104.0479169],wenshu:[30.6779002,104.0702059],ifs:[30.657469,104.077667],anshun:[30.645,104.082222],taikoo:[30.6558209,104.0809664],wuhou:[30.6470833,104.0471215],garden:[30.6628531,104.0262287],panda:[30.7432278,104.1329312],kuixing:[30.6706369,104.0516411],creative:[30.6711016,104.1206232],wangping:[30.6574794,104.0881310],jinli:[30.6488027,104.0475097],tea:[30.6597189,104.0548208],huanhuaxi:[30.6602649,104.0276369]
+    };
+    const stopPhotos={A:['ifs','panda','wenshu','kuanzhai','kuanzhai','ifs'],B:['ifs','creative','wangping','ifs','anshun','ifs'],C:['ifs','wuhou','jinli','tea','kuanzhai','ifs'],D:['ifs','garden','huanhuaxi','tea','jinli2','ifs']};
+    const stopPlaces={A:['base','panda','wenshu','kuanzhai','kuixing','base'],B:['base','creative','wangping','ifs','anshun','base'],C:['base','wuhou','jinli','tea','kuanzhai','base'],D:['base','garden','huanhuaxi','tea','jinli','base']};
+    const photoAlbums={
+      base:[['ifs','IFS ใกล้ย่านชุนซีลู่'],['taikoo','Taikoo Li ในโซนกลางเมืองใกล้ฐานพัก']],
+      kuanzhai:[['kuanzhai','ซอยกว้างซอยแคบ'],['kuanzhai2','อีกมุมของซอยกว้างซอยแคบ'],['kuanzhaiNight','บรรยากาศช่วงเย็นของซอย']],
+      taikoo:[['taikoo','ย่าน Taikoo Li'],['taikoo2','สถาปัตยกรรมผสมผสานใน Taikoo Li']],
+      panda:[['panda','แพนด้าที่ศูนย์อนุรักษ์'],['panda2','อีกมุมในศูนย์อนุรักษ์แพนด้า']],
+      wenshu:[['wenshu','วัดเหวินซู'],['wenshu2','อาคารภายในวัดเหวินซู']],
+      kuixing:[['kuanzhaiNight','ย่านอาหารคุยซิงโหลว'],['kuanzhai2','บรรยากาศถนนอาหารยามค่ำ']],
+      creative:[['creative','Eastern Suburb Memory'],['creative2','มุมโรงงานเก่าและงานศิลปะ']],
+      wangping:[['wangping','ถนนหวังผิงริมน้ำ'],['anshun','วิวสะพานริมน้ำเฉิงตู']],
+      ifs:[['ifs','รูปปั้นแพนด้าปีนตึกที่ IFS'],['ifs2','อีกมุมของแพนด้า IFS']],
+      anshun:[['anshun','สะพานอันซุ่นยามค่ำ'],['anshun2','แสงไฟสะท้อนผิวน้ำสะพานอันซุ่น']],
+      wuhou:[['wuhou','ศาลเจ้าสามก๊ก'],['wuhou2','กำแพงแดงและดงไผ่ศาลเจ้าสามก๊ก']],
+      jinli:[['jinli','ถนนโบราณจิ่นหลี่'],['jinli2','จิ่นหลี่ยามค่ำประดับโคมไฟแดง']],
+      tea:[['tea','ร้านชาในสวนประชาชน'],['tea2','บรรยากาศจิบชาสโลว์ไลฟ์เฉิงตู']],
+      garden:[['garden','บ้านตู้ฝู่'],['garden2','ทางเดินร่มรื่นในบ้านตู้ฝู่']],
+      huanhuaxi:[['huanhuaxi','สวนหวนฮวาซี'],['huanhuaxi2','อีกมุมของสวนหวนฮวาซี']],
+      xiling:[['xiling','ป้ายทางเข้าและศูนย์บริการนักท่องเที่ยวซีหลิง'],['xiling-peak','ยอดเขาและทะเลหมอกซีหลิง']],
+      xiling_peak:[['xiling-peak','จุดชมวิวยอดเขา Riyueping (3,250 ม.)'],['xiling-snow','ทะเลหมอกและทิวสนเคลือบหิมะ']],
+      xiling_snow:[['xiling-snow','ลานกิจกรรมหิมะและสกีซีหลิง'],['xiling','ทัศนียภาพรอบลานสกี']],
+      chengdueast:[['chengdu-east','สถานีรถไฟความเร็วสูง Chengdu East'],['taikoo','การเชื่อมต่อ Metro สาย 2 เข้าสู่ตัวเมือง']],
+      hongyadong:[['chongqing','แสงไฟสีทองอร่ามของหงหยาต้งยามค่ำ'],['anshun2','วิวแสงสะท้อนผิวน้ำริมแม่น้ำเจียหลิง']],
+      liziba:[['liziba','รถไฟโมโนเรลวิ่งทะลุตึกหลี่จื่อป้า'],['creative2','มุมมองสถาปัตยกรรมเมือง 8D ฉงชิ่ง']],
+      ciqikou:[['ciqikou','ตรอกหินโบราณฉือชี่โข่ว'],['jinli2','บรรยากาศร้านค้าและโคมไฟริมน้ำ']],
+      museumcq:[['museumcq','พิพิธภัณฑ์สามผาและมหาศาลาประชาชน'],['taikoo2','ลานจัตุรัสกลางเมืองฉงชิ่ง']],
+      jiefangbei:[['jiefangbei','หอนาฬิกาเจี่ยฟ่างเป่ย ใจกลาง CBD'],['chongqing','แสงสียามค่ำคืนใจกลางเมือง']],
+      shibati:[['shibati','ทางเดินบันไดโบราณสือปาที 18 ขั้น'],['jinli','บรรยากาศทางเดินหินย้อนยุค']],
+      raffles:[['raffles','Raffles City Chongqing & จุดบรรจบสองแม่น้ำ'],['chongqing','ตึกระฟ้าและวิวแม่น้ำฉงชิ่ง']],
+      hotpot:[['hotpot','หม้อไฟฉงชิ่ง 9 ช่องรสชาติต้นตำรับ'],['chongqing','บรรยากาศร้านอาหารพื้นเมือง']],
+      eling:[['eling','วิวพาโนรามาโค้งสองแม่น้ำจากสวนเอ๋อหลิง'],['creative2','มุมคาเฟ่และงานศิลปะ']],
+      tfu:[['tfu','สนามบินนานาชาติเฉิงตูเทียนฝู่ (TFU)'],['chengdu-east','สถานีรถไฟเชื่อมต่อเข้าเมือง']],
+      bianlian:[['bianlian','โชว์เปลี่ยนหน้ากากเสฉวน (Bian Lian) & พ่นไฟ'],['jinli2','บรรยากาศโรงน้ำชาเสฉวนยามค่ำ']],
+      skywalk:[['skywalk','The Crystal Skybridge สะพานลอยฟ้า Raffles City'],['raffles','ตึกระฟ้าและวิวแม่น้ำฉงชิ่ง']]
+    };
+    const placeStories={
+    base:{see:'IFS ย่านช้อปปิ้งและร้านอาหารรอบ Chunxi Road',vibe:'ฐานพักกลางเมือง เดินทางสะดวก กลับจากเที่ยวแล้วหาของกินต่อได้สบาย',tip:'ภาพเป็นแลนด์มาร์กใกล้ฐานพัก สะดวกต่อการขึ้น Metro',food:'ชานม Chagee (霸王茶姬), สตรีทฟู้ดเสฉวนรอบถนนชุนซีลู่',night:'เดินเล่นชมจอ LED 3D ขนาดยักษ์ใจกลางเมือง'},
+    kuanzhai:{see:'ตรอกบ้านโบราณสมัยชิง ร้านน้ำชา ของกินพื้นเมือง และร้านของฝากน่ารัก',vibe:'เมืองเก่าที่คึกคัก มีชีวิตชีวา และถ่ายรูปสวยทุกมุม',tip:'ช่วงเย็นโคมไฟจะเริ่มเปิด ได้ฟีลอบอุ่นและโรแมนติกขึ้น',food:'⭐ ขนมเหนียวทอดน้ำตาลแดง (Ciba), บะหมี่เย็นเสฉวน (Liangmian), เต้าหู้เหม็นทอดกรอบ',night:'🌙 ตรอกโคมไฟแดงสมัยชิง บรรยากาศโรแมนติกหลังฟ้ามืด & ร้านน้ำชาแสดงเปลี่ยนหน้ากาก'},
+    taikoo:{see:'ทางเดินช้อปปิ้งกลางแจ้ง สถาปัตยกรรมโบราณผสมกระจกทันสมัย ร้านแบรนด์เนมและคาเฟ่',vibe:'ทันสมัย ชิค เรียบหรู เหมาะเดินเล่นชิลล์ ถ่ายรูปสตรีทแฟชั่น และช้อปปิ้ง',tip:'มีร้านชาผลไม้ชื่อดัง Heytea และ Chagee ให้แวะชิม',food:'⭐ ชานมมะลิ Chagee (霸王茶姬 - ปาหวังเต้าจี), ขนมเปี๊ยวอบสด, ขนมแพนด้า',night:'🌙 ชมแสงไฟตึกโบราณผสมกระจกโมเดิร์น และจอโค้ง 3D ยักษ์ริมถนน'},
+    panda:{see:'ศูนย์เพาะพันธุ์หมีแพนด้า มีแพนด้ายักษ์กินไผ่ แพนด้าแดงน่ารัก และสวนไผ่ร่มรื่น',vibe:'น่ารัก อบอุ่น ผ่อนคลาย ได้ใกล้ชิดสัตว์สัญลักษณ์ของจีน',tip:'ควรมาถึงแต่เช้า 08:00–09:00 น. ช่วงเวลาแพนด้าตื่นกินอาหารและคึกคักที่สุด',food:'ไอศกรีมรูปหน้าแพนด้า 3D, ชาผลไม้สด',night:'ศูนย์ปิด 17:00 น. ช่วงค่ำแนะนำกลับมาช้อปปิ้งย่านชุนซีลู่'},
+    wenshu:{see:'วัดพุทธนิกายเซนที่สมบูรณ์ที่สุดในเฉิงตู กำแพงสีแดง ต้นไม้ใหญ่ร่มรื่น และตรอกเหวินซูฟาง',vibe:'สงบ ร่มเย็น สบายใจ มีกลิ่นธูปหอมและเสียงระฆังเบาๆ',tip:'อย่าลืมแวะชิมอาหารมังสวิรัติชื่อดังและซื้อขนมโบราณในตรอกเหวินซูฟาง',food:'⭐ เต้าหู้มาโปเฉินหมาผัว (Chen Mapo Tofu) ร้านต้นตำรับ, บะหมี่หวานต้านต้านเมี่ยน, ขนมเปี๊ยวหน้าวัด',night:'ตรอกเหวินซูฟางประดับโคมไฟสวยงามยามค่ำคืน'},
+    tea:{see:'โรงน้ำชาเหมากง (鹤鸣茶社) ริมสระน้ำ นั่งเก้าอี้ไม้ไผ่ จิบชาฝาปิด และวิถีชีวิตคนเฉิงตู',vibe:'สโลว์ไลฟ์ แท้จริง ผ่อนคลาย นั่งคุยพักผ่อนแบบไม่เร่งรีบ',tip:'สามารถลองสัมผัสประสบการณ์แคะหูไม้ไผ่แบบดั้งเดิมของเฉิงตูได้ที่นี่',food:'⭐ ชาเขียวจัสมินฝาปิด (Gaiwan Tea), เมล็ดทานตะวันคั่วเนย, ขนมงาอบโบราณ',night:'โรงน้ำชาปิดช่วงเย็น สวนสาธารณะร่มรื่นยามพลบค่ำ'},
+    creative:{see:'Eastern Suburb Memory อดีตโรงงานหลอดอิเล็กทรอนิกส์รีโนเวทเป็นย่านอาร์ต คาเฟ่วินเทจ และสตรีทอาร์ต',vibe:'เท่ อาร์ต ฮิปสเตอร์ กลิ่นอายเรโทรยุค 70-80s ถ่ายรูปคูลมาก',tip:'มีมุมถ่ายรูปกับรถไฟไอน้ำโบราณและกำแพงกราฟิตี',food:'กาแฟ Specialty คั่วบดสด, เบเกอรีโฮมเมดในโกดังเก่า',night:'🌙 แสงไฟนีออนสไตล์ Industrial Loft ร้านคราฟต์เบียร์เปิดเพลงอินดี้'},
+    wangping:{see:'ถนนคนเดินเลียบแม่น้ำ ร้านคาเฟ่เก๋ สตรีทฟู้ดเสฉวน และบรรยากาศสุดชิลล์ริมน้ำ',vibe:'ฮิปสเตอร์ ชิลล์ สบายๆ เต็มไปด้วยคนรุ่นใหม่และกลิ่นอายคาเฟ่',tip:'เหมาะกับการมานั่งจิบกาแฟช่วงบ่าย หรือชิมอาหารเสฉวนริมน้ำช่วงเย็น',food:'⭐ ชวนชวนเซียง (Chuan Chuan Xiang - หมาล่าเสียบไม้รสเด็ด), เกี๊ยวเสฉวนน้ำมันพริก',night:'🌙 ตรอก Xiangxiang Alley แหล่งแฮงเอาต์บาร์และคาเฟ่วัยรุ่นเฉิงตูริมแม่น้ำ'},
+    ifs:{see:'รูปปั้นแพนด้ายักษ์ปีนตึกไอคอนิก ห้างสรรพสินค้าลักชัวรี และจุดชมวิวเมือง',vibe:'แลนด์มาร์กยอดฮิต คึกคัก ต้องแวะมาเช็กอินถ่ายรูปคู่แพนด้า',tip:'จุดถ่ายรูปยอดนิยมอยู่ที่ระเบียงดาดฟ้าชั้น 7 ควรมาช่วงเช้าคิวจะสั้น',food:'ของหวานแพนด้าไอศกรีม, ชานมไข่มุก, ร้านอาหารชั้น 6-7',night:'🌙 ถ่ายรูปคู่แพนด้าปีนตึกตัดกับแสงไฟนีออนและตึกระฟ้าใจกลาง CBD'},
+    anshun:{see:'สะพานโบราณข้ามแม่น้ำจินเจียง ศาลาจีนโบราณสีทอง และร้านอาหารริมน้ำ',vibe:'โรแมนติก แสงไฟสะท้อนน้ำระยิบระยับ เหมาะกับการเดินเล่นรับลมหนาวช่วงค่ำ',tip:'แสงไฟบนสะพานจะเปิดช่วง 18:30–22:30 น. เป็นจุดถ่ายรูปคู่ที่สวยที่สุดแห่งหนึ่งในเฉิงตู',food:'⭐ ปลาต้มผักกาดดองเสฉวน (Suancaiyu), คราฟต์เบียร์ท้องถิ่นเฉิงตู',night:'🌙 สะพานโบราณสีทองอร่าม & ถนนบาร์จิ่วเหยี่ยนเฉียว (Jiu Yan Qiao) มีดนตรีสดริมแม่น้ำ'},
+    wuhou:{see:'ศาลเจ้าเล่าปี่-ขงเบ้งสมัยสามก๊ก กำแพงสีแดงทางเดินป่าไผ่อันโด่งดัง',vibe:'ประวัติศาสตร์ สง่างาม ขรึมขลัง ต้นไผ่สูงสง่าถ่ายรูปสวยคลาสสิก',tip:'จุดถ่ายรูปยอดฮิตคือกำแพงแดงโค้งที่มีดงไผ่ขนาบสองข้าง',food:'เนื้อวัวสามก๊กจางเฟย (Zhangfei Beef), บะหมี่ดันดัน',night:'เดินทะลุเข้าถนนโบราณจิ่นหลี่ได้ทันทีช่วงเย็น'},
+    jinli:{see:'ถนนโบราณโคมไฟแดงสมัยสามก๊ก สตรีทฟู้ดเสฉวน ขนมโบราณ และของที่ระลึก',vibe:'ย้อนยุค โรแมนติกด้วยแสงไฟสีส้มแดง คึกคักด้วยผู้คนและของกินอร่อย',tip:'ช่วงค่ำหลัง 18:30 น. เป็นช่วงที่โคมไฟเปิดสวยที่สุด ถ่ายรูปออกมามีมิติ',food:'⭐ เนื้อวัวจางเฟย, บะหมี่ดันดัน (Dan Dan Mian), ขนมถังหูลู่เคลือบน้ำตาล',night:'🌙 โคมไฟแดงส่องสว่างสะท้อนสายน้ำในตรอกโบราณ & โรงเตี๊ยมดนตรีสด'},
+    garden:{see:'กระท่อมจำลองของมหากวีตู้ฝู่ สวนไผ่ สระน้ำ สะพานหิน และศาลากลางน้ำ',vibe:'บทกวี ร่มรื่น วัฒนธรรมจีนแท้ ดื่มด่ำความเงียบสงบในสวนโบราณ',tip:'บรรยากาศร่มรื่นมาก เหมาะกับการเดินเล่นไม่เร่งรีบ',food:'จิบชาสมุนไพรในศาลาโบราณ, ขนมเปี๊ยะดอกกุ้ยฮวา',night:'สวนปิด 18:00 น. แนะนำไปต่อถนนจิ่นหลี่หรือสะพานอันซุ่น'},
+    huanhuaxi:{see:'สวนสาธารณะขนาดใหญ่ริมน้ำ นกน้ำ ป่าไผ่ และสระน้ำธรรมชาติ',vibe:'ธรรมชาติ ร่มเย็น สบายใจ จุดพักผ่อนที่คนท้องถิ่นชื่นชอบ',tip:'อยู่ติดกับบ้านตู้ฝู่ สามารถเดินเชื่อมต่อกันได้เลย',food:'ผลไม้สดและของว่างคนท้องถิ่น',night:'เหมาะกับช่วงบ่ายแก่ๆ ก่อนพระอาทิตย์ตกดิน'},
+    xiling:{see:'ป่าสน ธารน้ำใส และเทือกเขาหิมะสูงตระหง่าน ศูนย์บริการนักท่องเที่ยวและลานสกี Yingxue Plaza',vibe:'สดชื่น หนาวเย็น บริสุทธิ์ ตื่นตากับทัศนียภาพภูเขาหิมะสไตล์สวิส',tip:'อุณหภูมิบนเขาหนาวกว่าในเมืองมาก ควรเตรียมเสื้อกันหนาว หมวกไหมพรม และถุงมือให้พร้อม',food:'⭐ ซุปไก่ตุ๋นโสมหิมะเสฉวนร้อนๆ, ช็อกโกแลตร้อนบนยอดเขา',night:'🌙 เดินเล่นลานหิมะใต้แสงดาว (Stargazing Snow Walk) บรรยากาศเงียบสงบโรแมนติก'},
+    xiling_peak:{see:'จุดชมวิวยอดเขา日月坪 (Riyueping) ความสูง 3,250 ม. ทะเลหมอก ป่าสนเคลือบน้ำแข็ง และทิวทัศน์เทือกเขาหิมะ',vibe:'อลังการ เงียบสงบ มหัศจรรย์ดั่งภาพวาดธรรมชาติ',tip:'ควรขึ้นแต่เช้าเพื่อชมทะเลหมอกและแสงแดดสะท้อนหิมะ; เตรียมแผ่นแปะร้อนกันหนาว',food:'⭐ ไส้กรอกหมูย่างรมควันเสฉวนร้อนๆ & มาม่าจีนพ่นควันบนยอดเขา 3,250 ม.',night:'พักผ่อนในรีสอร์ตบนเขา อบอุ่นท่ามกลางหิมะ'},
+    xiling_snow:{see:'ลานกิจกรรมหิมะ Yingxue Plaza สกี สโนว์ทูป สโนว์โมบิล และจุดถ่ายรูปหิมะ',vibe:'สนุกสนาน ร่าเริง มีชีวิตชีวา เล่นหิมะสุดฟินกับคู่รัก',tip:'เช่าอุปกรณ์เล่นหิมะได้ที่จุดบริการกลางลาน มีมัดจำการ์ด',food:'ขนมอบร้อน ชานมร้อน ช็อกโกแลตฟองดู',night:'ชมไฟประดับลานสกีหิมะยามค่ำคืน'},
+    chengdueast:{see:'สถานีรถไฟความเร็วสูงขนาดใหญ่ ศูนย์กลางคมนาคม และโรงแรมฝั่ง West Square',vibe:'ทันสมัย กว้างขวาง สะดวกสบาย จุดพักผ่อนที่ปลอดภัยและไม่วุ่นวาย',tip:'เชื่อมต่อ Metro สาย 2 เข้าสู่ Taikoo Li ได้ใน 15 นาที',food:'หม้อไฟ Haidilao ใกล้สถานี, บะหมี่เนื้อตุ๋นร้อนๆ',night:'แวะตุนขนมและผลไม้สดที่ซูเปอร์มาร์เก็ตสถานี'},
+    hongyadong:{see:'หมู่อาคารไม้โบราณสไตล์เตียวเจี่ยวโหลว 11 ชั้น สร้างเกาะหน้าผาริมแม่น้ำเจียหลิง',vibe:'ตระการตา มหัศจรรย์ ดั่งหลุดเข้าไปในโลกอนิเมะ Spirited Away แสงสีทองสว่างไสว',tip:'วิวถ่ายรูปมุมกว้างที่ดีที่สุดคือบนสะพานเฉียนซื่อเหมิน (Qiansimen Bridge) หรือข้ามไปฝั่งตรงข้ามแม่น้ำ',food:'⭐ ก๋วยเตี๋ยวเปรี้ยวหวานเสฉวน (Suanlafen), สตรีทฟู้ดชั้น 4',night:'🌙 ไฟทองอร่ามเปิด 19:30-22:00 น. ถ่ายรูปคู่บนสะพานเฉียนซื่อเหมิน วิวมุมสูง Spirited Away'},
+    liziba:{see:'รถไฟโมโนเรลสาย 2 วิ่งทะลุผ่านช่องตึก 6–8 ของอาคารที่พักอาศัย จุดชมวิวด้านล่าง และชานชาลาลอยฟ้า',vibe:'ตื่นเต้น มหัศจรรย์ แปลกตา เอกลักษณ์เฉพาะตัวของเมืองภูเขาฉงชิ่ง 8D',tip:'ถ่ายรูปได้ทั้งจากลานชมวิวด้านล่าง และลองแตะบัตรขึ้นไปยืนในขบวนรถเพื่อสัมผัสฟีลทะลุตึก',food:'ของกินเล่นรอบสถานี, ชานมและกาแฟเทคอะเวย์',night:'รถไฟวิ่งถึง 22:30 น. แสงไฟรถไฟทะลุตึกยามค่ำคืน'},
+    ciqikou:{see:'ถนนคนเดินปูหินโบราณพันปีริมน้ำ ขนมบิดเกลียวเฉินหมาฮวา หม้อไฟ และงานหัตถกรรม',vibe:'สนุกสนาน มีชีวิตชีวา กลิ่นอายเมืองท่าโบราณริมน้ำ',tip:'เดินลึกเข้าไปในตรอกด้านในจะเงียบสงบและมีคาเฟ่วิวแม่น้ำสวยกว่าถนนสายหลัก',food:'⭐ ขนมเกลียวเฉินหมาฮวา (Chen Mahua), ตีนไก่ดองพริกเสฉวน, เลือดเป็ดต้มหมาล่า (Maoxuewang)',night:'โคมไฟตรอกโบราณริมแม่น้ำและบาร์อะคูสติกริมผา'},
+    museumcq:{see:'นิทรรศการประวัติศาสตร์เขื่อนสามผา วัฒนธรรมปาอวี๋ และอาคารมหาศาลาประชาชนทรงโดมสไตล์ราชวงศ์หมิง',vibe:'ยิ่งใหญ่ ได้ความรู้ ถ่ายรูปสถาปัตยกรรมอลังการ',tip:'เปิดให้เข้าชมฟรี แต่ต้องพกพาสปอร์ตตัวจริงสำหรับสแกนเข้า',food:'บะหมี่ฉงชิ่งหน้ามหาศาลาประชาชน, ชาอู่หลงเสฉวน',night:'มหาศาลาประชาชน Great Hall เปิดไฟประดับโดมสวยงามช่วง 19:00–21:30 น.'},
+    jiefangbei:{see:'หอนาฬิกาชัยชนะ ตึกระฟ้ารายล้อม ถนนคนเดินอาหารปาอี (Bayi Food Street)',vibe:'มหานครใจกลางเมือง ช้อปปิ้ง สตรีทฟู้ด เผ็ดชาสะใจ',tip:'ถนนคนเดินอาหารปาอี มีของกินเด็ดคือ บะหมี่เปรี้ยวหวาน (Suanlafen) และเนื้อย่าง',food:'⭐ ก๋วยเตี๋ยวฉงชิ่งเสี่ยวเมี่ยน (Chongqing Xiaomian), ขนมหวาน Bingfen น้ำแข็งใสผลไม้ดับเผ็ด',night:'🌙 หอนาฬิกาใจกลางตึกระฟ้า แสงสีนีออนมหานคร & บาร์รูฟท็อปชมเส้นขอบฟ้า 8D'},
+    shancheng:{see:'ทางเดินไม้ลอยฟ้าริมผาสูง ทางเดินโบราณเลียบกำแพงเมืองเก่า และวิวแม่น้ำเจียหลิง',vibe:'ชิลล์ โปร่งโล่ง ลมพัดเย็น วิวมุมสูง และสัมผัสมิติเมืองภูเขา',tip:'ทางเดินเป็นพื้นเรียบสลับขั้นบันได เดินง่ายและถ่ายรูปเปิดมุมกว้างสวยมาก',food:'⭐ ก๋วยเตี๋ยวฉงชิ่งเสี่ยวเมี่ยน (Chongqing Xiaomian) มื้อเช้า',night:'โคมไฟทางเดินเลียบผาเปิดไฟสวยงาม'}, shibati:{see:'ทางเดินบันไดหินโบราณ 18 ขั้นที่เชื่อมเมืองบนกับเมืองล่าง ร้านน้ำชา และงานศิลปะ',vibe:'มีเสน่ห์ แสงไฟอุ่นๆ ถ่ายทอดความต่างระดับของฉงชิ่งได้ชัดเจนที่สุด',tip:'ควรใส่รองเท้าผ้าใบที่เดินสบาย เพราะมีทางลาดและบันไดตลอดทาง',food:'⭐ ขนมหนวดมังกร, หมี่เย็นเสฉวน (Liangmian), ชาร้อนสมุนไพร',night:'🌙 บันไดหินโบราณประดับโคมไฟสีส้มอบอุ่นยามค่ำคืน บรรยากาศย้อนยุคสุดโรแมนติก'},
+    raffles:{see:'ตึกระฟ้าแลนด์มาร์กรูปเรือใบยักษ์ Raffles City สวนลอยฟ้า The Crystal และจุดบรรจบแม่น้ำแยงซีกับเจียหลิง',vibe:'ล้ำยุค ทันสมัย ยิ่งใหญ่ สัมผัสมหานครแห่งอนาคต',tip:'ชมวิวได้ทั้งจากลานชั้นล่างริมแม่น้ำ หรือขึ้นไปจุดชมวิวชั้นบน',food:'ห้องอาหารระดับมิชลิน, คาเฟ่วิวแม่น้ำสองสี',night:'🌙 ชมแสงสีตึกระฟ้าและเงาสะท้อนน้ำ หรือขึ้นสะพาน The Crystal Skybridge'},
+    hotpot:{see:'หม้อไฟฉงชิ่ง 9 ช่อง (Jiugongge) ในถ้ำหลบภัยสงคราม กลิ่นหอมเครื่องเทศพริกฮวาเจียวและน้ำซุปเนื้อวัวเข้มข้น',vibe:'เผ็ดชา ร้อนแรง แปลกใหม่ ลิ้มรสชาติแท้ในถ้ำอุโมงค์ประวัติศาสตร์',tip:'สามารถสั่งระดับความเผ็ดน้อย (微辣 - Weila) และน้ำมันงาช่วยลดความเผ็ดได้',food:'⭐ หม้อไฟ 9 ช่องในถ้ำหลบภัย (Air-Raid Shelter Hotpot), เนื้อวัวหมักพริก, ผ้าขี้ริ้วกรอบ + ขนมเหนียวทอด Ciba',night:'🌙 มื้อค่ำยอดฮิตอันดับ 1 ของคนฉงชิ่ง บรรยากาศคึกคักพ่นควันอบอุ่นใจ'},
+    eling:{see:'จุดชมวิวมุมสูงมองเห็นโค้งสองแม่น้ำของฉงชิ่ง สวนสาธารณะร่มรื่น และหอชมวิวพาโนรามา',vibe:'โรแมนติก วิวมุมกว้าง สโลว์ไลฟ์ มองเห็นมิติเมืองฉงชิ่งได้รอบทิศ',tip:'ช่วงเย็นก่อนค่ำจะได้เห็นทั้งวิวพระอาทิตย์ตกและแสงไฟเมืองที่ค่อยๆ สว่างขึ้น',food:'คาเฟ่ในสวนเอ๋อหลิง, อาหารเสฉวนสูตรโบราณ',night:'🌙 ชมวิวพาโนรามาแสงไฟเมือง 8D และสะพานข้ามแม่น้ำเปิดไฟระยิบระยับ'},
+    tfu:{see:'สนามบินนานาชาติขนาดใหญ่ สถาปัตยกรรมรูปนกสวรรค์ ศูนย์การค้า Duty Free และการเชื่อมต่อรถไฟ',vibe:'โอ่โถง กว้างขวาง สะดวกสบาย ส่งท้ายทริปอย่างสมบูรณ์แบบ',tip:'เผื่อเวลาเดินทางจากตัวเมืองและผ่านจุดตรวจความปลอดภัยอย่างน้อย 2.5–3 ชม.',food:'ร้านอาหารในสนามบิน, ชานมและของฝากเสฉวน',night:'ไฟสถาปัตยกรรมอาคารผู้โดยสาร TFU ยามเช้าตรู่/ค่ำคืน'},
+    bianlian:{see:'โชว์เปลี่ยนหน้ากากเสฉวน (川剧变脸 - Bian Lian) กายกรรมพ่นไฟ และการแสดงหุ่นเชิดโบราณ',vibe:'อัศจรรย์ ตื่นตาตื่นใจ มนต์เสน่ห์วัฒนธรรมจีนโบราณที่คู่รักต้องมาดูด้วยกัน',tip:'จองรอบค่ำ 19:30–20:30 น. ที่ Shufeng Yayun หรือโรงน้ำชาในจิ่นหลี่/ควานไจ้',food:'⭐ จิบชาเขียวเก๋ากี้ดอกเก๊กฮวย และขนมหวานเสฉวนระหว่างชมโชว์',night:'🌙 ไฮไลต์การแสดงค่ำอันดับ 1 ของเฉิงตู ตื่นตากับการเปลี่ยนหน้ากากในเสี้ยววินาที'},
+    skywalk:{see:'The Crystal Skybridge สะพานลอยฟ้ากระจกเชื่อม 4 ตึกระฟ้าความสูง 250 เมตร Raffles City',vibe:'หรูหรา อลังการ ทันสมัย โรแมนติกสูงสุดยามค่ำคืน',tip:'เหมาะกับการขึ้นมาจิบค็อกเทลหรือกาแฟช่วงพระอาทิตย์ตกดินจนถึงเมืองเปิดไฟ',food:'⭐ ค็อกเทลซิกเนเจอร์ และดินเนอร์หรูบนความสูง 250 เมตร',night:'🌙 วิวไฟเมืองและสะพานข้ามแม่น้ำสองสาย สวยตระการตาที่สุดในฉงชิ่ง'}
+
+    };
+    const nightScenes={
+      A:{place:'kuixing',photo:'kuanzhaiNight',title:'มื้อค่ำแถวคุยซิงโหลว',detail:'จบวันด้วยร้านอาหารท้องถิ่น แล้วนั่งรถกลับฐานพักชุนซีลู่',badge:'สายกิน · ภาพเป็นย่านใกล้เคียง'},
+      B:{place:'anshun',photo:'anshun',title:'สะพานอันซุ่นหลังฟ้ามืด',detail:'จาก IFS ลงไปเดินริมแม่น้ำ ดูเมืองอีกอารมณ์',badge:'วิวแม่น้ำ · แสงเมือง'},
+      C:{place:'kuanzhai',photo:'kuanzhaiNight',title:'ซอยกว้างซอยแคบยามค่ำ',detail:'จากสวนประชาชนไปเดินตรอกและหาร้านอาหารต่อ',badge:'ซอยเก่า · คึกคัก'},
+      D:{place:'jinli',photo:'jinli2',title:'ถ้ายังมีแรง: จิ่นหลี่ยามค่ำ',detail:'หลังชา ไปเดินดูโคมไฟและของกิน ก่อนกลับฐานพักชุนซีลู่',badge:'ทางเลือก · โคมไฟเมืองเก่า'}
+    };
+    const $=id=>document.getElementById(id);
+    const cityInfo={
+      chengdu:{name:'เฉิงตู',en:'CHENGDU',days:[['6','ถึงเมือง · บ่าย'],['7','เที่ยวเต็มวัน']],image:'ifs',photoLabel:'ภาพ IFS ในเฉิงตู'},
+      xiling:{name:'ซีหลิง',en:'XILING',days:[['8','ขึ้นเขา · ค้างคืน'],['9','เที่ยวต่อ · กลับ']],image:'xiling',photoLabel:'ภาพถ่ายจริงป้ายซีหลิง · ไม่ใช่สภาพหิมะวันเดินทาง'},
+      chengdu_return:{name:'เฉิงตู (รอบ 2)',en:'CHENGDU',days:[['9','กลับถึงเฉิงตู'],['10','ก่อนขึ้นรถไฟ']],image:'chengdu-east',photoLabel:'ภาพถ่ายจริงที่สถานี Chengdu East · ไม่ใช่ขบวนรถที่จอง'},
+      chongqing:{name:'ฉงชิ่ง',en:'CHONGQING',days:[['10','ถึงเมือง · ค่ำ'],['11','เที่ยวเต็มวัน'],['12','เดินทางกลับ']],image:'chongqing',photoLabel:'ภาพถ่ายจริง Hongyadong ตอนกลางคืน'}
+    };
+    const overviewDays={
+      'chengdu-6':{
+        title:'ถึงเฉิงตูแล้วค่อยเที่ยว',
+        intro:'เครื่องลง 10:40 น. ฝากกระเป๋าที่โรงแรมก่อน แล้วเลือกทริปช่วงบ่ายตามแรงที่เหลือ',
+        heroPhoto:'taikoo',
+        morning:'บินจากกรุงเทพฯ สู่สนามบินเฉิงตูเทียนฝู่ (TFU)',
+        milestone:'🛬 10:40 น. เครื่องบินแลนดิ้งสนามบินเทียนฝู่ (TFU) · ผ่าน ตม. และนั่ง Metro เข้าเมือง ~1.5 ชม.',
+        evening:'เช็กอินโรงแรมย่านชุนซีลู่ ดื่มด่ำมื้อค่ำและแสงสีย่านใจกลางเมือง',
+        tomorrow:'พรุ่งนี้ (7 ธ.ค.): ลุยเฉิงตูเต็มวันแบบจัดเต็มตาม Mood ที่เลือก!',
+        nextCity:'chengdu',nextDay:'7',nextBtnLabel:'ดูแผนวันพรุ่งนี้ (7 ธ.ค. - ลุยเฉิงตูเต็มวัน) →',
+        default:'A',
+        options:[
+          {id:'A',name:'แลนด์มาร์ก & แฟชั่น',note:'เดินเป็นหลัก · เบา',stops:[
+            {time:'13:30',title:'ฝากกระเป๋าที่โรงแรม',note:'โรงแรมโซนชุนซีลู่ เริ่มต้นตัวปลิว',transit:true},
+            {time:'14:30',title:'IFS แพนด้าปีนตึก',note:'ขึ้นชั้น 7 ถ่ายรูปคู่แพนด้าไอคอนิก',place:'ifs',food:'ชานม Chagee (霸王茶姬) มะลิหอมละมุน'},
+            {time:'16:00',title:'Taikoo Li ช้อปปิ้ง',note:'เดินเล่นอาคารโบราณผสมกระจก & ชิมชา Heytea/Chagee',place:'taikoo',night:'ชมจอ LED 3D โค้งยักษ์ & แสงไฟตึกกระจก'},
+            {time:'18:30',title:'มื้อค่ำถนนคนเดินชุนซีลู่',note:'ชิมอาหารเสฉวนและสตรีทฟู้ดรอบชุนซีลู่',place:'wangping',food:'เกี๊ยวน้ำมันพริกจงสุ่ยเจี่ยว & เต้าหู้มาโปเฉินหมาผัว'},
+            {time:'20:00',title:'กลับโรงแรมพักผ่อน',note:'พักเอาแรงเตรียมลุยเฉิงตูวันพรุ่งนี้',transit:true}
+          ]},
+          {id:'B',name:'วัดเก่า & ถนนสงบ',note:'รถไฟฟ้า + เดิน · เบา',stops:[
+            {time:'13:30',title:'ฝากกระเป๋าที่โรงแรม',note:'โรงแรมโซนชุนซีลู่',transit:true},
+            {time:'14:30',title:'วัดเหวินซู (Wenshu)',note:'ไหว้พระ ไหว้สิ่งศักดิ์สิทธิ์ รับบรรยากาศสงบ',place:'wenshu'},
+            {time:'16:30',title:'เดินเล่นเหวินซูฟาง',note:'ตรอกโบราณรอบวัด ชิมขนมเปี๊ยะและเกี๊ยวเสฉวน',place:'wenshu'},
+            {time:'18:30',title:'มื้อค่ำใกล้วัดเหวินซู',note:'อาหารมังสวิรัติรสเลิศหรืออาหารท้องถิ่น',place:'kuixing'},
+            {time:'20:00',title:'กลับโรงแรมพักผ่อน',note:'เดินทางกลับฐานพักชุนซีลู่',transit:true}
+          ]},
+          {id:'C',name:'ซอยเก่า & ร้านชา',note:'รถไฟฟ้า + เดิน · เบา–กลาง',stops:[
+            {time:'13:30',title:'ฝากกระเป๋าที่โรงแรม',note:'โรงแรมโซนชุนซีลู่',transit:true},
+            {time:'14:30',title:'ซอยกว้างซอยแคบ (Kuanzhai)',note:'ตรอกบ้านเก่าสมัยชิง ถ่ายรูปและชิมของฝาก',place:'kuanzhai'},
+            {time:'16:30',title:'โรงน้ำชาสวนประชาชน',note:'จิบชาฝาปิดริมสระ สัมผัสสโลว์ไลฟ์เฉิงตู',place:'tea'},
+            {time:'18:30',title:'มื้อค่ำรอบสวนประชาชน',note:'ร้านอาหารเสฉวนต้นตำรับ',place:'kuixing'},
+            {time:'20:00',title:'กลับโรงแรมพักผ่อน',note:'กลับฐานพักชุนซีลู่',transit:true}
+          ]},
+          {id:'D',name:'สะพานไฟค่ำ',note:'เดิน + รถสั้น · เบา–กลาง',stops:[
+            {time:'13:30',title:'ฝากกระเป๋าที่โรงแรม',note:'โรงแรมโซนชุนซีลู่',transit:true},
+            {time:'15:00',title:'วัดต้าฉือ & Taikoo Li',note:'สัมผัสวัดโบราณใจกลางย่านช้อปปิ้งหรู',place:'taikoo'},
+            {time:'18:30',title:'มื้อค่ำริมแม่น้ำจินเจียง',note:'ดินเนอร์รับลมหนาวริมสายน้ำ',place:'wangping'},
+            {time:'19:30',title:'ชมไฟสะพานอันซุ่น (Anshun)',note:'สะพานโบราณสีทองอร่าม ถ่ายรูปคู่สุดโรแมนติก',place:'anshun',night:'ไฟสะพานสีทอง & ถนนบาร์จิ่วเหยี่ยนเฉียวดนตรีสดริมแม่น้ำ',food:'ปลาต้มผักกาดดอง Suancaiyu & คราฟต์เบียร์'},
+            {time:'21:00',title:'กลับโรงแรมพักผ่อน',note:'กลับโรงแรมชุนซีลู่',transit:true}
+          ]},
+          {id:'E',name:'เมืองใหม่แบบเบา',note:'เดินเป็นหลัก · เบา',stops:[
+            {time:'13:30',title:'ฝากกระเป๋าที่โรงแรม',note:'โรงแรมโซนชุนซีลู่',transit:true},
+            {time:'15:00',title:'วัดต้าฉือ & Taikoo Li',note:'เดินชมงานดีไซน์และสถาปัตยกรรมชิคๆ',place:'taikoo'},
+            {time:'18:00',title:'มื้อค่ำชุนซีลู่',note:'ชิมอาหารอร่อยไม่ต้องรีบ',place:'wangping'},
+            {time:'19:30',title:'พักผ่อนเอาแรง',note:'นอนหลับเต็มอิ่มหลังวันเดินทางบิน',transit:true}
+          ]}
+        ],
+        caution:'วันเครื่องลง เผื่อเวลาผ่าน ตม. และเดินทางจาก TFU; ไม่ต้องฝืนเก็บทุกจุด',
+        budget:{hotel:{name:'โรงแรมย่านชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'Metro สาย 18 จาก TFU (¥20) + Metro ในเมือง (¥15)',cny:35},tickets:{desc:'Taikoo Li, IFS, สะพานอันซุ่น (เข้าชมฟรีทุกจุด)',cny:0}},
+      },
+      
+      'chengdu-7': {
+        title: 'เฉิงตูเต็มวัน เลือกตาม Mood',
+        intro: 'เที่ยวเต็มวันในเฉิงตูแบบไม่รีบเร่ง ปรับเปลี่ยนตามฟีลและสไตล์การเดินทางของ Gee × Gaeun',
+        heroPhoto: 'panda',
+        morning: 'ตื่นเช้าที่โรงแรมย่านชุนซีลู่ รับประทานอาหารเช้าพร้อมออกเดินทาง',
+        milestone: '⭐ เที่ยวเฉิงตูเต็มวันแบบอิสระ · ช่วงค่ำเตรียมสัมภาระสำหรับออกเดินทางขึ้นเขาซีหลิงพรุ่งนี้',
+        evening: 'พักผ่อนเอาแรงที่ชุนซีลู่ ชาร์จแบตกล้องและเตรียมเสื้อกันหนาวตัวหนา',
+        tomorrow: 'พรุ่งนี้ (8 ธ.ค.): ออกเดินทางแต่เช้า 08:30 น. มุ่งหน้าสู่เขาหิมะซีหลิง (Xiling Snow Mountain) และค้างคืนบนเขา!',
+        nextCity: 'xiling', nextDay: '8', nextBtnLabel: 'ดูแผนวันพรุ่งนี้ (8 ธ.ค. - ขึ้นเขาซีหลิง) →',
+        default: 'A',
+        options: [
+          {
+            id: 'A', name: 'แพนด้า & เมืองเก่า', note: 'เดินค่อนข้างมาก · ออกเช้า', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ไปศูนย์แพนด้า + DiDi กลับวัดเหวินซู + ในเมือง',cny:75},tickets:{desc:'ตั๋วเข้าศูนย์แพนด้า (¥55 × 2 ท่าน)',cny:110}},
+            stops: [
+              {time: '08:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ออกเดินทางแต่เช้าเพื่อไปถึงศูนย์แพนด้าก่อน 09:00 น.', place: 'base', transit: true},
+              {time: '09:00', title: 'ศูนย์อนุรักษ์แพนด้าเฉิงตู', cn: '成都大熊猫繁育研究基地', note: 'ชมแพนด้ากินไผ่ตอนเช้า แพนด้าแดง และเดินสวนไผ่ร่มรื่น (เผื่อ 2.5–3.5 ชม.)', place: 'panda', food: 'ไอศกรีม 3D รูปหน้าแพนด้า & ชาผลไม้สด'},
+              {time: '13:00', title: 'วัดเหวินซู & ตรอกเหวินซูฟาง', cn: '文殊院', note: 'วัดพุทธเซนสงบร่มเย็น ไหว้พระและหาอาหารกลางวันในตรอกโบราณ', place: 'wenshu', food: 'เต้าหู้มาโปเฉินหมาผัว (Chen Mapo Tofu) ต้นตำรับ & ขนมเปี๊ยวหน้าวัด'},
+              {time: '15:30', title: 'ซอยกว้างซอยแคบ (Kuanzhai Alleys)', cn: '宽窄巷子', note: 'ตรอกบ้านโบราณสมัยชิง ร้านน้ำชา ของกินพื้นเมือง และร้านของฝากน่ารัก', place: 'kuanzhai', food: 'ขนมเหนียวทอดน้ำตาลแดง Ciba & บะหมี่เย็นเสฉวน', night: 'ตรอกโคมไฟแดงสมัยชิง บรรยากาศโรแมนติกหลังฟ้ามืด'},
+              {time: '18:30', title: 'ถนนอาหารคุยซิงโหลว (Kuixinglou)', cn: '奎星楼街', note: 'มื้อค่ำสตรีทฟู้ดและร้านอาหารเสฉวนชื่อดังที่คนท้องถิ่นชื่นชอบ', place: 'kuixing', food: 'ชวนชวนเซียงหมาล่าเสียบไม้ & เกี๊ยวเสฉวน'},
+              {time: '20:30', title: 'กลับโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'พักผ่อนเอาแรงเตรียมตัวออกเดินทางขึ้นเขาซีหลิงพรุ่งนี้', place: 'base', transit: true}
+            ]
+          },
+          {
+            id: 'B', name: 'อาร์ต คาเฟ่ & แสงเมือง', note: 'เดินกลาง · ชิลล์และโรแมนติก', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ไป Eastern Suburb + DiDi หวังผิง + กลับที่พัก',cny:42},tickets:{desc:'Eastern Suburb, หวังผิง, Taikoo Li, สะพานอันซุ่น (ฟรี)',cny:0}},
+            stops: [
+              {time: '10:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ตื่นสายได้สบายๆ จิบกาแฟเช้าแบบไม่เร่งรีบ', place: 'base', transit: true},
+              {time: '10:45', title: 'Eastern Suburb Memory (东郊记忆)', cn: '东郊记忆', note: 'โรงงานหลอดอิเล็กทรอนิกส์เก่ากลายเป็นย่านศิลปะ คาเฟ่วินเทจ และกราฟิตี', place: 'creative', food: 'กาแฟ Specialty คั่วบดสด & เบเกอรีโฮมเมดในโกดังเก่า'},
+              {time: '13:30', title: 'ถนนเลียบแม่น้ำหวังผิง (Wangping Street)', cn: '望平街', note: 'เดินเล่นริมน้ำ แวะคาเฟ่ฮิปสเตอร์ ชิมของว่าง และสัมผัสฟีลคนรุ่นใหม่', place: 'wangping', food: 'ชวนชวนเซียงเสียบไม้ & เกี๊ยวเสฉวนน้ำมันพริก'},
+              {time: '16:00', title: 'IFS แพนด้าปีนตึก & Taikoo Li', cn: '成都IFS', note: 'ขึ้นชั้น 7 ถ่ายรูปคู่แพนด้าไอคอนิก แล้วเดินช้อปปิ้งสตรีทแฟชั่นและอาคารกระจกผสมโบราณ', place: 'ifs', food: 'ชานมมะลิ Chagee (霸王茶姬) & ชาผลไม้ Heytea'},
+              {time: '19:00', title: 'สะพานโบราณอันซุ่น (Anshun Bridge)', cn: '安顺廊桥', note: 'ชมไฟสีทองอร่ามสะท้อนผิวน้ำ & แวะถนนบาร์จิ่วเหยี่ยนเฉียว (Jiu Yan Qiao) จิบค็อกเทลฟังดนตรีสด', place: 'anshun', food: 'ปลาต้มผักกาดดอง Suancaiyu & คราฟต์เบียร์เฉิงตู', night: 'สะพานโบราณสีทองเปิดไฟ 18:30-22:30 น. โรแมนติกที่สุดในเมือง'},
+              {time: '21:30', title: 'กลับโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'เดินกลับหรือเรียก DiDi สั้นๆ สู่โรงแรม', place: 'base', transit: true}
+            ]
+          },
+          {
+            id: 'C', name: 'สามก๊ก & เมืองเก่า', note: 'ประวัติศาสตร์กับซอยเก่า · เดินกลาง', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ศาลเจ้าสามก๊ก + สวนประชาชน + กลับที่พัก',cny:36},tickets:{desc:'ตั๋วเข้าศาลเจ้าสามก๊ก (¥50 × 2 ท่าน)',cny:100}},
+            stops: [
+              {time: '09:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ออกเดินทางมุ่งหน้าสู่โซนประวัติศาสตร์', place: 'base', transit: true},
+              {time: '09:30', title: 'ศาลเจ้าสามก๊ก (Wuhou Shrine)', cn: '武侯祠', note: 'ศาลเจ้าเล่าปี่-ขงเบ้ง เดินชมกำแพงแดงโค้งและดงไผ่เขียวชอุ่มอันเป็นเอกลักษณ์', place: 'wuhou', food: 'เนื้อวัวสามก๊กจางเฟย (Zhangfei Beef)'},
+              {time: '12:00', title: 'ถนนโบราณจิ่นหลี่ (Jinli Old Street)', cn: '锦里古街', note: 'เดินทะลุจากศาลเจ้าเข้าสู่ถนนโคมไฟแดงสมัยสามก๊ก หาของกินกลางวันเสฉวน', place: 'jinli', food: 'บะหมี่ดันดัน (Dan Dan Mian) & ขนมถังหูลู่เคลือบน้ำตาล'},
+              {time: '14:30', title: 'โรงน้ำชาสวนประชาชน (People’s Park)', cn: '鹤鸣茶社', note: 'นั่งเก้าอี้ไม้ไผ่ริมสระน้ำ จิบชาฝาปิด และสัมผัสประสบการณ์ช่างแคะหูไม้ไผ่โบราณ (Cǎi’ěr)', place: 'tea', food: 'ชาเขียวจัสมินฝาปิด (Gaiwan Tea) & เมล็ดทานตะวันคั่วเนย'},
+              {time: '17:00', title: 'ซอยกว้างซอยแคบ (Kuanzhai Alleys)', cn: '宽窄巷子', note: 'เดินเล่นตรอกโบราณสมัยชิงยามเย็น โคมไฟเริ่มเปิดสว่าง ถ่ายรูปสวยมาก', place: 'kuanzhai', food: 'ขนม Ciba น้ำตาลแดง & เต้าหู้เหม็นทอด', night: 'ชมโชว์เปลี่ยนหน้ากากเสฉวน (Bian Lian) & โรงน้ำชาดนตรีสด'},
+              {time: '20:30', title: 'กลับโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'กลับที่พักชุนซีลู่ เตรียมจัดกระเป๋า', place: 'base', transit: true}
+            ]
+          },
+          {
+            id: 'D', name: 'สวนจีน & บทกวี', note: 'เดินสบาย · ไม่เร่งเก็บจุด', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi บ้านตู้ฝู่ + สวนประชาชน + สะพานอันซุ่น',cny:46},tickets:{desc:'ตั๋วเข้าบ้านตู้ฝู่ (¥50 × 2 ท่าน)',cny:100}},
+            stops: [
+              {time: '09:30', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'เริ่มวันแบบสโลว์ไลฟ์', place: 'base', transit: true},
+              {time: '10:00', title: 'กระท่อมมหากวีตู้ฝู่ (Du Fu Thatched Cottage)', cn: '杜甫草堂', note: 'สวนโบราณร่มรื่น สระน้ำ ศาลากลางน้ำ และประวัติศาสตร์กวีเอกของจีน', place: 'garden', food: 'จิบชาสมุนไพรในศาลาโบราณ & ขนมเปี๊ยะดอกกุ้ยฮวา'},
+              {time: '12:30', title: 'สวนสาธารณะหวนฮวาซี (Huanhuaxi Park)', cn: '浣花溪公园', note: 'เดินเชื่อมจากบ้านตู้ฝู่เข้าสู่สวนธรรมชาติริมน้ำ ชมฝูงนกน้ำและต้นไม้ใหญ่', place: 'huanhuaxi'},
+              {time: '14:30', title: 'โรงน้ำชาสวนประชาชน (People’s Park)', cn: '人民公园', note: 'นั่งจิบชาฝาปิดใต้ร่มไม้ สัมผัสวิถีชีวิตคนเฉิงตูแท้ๆ', place: 'tea', food: 'ชาเขียวจัสมินฝาปิด & ช่างแคะหูไม้ไผ่โบราณ'},
+              {time: '17:30', title: 'สะพานโบราณอันซุ่น (Anshun Bridge)', cn: '安顺廊桥', note: 'มื้อค่ำริมน้ำและชมแสงไฟสะพานทองอร่าม', place: 'anshun', food: 'ปลาต้มผักกาดดอง Suancaiyu & คราฟต์เบียร์', night: 'แสงไฟสะพานอันซุ่นเปิดยามค่ำคืน'},
+              {time: '20:30', title: 'กลับโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'กลับที่พัก', place: 'base', transit: true}
+            ]
+          }
+        ],
+        caution: 'เฉิงตูเต็มวันสามารถปรับเปลี่ยนเวลาตามแรงได้ ไม่ต้องรีบเก็บทุกจุด'
+      },
+
+      'xiling-8':{
+        title:'ขึ้นซีหลิง · ค้างบนเขา',
+        intro:'เดินทางจากเฉิงตูขึ้นซีหลิง ขึ้นกระเช้าและพักบนเขา 1 คืน',
+        heroPhoto:'xiling',
+        morning:'เช็กเอาต์ 08:30 น. จากโรงแรมชุนซีลู่ เตรียมสัมภาระขึ้นภูเขาหิมะ',
+        milestone:'🏔️ 08:30 น. ออกเดินทางขึ้นเขาซีหลิง · 11:30 น. ขึ้นกระเช้าใหญ่สู่ลานสกี Yingxue Plaza',
+        evening:'เช็กอินที่พักบนเขาซีหลิง จิบช็อกโกแลตร้อนและชมวิวหิมะยามค่ำคืน',
+        tomorrow:'พรุ่งนี้ (9 ธ.ค.): เช้าขึ้นกระเช้าชมทะเลหมอก Riyueping แล้วบ่ายนั่งรถกลับเฉิงตู!',
+        nextCity:'chengdu_return',nextDay:'9',nextBtnLabel:'ดูแผนวันพรุ่งนี้ (9 ธ.ค. - ชมหมอก & กลับเฉิงตู) →',
+        stops:[
+          {time:'08:30',title:'ออกเดินทางจากเฉิงตู',note:'นั่งรถบัส/รถเช่ามุ่งหน้าสู่ภูเขาหิมะซีหลิง (~2.5 ชม.)',transit:true},
+          {time:'11:00',title:'ถึงศูนย์บริการนักท่องเที่ยวซีหลิง',note:'ซื้อตั๋วและเตรียมตัวขึ้นกระเช้าลอยฟ้า',place:'xiling'},
+          {time:'11:30',title:'ขึ้นกระเช้าลอยฟ้าสู่ลานสกี',note:'นั่งกระเช้าชมวิวป่าสนและขุนเขาเขียวชอุ่มสู่โซนหิมะ',place:'xiling'},
+          {time:'13:30',title:'เล่นหิมะ & สกี Yingxue Plaza',note:'สนุกกับสโนว์ทูป สโนว์โมบิล และถ่ายรูปคู่ลานสกี',place:'xiling_snow',food:'ช็อกโกแลตร้อน & วาฟเฟิลอบอุ่นๆ'},
+          {time:'16:30',title:'เช็กอินที่พักบนเขาซีหลิง',note:'พักผ่อนในบรรยากาศอบอุ่นท่ามกลางอากาศหนาวเหน็บ',transit:true}
+        ],
+        caution:'ต้นธันวาคมไม่รับประกันหิมะทั่วเขา ตรวจภาพสด อากาศ และประกาศกระเช้าก่อนออกเดินทาง'
+      },
+      'xiling-9':{
+        title:'เก็บวิวซีหลิงก่อนกลับ',
+        intro:'เที่ยวบนเขาช่วงเช้า–บ่าย แล้วกลับเฉิงตูไปพักใหม่ใกล้สถานี Chengdu East',
+        heroPhoto:'xiling_peak',
+        morning:'ตื่นเช้าท่ามกลางอากาศหนาวบนยอดเขาซีหลิง รับประทานอาหารเช้าพร้อมวิวทิวสน',
+        milestone:'🚠 09:30 น. กระเช้าช่วงที่สองสู่ยอดเขา Riyueping (3,250 ม.) · 15:00 น. รถบัสขากลับเข้าเฉิงตู',
+        evening:'เช็กอินโรงแรมใหม่ฝั่ง West Square ใกล้สถานี Chengdu East พักผ่อนสบายๆ',
+        tomorrow:'พรุ่งนี้ (10 ธ.ค.): เช้าแวะช้อปปิ้งของฝาก Taikoo Li · 14:00 น. รถไฟความเร็วสูงข้ามสู่ฉงชิ่ง!',
+        nextCity:'chengdu_return',nextDay:'10',nextBtnLabel:'ดูแผนวันพรุ่งนี้ (10 ธ.ค. - ช้อปปิ้ง & ข้ามสู่ฉงชิ่ง) →',
+        stops:[
+          {time:'08:30',title:'เช็กเอาต์ที่พักบนเขา',note:'ฝากกระเป๋าไว้ที่ล็อบบี้โรงแรมบนเขา',transit:true},
+          {time:'09:30',title:'กระเช้าช่วงสองสู่ Riyueping',note:'ขึ้นสู่ความสูง 3,250 ม. ชมทะเลหมอกและแสงแดดสีทอง',place:'xiling_peak'},
+          {time:'11:30',title:'จุดชมวิวหยินหยาง (Yinyangjie)',note:'ชมความมหัศจรรย์ของเส้นแบ่งสองสภาพอากาศ (ถ้าเปิด)',place:'xiling'},
+          {time:'14:00',title:'ลงกระเช้าสู่ด้านล่าง',note:'รับประทานอาหารกลางวันก่อนขึ้นรถเดินทางกลับ',transit:true},
+          {time:'15:00',title:'นั่งรถบัสกลับเข้าเฉิงตู',note:'มุ่งหน้าสู่สถานี Chengdu East เพื่อเข้าที่พักใหม่',place:'chengdueast'}
+        ],
+        caution:'Riyueping และ Yinyangjie ขึ้นกับอากาศกับการเปิดพื้นที่; เผื่อเวลาเดินทางลงเขาและย้ายโรงแรม'
+      },
+      'chengdu_return-9':{
+        title:'กลับเข้าเฉิงตู · เช็กอินที่พักใหม่',
+        intro:'หลังเที่ยวซีหลิงและลงเขาแล้ว ไปพักฝั่ง West Square ใกล้สถานี Chengdu East',
+        heroPhoto:'chengdueast',
+        morning:'เดินทางลงจากเขาซีหลิง มุ่งหน้ากลับสู่เฉิงตู',
+        milestone:'🚌 16:30 น. ถึงสถานีขนส่ง Chadianzi ในเฉิงตู · ต่อ Metro สาย 2 ตรงยาวสู่ Chengdu East',
+        evening:'เช็กอินโรงแรม Vienna International ใกล้สถานี Chengdu East มื้อค่ำพักผ่อนสบายๆ',
+        tomorrow:'พรุ่งนี้ (10 ธ.ค.): เช้าแวะช้อปปิ้งของฝาก Taikoo Li · 14:00 น. รถไฟความเร็วสูงสู่ฉงชิ่ง!',
+        nextCity:'chengdu_return',nextDay:'10',nextBtnLabel:'ดูแผนวันพรุ่งนี้ (10 ธ.ค. - ช้อปปิ้ง & ข้ามสู่ฉงชิ่ง) →',
+        stops:[
+          {time:'14:00',title:'ขึ้นรถบัสขากลับจากซีหลิง',note:'ออกเดินทางลงเขาเข้าสู่เมืองเฉิงตู (~2–2.5 ชม.)',transit:true},
+          {time:'16:30',title:'ถึงสถานี Chadianzi ในเฉิงตู',note:'จุดลงรถบัสหลัก เชื่อมต่อรถไฟฟ้าใต้ดิน',transit:true},
+          {time:'17:15',title:'Metro สาย 2 ยาวไป Chengdu East',note:'นั่งตรงยาวโดยไม่ต้องเปลี่ยนสาย (~30 นาที)',transit:true},
+          {time:'18:00',title:'เช็กอินโรงแรมใกล้ Chengdu East',note:'เดินจากสถานีเพียง 5–8 นาที พักผ่อนตัวปลิว',place:'chengdueast'},
+          {time:'19:00',title:'มื้อค่ำชิลๆ รอบสถานีรถไฟ',note:'หาของกินอร่อยรอบสถานี พักผ่อนเตรียมขึ้นรถไฟพรุ่งนี้',transit:true}
+        ],
+        caution:'ถ้ารถกลับลง Chadianzi ต่อ Metro สาย 2 ไป Chengdu East ได้; รอบรถและจุดลงขากลับต้องตรวจอีกครั้ง'
+      },
+      'chengdu_return-10':{
+        title:'เฉิงตูครึ่งวันก่อนขึ้นรถไฟ',
+        intro:'เช็กเอาต์จากที่พักฝั่ง Chengdu East ฝากกระเป๋า แล้วเลือกเที่ยวครึ่งวันก่อนกลับมาขึ้นรถไฟ',
+        heroPhoto:'taikoo',
+        morning:'ตื่นเช้าที่โรงแรมใกล้สถานี Chengdu East เช็กเอาต์ฝากกระเป๋าไว้ที่ล็อบบี้',
+        milestone:'🚄 14:00 น. รถไฟความเร็วสูง Fuxinghao ออกเดินทางสู่ฉงชิ่ง (ต้องถึงสถานีก่อน 13:15 น.)',
+        evening:'ถึงฉงชิ่ง 15:45 น. เช็กอิน Jiefangbei แล้วตื่นตากับแสงไฟสีทองหงหยาต้งยามค่ำ',
+        tomorrow:'พรุ่งนี้ (11 ธ.ค.): ลุยเมือง 8D ฉงชิ่งเต็มวัน นั่งรถไฟทะลุตึกและทางเดินลอยฟ้า!',
+        nextCity:'chongqing',nextDay:'10',nextBtnLabel:'ก้าวถัดไป: เช็กอินฉงชิ่งคืนนี้ (10 ธ.ค.) →',
+        default:'D',
+        options:[
+          {id:'A',name:'สามก๊กก่อนย้ายเมือง',note:'กลาง; เลี่ยงถ้าวันที่ 7 ไป Route C',stops:[
+            {time:'08:30',title:'เช็กเอาต์ & ฝากกระเป๋าโรงแรม',note:'โรงแรมรอบสถานี Chengdu East',transit:true},
+            {time:'09:30',title:'ศาลเจ้าสามก๊ก & จิ่นหลี่',note:'เดินชมกำแพงแดงและตรอกโคมไฟยามเช้า',place:'wuhou'},
+            {time:'12:00',title:'มื้อกลางวันอาหารเสฉวน',note:'อาหารกลางวันต้นตำรับแถวจิ่นหลี่',place:'jinli'},
+            {time:'13:15',title:'กลับมารับกระเป๋าที่โรงแรม',note:'เตรียมสัมภาระเดินเชื่อมเข้าสถานีรถไฟ',transit:true},
+            {time:'14:00',title:'สแกนตั๋วขึ้นรถไฟไปฉงชิ่ง',note:'รถไฟหัวกระสุน 350 km/h สู่มหานครฉงชิ่ง',place:'chengdueast'}
+          ]},
+          {id:'B',name:'วัดเหวินซู & ขนม',note:'เบา; เลี่ยงถ้าวันที่ 6 ไป Route B',stops:[
+            {time:'08:30',title:'เช็กเอาต์ & ฝากกระเป๋าโรงแรม',note:'โรงแรมรอบสถานี Chengdu East',transit:true},
+            {time:'09:30',title:'วัดเหวินซู & เหวินซูฟาง',note:'ไหว้พระเสริมสิริมงคลและซื้อขนมโบราณ',place:'wenshu'},
+            {time:'12:00',title:'มื้อกลางวันใกล้วัด',note:'ชิมบะหมี่และของกินเล่นหน้าวัด',place:'kuixing'},
+            {time:'13:15',title:'กลับมารับกระเป๋าที่โรงแรม',note:'รับกระเป๋าเดินทางเข้าสถานี',transit:true},
+            {time:'14:00',title:'สแกนตั๋วขึ้นรถไฟไปฉงชิ่ง',note:'รถไฟหัวกระสุนสู่ฉงชิ่ง',place:'chengdueast'}
+          ]},
+          {id:'C',name:'สวนชา & จัตุรัส',note:'เบา',stops:[
+            {time:'08:30',title:'เช็กเอาต์ & ฝากกระเป๋าโรงแรม',note:'โรงแรมรอบสถานี Chengdu East',transit:true},
+            {time:'09:30',title:'สวนประชาชน & จิบชา',note:'นั่งชิลโรงน้ำชาเหมากงรับลมเช้า',place:'tea'},
+            {time:'11:45',title:'จัตุรัส Tianfu Square',note:'ชมรูปปั้นประธานเหมาและใจกลางเมือง',place:'base'},
+            {time:'13:00',title:'กลับมารับกระเป๋าที่โรงแรม',note:'เตรียมตัวเข้าสถานีรถไฟ',transit:true},
+            {time:'14:00',title:'สแกนตั๋วขึ้นรถไฟไปฉงชิ่ง',note:'รถไฟหัวกระสุนสู่ฉงชิ่ง',place:'chengdueast'}
+          ]},
+          {id:'D',name:'ช้อปปิ้งก่อนเดินทาง',note:'เบา · เข้าคู่กับ Mood B',stops:[
+            {time:'08:30',title:'เช็กเอาต์ & ฝากกระเป๋าโรงแรม',note:'โรงแรมใกล้สถานี Chengdu East ตัวปลิวพร้อมเที่ยว',transit:true},
+            {time:'09:15',title:'Taikoo Li & IFS แพนด้า',note:'นั่ง Metro 15 นาทีตรงถึงชุนซีลู่ ช้อปของฝาก & ถ่ายรูปคู่',place:'taikoo',food:'ชานม Chagee ตุนขึ้นรถไฟ & ขนมเปี๊ยะของฝาก'},
+            {time:'12:00',title:'มื้อกลางวันย่านชุนซีลู่',note:'ชิมอาหารอร่อยและชานม Heytea/Chagee',place:'ifs',food:'บะหมี่ดันดัน & เกี๊ยวเสฉวนต้นตำรับ'},
+            {time:'13:15',title:'Metro สาย 2 กลับมารับกระเป๋า',note:'นั่งตรง 15 นาทีกลับสถานี Chengdu East',transit:true},
+            {time:'14:00',title:'สแกนตั๋วขึ้นรถไฟสู่ฉงชิ่ง',note:'นั่งรถไฟความเร็วสูง Fuxinghao (~1.5 ชม.) สู่ฉงชิ่ง',place:'chengdueast'}
+          ]}
+        ],
+        caution:'ที่พักใกล้ Chengdu East ช่วยวันขึ้นรถไฟ แต่การเที่ยวใจกลางเมืองเช้านี้ต้องนั่งรถไปกลับ; เผื่อรับกระเป๋าและตรวจตั๋วก่อนออก',
+        budget:{hotel:{name:'โรงแรมย่าน Jiefangbei ฉงชิ่ง (คืนที่ 1)',cny:320},transit:{desc:'Metro สาย 2 ไป-กลับ (¥12) + รถไฟความเร็วสูง Fuxinghao (¥308) + CRT (¥8)',cny:328},tickets:{desc:'Taikoo Li, IFS, Jiefangbei, Hongyadong (เข้าชมฟรีทุกจุด)',cny:0}},
+      },
+      'chengdu-10':{
+        title:'เฉิงตูครึ่งวันก่อนขึ้นรถไฟ',
+        intro:'เช็กเอาต์จากที่พักฝั่ง Chengdu East ฝากกระเป๋า แล้วเลือกเที่ยวครึ่งวันก่อนกลับมาขึ้นรถไฟ',
+        heroPhoto:'taikoo',
+        morning:'ตื่นเช้าที่โรงแรมใกล้สถานี Chengdu East เช็กเอาต์ฝากกระเป๋าไว้ที่ล็อบบี้',
+        milestone:'🚄 14:00 น. รถไฟความเร็วสูง Fuxinghao ออกเดินทางสู่ฉงชิ่ง (ต้องถึงสถานีก่อน 13:15 น.)',
+        evening:'ถึงฉงชิ่ง 15:45 น. เช็กอิน Jiefangbei แล้วตื่นตากับแสงไฟสีทองหงหยาต้งยามค่ำ',
+        tomorrow:'พรุ่งนี้ (11 ธ.ค.): ลุยเมือง 8D ฉงชิ่งเต็มวัน นั่งรถไฟทะลุตึกและทางเดินลอยฟ้า!',
+        nextCity:'chongqing',nextDay:'10',nextBtnLabel:'ก้าวถัดไป: เช็กอินฉงชิ่งคืนนี้ (10 ธ.ค.) →',
+        default:'D',
+        options:[
+          {id:'D',name:'ช้อปปิ้งก่อนเดินทาง',note:'เบา · เข้าคู่กับ Mood B',stops:[
+            {time:'08:30',title:'เช็กเอาต์ & ฝากกระเป๋าโรงแรม',note:'โรงแรมใกล้สถานี Chengdu East',transit:true},
+            {time:'09:15',title:'Taikoo Li & IFS แพนด้า',note:'นั่ง Metro 15 นาทีตรงถึงชุนซีลู่ ช้อปของฝาก & ถ่ายรูปคู่',place:'taikoo',food:'ชานม Chagee ตุนขึ้นรถไฟ & ขนมเปี๊ยะของฝาก'},
+            {time:'12:00',title:'มื้อกลางวันย่านชุนซีลู่',note:'ชิมอาหารอร่อยและชานม Heytea/Chagee',place:'ifs',food:'บะหมี่ดันดัน & เกี๊ยวเสฉวนต้นตำรับ'},
+            {time:'13:15',title:'Metro สาย 2 กลับมารับกระเป๋า',note:'นั่งตรง 15 นาทีกลับสถานี Chengdu East',transit:true},
+            {time:'14:00',title:'สแกนตั๋วขึ้นรถไฟสู่ฉงชิ่ง',note:'นั่งรถไฟความเร็วสูง Fuxinghao (~1.5 ชม.) สู่ฉงชิ่ง',place:'chengdueast'}
+          ]}
+        ],
+        caution:'ที่พักใกล้ Chengdu East ช่วยวันขึ้นรถไฟ แต่การเที่ยวใจกลางเมืองเช้านี้ต้องนั่งรถไปกลับ; เผื่อรับกระเป๋าและตรวจตั๋วก่อนออก',
+        budget:{hotel:{name:'โรงแรมย่าน Jiefangbei ฉงชิ่ง (คืนที่ 1)',cny:320},transit:{desc:'Metro สาย 2 ไป-กลับ (¥12) + รถไฟความเร็วสูง Fuxinghao (¥308) + CRT (¥8)',cny:328},tickets:{desc:'Taikoo Li, IFS, Jiefangbei, Hongyadong (เข้าชมฟรีทุกจุด)',cny:0}},
+      },
+      'chongqing-10':{
+        title:'คืนแรกในฉงชิ่ง',
+        intro:'หลังรถไฟมาถึงและเช็กอินแถว Jiefangbei เลือกเดินเที่ยวช่วงเย็น–ค่ำแบบไม่ฝืน',
+        heroPhoto:'hongyadong',
+        morning:'นั่งรถไฟความเร็วสูงจากเฉิงตู ข้ามมณฑลเข้าสู่มหานครฉงชิ่ง',
+        milestone:'🚄 15:45 น. รถไฟถึงฉงชิ่ง · เช็กอินโรงแรมใจกลางย่าน Jiefangbei',
+        evening:'ชมแสงไฟสีทองอร่ามหงหยาต้งริมแม่น้ำเจียหลิง ราวกับหลุดเข้าไปในอนิเมะ Spirited Away',
+        tomorrow:'พรุ่งนี้ (11 ธ.ค.): ลุยฉงชิ่งเต็มวัน 8D City สัมผัสรถไฟทะลุตึกและย่านศิลปะ!',
+        nextCity:'chongqing',nextDay:'11',nextBtnLabel:'ดูแผนวันพรุ่งนี้ (11 ธ.ค. - ลุยฉงชิ่ง 8D เต็มวัน) →',
+        default:'B',
+        options:[
+          {id:'A',name:'Hongyadong กลางคืน',note:'เดินเป็นหลัก · เบา–กลาง',stops:[
+            {time:'16:30',title:'เช็กอินโรงแรม Jiefangbei',note:'เก็บกระเป๋าพักเหนื่อยหลังนั่งรถไฟ',place:'jiefangbei'},
+            {time:'18:00',title:'Bayi Food Street',note:'ตะลุยกินสตรีทฟู้ดฉงชิ่ง บะหมี่เปรี้ยวหวาน & ชานม',place:'hotpot'},
+            {time:'19:30',title:'ชมไฟหงหยาต้ง (Hongyadong)',note:'ตึกไม้โบราณ 11 ชั้นประดับไฟสีทองอร่ามริมผา',place:'hongyadong'},
+            {time:'21:00',title:'จุดชมวิวสะพานเฉียนซื่อเหมิน',note:'เดินรับลมชมวิวพาโนรามาหงหยาต้งและแม่น้ำ',place:'hongyadong'},
+            {time:'22:00',title:'กลับโรงแรมพักผ่อน',note:'กลับโรงแรมโซนเจี่ยฟ่างเป่ย',transit:true}
+          ]},
+          {id:'B',name:'เจี่ยฟ่างเป่ย & บันไดเก่า',note:'เดิน/รถไฟฟ้าสั้น · เบา–กลาง',stops:[
+            {time:'16:30',title:'เช็กอินโรงแรม Jiefangbei',note:'ใจกลางมหานครฉงชิ่ง',place:'jiefangbei'},
+            {time:'17:30',title:'ลานหอนาฬิกา Jiefangbei',note:'ถ่ายรูปคู่หอนาฬิกาแลนด์มาร์กศูนย์กลางเมือง',place:'jiefangbei'},
+            {time:'18:30',title:'บันไดโบราณสือปาที (Shibati)',note:'เดินบันไดหิน 18 ขั้นยามค่ำ แสงไฟอุ่นๆ ถ่ายรูปสวย',place:'shibati'},
+            {time:'20:30',title:'ของกิน Bayi Food Street',note:'ชิมของกินเล่นและผลไม้สดเคลือบน้ำตาล',place:'hotpot'},
+            {time:'21:30',title:'กลับโรงแรมพักผ่อน',note:'พักผ่อนเอาแรงเตรียมลุยพรุ่งนี้',transit:true}
+          ]},
+          {id:'C',name:'ถนนเก่าฝั่งแม่น้ำ',note:'รถไฟฟ้า + เดินเนิน · กลาง',stops:[
+            {time:'16:30',title:'เช็กอินโรงแรม Jiefangbei',note:'เก็บสัมภาระที่โรงแรม',place:'jiefangbei'},
+            {time:'17:30',title:'ถนนเก่า Longmenhao',note:'ชมวิวตึกระฟ้าข้ามแม่น้ำจากฝั่งใต้',place:'ciqikou'},
+            {time:'19:30',title:'เดินเล่น Xiahaoli ริมแม่น้ำ',note:'ตรอกศิลปะและคาเฟ่ริมแม่น้ำแยงซี',place:'hongyadong'},
+            {time:'21:00',title:'กลับโรงแรมย่าน Jiefangbei',note:'ข้ามแม่น้ำกลับมายังฝั่งเมือง',transit:true}
+          ]},
+          {id:'D',name:'คืนแรกแบบเบา',note:'เดินเป็นหลัก · เบา',stops:[
+            {time:'16:30',title:'เช็กอินโรงแรม Jiefangbei',note:'พักผ่อนตามอัธยาศัย',place:'jiefangbei'},
+            {time:'17:30',title:'เดินชิลรอบหอนาฬิกา Jiefangbei',note:'สัมผัสแสงสีและความคึกคักของฉงชิ่ง',place:'jiefangbei'},
+            {time:'18:30',title:'มื้อค่ำหม้อไฟฉงชิ่งแบบเบาๆ',note:'ลองชิมหม้อไฟเสฉวนแท้ๆ เลือกซุปเผ็ดน้อยได้',place:'hotpot'},
+            {time:'20:30',title:'พักผ่อนเอาแรง',note:'นอนหลับเอาแรงเตรียมเที่ยววันเต็ม',transit:true}
+          ]}
+        ],
+        caution:'เลือกตามเวลารถไฟจริงและแรงที่เหลือ; ฉงชิ่งมีบันไดและต่างระดับ'
+      },
+      'chongqing-11':{
+        title:'ฉงชิ่งเต็มวัน เลือกฟีล',
+        intro:'เมือง 8D มีทั้งรถไฟทะลุตึก ซอยเก่า วิวแม่น้ำ และไฟกลางคืน เลือกเพียง Route เดียว',
+        heroPhoto:'liziba',
+        morning:'ตื่นเช้าที่โรงแรมเจี่ยฟ่างเป่ย ใจกลางเมืองฉงชิ่ง',
+        milestone:'🏙️ ลุยฉงชิ่งเต็มวัน 8D City: รถไฟทะลุตึก Liziba / ครีเอทีฟ TESTBED 2 / บันไดเมือง Shibati',
+        evening:'ดินเนอร์หม้อไฟฉงชิ่งรสชาติต้นตำรับริมแม่น้ำ และเก็บกระเป๋าเตรียมบินกลับ',
+        tomorrow:'พรุ่งนี้ (12 ธ.ค.): ออกเดินทางแต่เช้า 07:15 น. สู่สนามบิน CKG บินกลับกรุงเทพฯ',
+        nextCity:'chongqing',nextDay:'12',nextBtnLabel:'ดูแผนวันพรุ่งนี้ (12 ธ.ค. - เดินทางกลับ กทม.) →',
+        default:'A',
+        options:[
+          {id:'A',name:'รถไฟทะลุตึก & วิวเมือง',note:'รถไฟฟ้า + เดินลงเขา · กลาง',stops:[
+            {time:'09:30',title:'สวนเอ๋อหลิง (Eling Park)',note:'จุดชมวิวมุมสูงมองเห็นโค้งสองแม่น้ำของฉงชิ่ง',place:'eling'},
+            {time:'11:30',title:'ย่านศิลปะ TESTBED 2',note:'โรงพิมพ์ธนบัตรเก่ากลายเป็นอาร์ตสเปซ คาเฟ่วินเทจ',place:'creative'},
+            {time:'14:00',title:'รถไฟทะลุตึกหลี่จื่อป้า (Liziba)',note:'ชมโมโนเรลวิ่งแล่นทะลุตึกพักอาศัย ความมหัศจรรย์ระดับโลก',place:'liziba'},
+            {time:'18:30',title:'ดินเนอร์หม้อไฟฉงชิ่งแท้ๆ',note:'ลิ้มรสหม้อไฟ 9 ช่องเสฉวนเข้มข้นรสชาติต้นตำรับ',place:'hotpot'},
+            {time:'20:00',title:'ชมไฟ Hongyadong ยามค่ำ',note:'เก็บภาพความประทับใจแสงสีทองริมหน้าผา',place:'hongyadong'},
+            {time:'21:30',title:'กลับโรงแรมพักผ่อน',note:'เตรียมแพ็กสัมภาระสำหรับบินพรุ่งนี้',transit:true}
+          ]},
+          {id:'B',name:'เมืองเก่า & รถไฟ',note:'รถไฟฟ้าเป็นหลัก · กลาง',stops:[
+            {time:'09:30',title:'เมืองโบราณฉือชี่โข่ว (Ciqikou)',note:'เดินตรอกหินโบราณริมแม่น้ำ ชิมขนมเฉินหมาฮวา',place:'ciqikou'},
+            {time:'13:00',title:'หาของกินย่าน Shapingba',note:'แหล่งอาหารของวัยรุ่นและนักศึกษา',place:'ciqikou'},
+            {time:'15:30',title:'จุดชมวิวรถไฟทะลุตึก Liziba',note:'ถ่ายคลิปโมโนเรลวิ่งทะลุตึก',place:'liziba'},
+            {time:'18:30',title:'มื้อค่ำหม้อไฟฉงชิ่ง',note:'หม้อไฟเผ็ดชาต้นตำรับ',place:'hotpot'},
+            {time:'21:00',title:'กลับโรงแรมพักผ่อน',note:'กลับโรงแรมเจี่ยฟ่างเป่ย',transit:true}
+          ]},
+          {id:'C',name:'ถนนริมแม่น้ำ & กระเช้า',note:'รถไฟฟ้า + เดิน · กลาง',stops:[
+            {time:'10:00',title:'กระเช้าลอยฟ้าแม่น้ำแยงซี',note:'นั่งกระเช้าลอยฟ้าข้ามแม่น้ำแยงซีเกียง',place:'hongyadong'},
+            {time:'12:00',title:'ถนนเก่า Longmenhao & Xiahaoli',note:'ตรอกสถาปัตยกรรมตะวันตกผสมจีนริมผา',place:'ciqikou'},
+            {time:'15:30',title:'เดินเล่นเลียบแม่น้ำ Nanbin Road',note:'เส้นทางเดินชมเส้นขอบฟ้าตึกระฟ้าของฉงชิ่ง',place:'raffles'},
+            {time:'18:30',title:'มื้อค่ำหม้อไฟริมแม่น้ำ',note:'ดินเนอร์ชมวิวแสงไฟข้ามฝั่ง',place:'hotpot'},
+            {time:'21:00',title:'กลับโรงแรมพักผ่อน',note:'กลับโรงแรมเจี่ยฟ่างเป่ย',transit:true}
+          ]},
+          {id:'D',name:'บันไดเมือง 8D & แสงไฟ',note:'เดินเนิน + รถไฟฟ้า · มาก',stops:[
+            {time:'09:30',title:'ทางเดินลอยฟ้า Shancheng Trail',note:'ทางเดินไม้เลียบหน้าผาริมแม่น้ำเจียหลิง & เช็กอินตึกข้ามมิติ Kuixinglou (ชั้น 1 กลายเป็นชั้น 22)',place:'shancheng',food:'ก๋วยเตี๋ยวฉงชิ่งเสี่ยวเมี่ยน (Chongqing Xiaomian) มื้อเช้า'},
+            {time:'12:00',title:'บันไดโบราณสือปาที (Shibati)',note:'บันไดหินเชื่อมระหว่างเมืองบนและเมืองล่าง',place:'shibati',food:'ขนมหนวดมังกร & หมี่เย็นเสฉวน'},
+            {time:'15:00',title:'Chaotianmen & Raffles City',note:'ตึกระฟ้าแลนด์มาร์กรูปเรือใบยักษ์ริมแม่น้ำบรรจบ & The Crystal Skybridge',place:'raffles',night:'ชมแสงสียามเย็นจุดบรรจบสองแม่น้ำ'},
+            {time:'18:30',title:'มื้อค่ำหม้อไฟฉงชิ่ง',note:'หม้อไฟ 9 ช่องรสเด็ด ในถ้ำหลบภัยสงครามโลก',place:'hotpot',food:'เนื้อวัวหมักพริก, ผ้าขี้ริ้วกรอบ, น้ำมันงากระเทียม & ปิงเฟิ่น Bingfen หวานเย็น'},
+            {time:'20:00',title:'ชมแสงไฟหงหยาต้งยามค่ำ',note:'ถ่ายรูปกับแสงสีทองอลังการ',place:'hongyadong',night:'เดินข้ามสะพานเฉียนซื่อเหมิน หรือชมโคมไฟโบราณสือปาที (Shibati Lantern Night)'},
+            {time:'21:30',title:'กลับโรงแรมพักผ่อน',note:'กลับโรงแรมเจี่ยฟ่างเป่ย',transit:true}
+          ]},
+          {id:'E',name:'พิพิธภัณฑ์ & คาเฟ่',note:'รถไฟฟ้า + DiDi/เดิน · กลาง',stops:[
+            {time:'09:30',title:'พิพิธภัณฑ์สามผา (Three Gorges)',note:'ชมนิทรรศการประวัติศาสตร์และเขื่อนสามผา',place:'museumcq'},
+            {time:'11:30',title:'อาคารมหาศาลาประชาชน Great Hall',note:'สถาปัตยกรรมจีนโบราณทรงโดมขนาดใหญ่',place:'museumcq'},
+            {time:'14:00',title:'คาเฟ่และงานออกแบบ TESTBED 2',note:'นั่งชิลจิบกาแฟชมงานดีไซน์',place:'creative'},
+            {time:'18:30',title:'มื้อค่ำหม้อไฟฉงชิ่ง & กลับโรงแรม',note:'กลับโรงแรมเจี่ยฟ่างเป่ย',place:'hotpot'}
+          ]}
+        ],
+        caution:'Hongyadong อาจซ้ำกับคืนวันที่ 10; เส้นทางที่ดูใกล้บนแผนที่อาจต้องขึ้นลงบันได',
+        budget:{hotel:{name:'โรงแรมย่าน Jiefangbei ฉงชิ่ง (คืนที่ 2)',cny:320},transit:{desc:'CRT โมโนเรลสาย 2 + DiDi เดินทางในเมือง 3-4 เที่ยว',cny:48},tickets:{desc:'Shancheng Trail, Shibati, Kuixinglou, Liziba, Hongyadong (ฟรี)',cny:0}},
+      },
+      'chongqing-12':{
+        title:'ออกจากฉงชิ่งกลับบ้าน',
+        intro:'เที่ยวบิน CKG 11:05 น. ออกจากโรงแรมเช้าและเผื่อเวลาไปสนามบิน',
+        heroPhoto:'tfu',
+        morning:'เช็กเอาต์เช้า 06:45 น. ออกจากโรงแรมเจี่ยฟ่างเป่ย',
+        milestone:'🛫 08:15 น. ถึงสนามบิน CKG T3 · 11:05 น. เที่ยวบินเหินฟ้าสู่กรุงเทพฯ (แวะเซี่ยเหมิน)',
+        evening:'เดินทางถึงสนามบินสุวรรณภูมิโดยสวัสดิภาพ ปิดทริป Gee × Gaeun อย่างประทับใจ ♡',
+        tomorrow:'จบทริปความทรงจำเฉิงตู-ซีหลิง-ฉงชิ่ง เก็บความสุขและความประทับใจกลับบ้านเต็มกระเป๋า',
+        nextCity:null,nextDay:null,
+        stops:[
+          {time:'06:45',title:'เช็กเอาต์โรงแรม Jiefangbei',note:'ตรวจสัมภาระ พาสปอร์ต และของฝากให้เรียบร้อย',transit:true},
+          {time:'07:15',title:'เดินทางสู่สนามบิน CKG T3',note:'นั่ง DiDi หรือ Metro สาย 10 ตรงสู่สนามบิน (~45 นาที)',transit:true},
+          {time:'08:15',title:'ถึงสนามบิน เช็กอิน & ผ่าน ตม.',note:'โหลดสัมภาระ สแกนกระเป๋า และช้อปปิ้ง Duty Free',place:'tfu'},
+          {time:'11:05',title:'เที่ยวบินออกเดินทางสู่กรุงเทพฯ',note:'เที่ยวบินเหินฟ้า แวะเปลี่ยนเครื่องเซี่ยเหมิน สู่ไทย',transit:true}
+        ],
+        caution:'วันนี้เป็นวันเดินทาง ไม่ควรใส่จุดเที่ยวเพิ่มก่อนบิน',
+        budget:{hotel:{name:'วันเดินทางกลับ (เช็กเอาต์ ไม่มีค่าโรงแรม)',cny:0},transit:{desc:'DiDi ตรงจาก Jiefangbei สู่สนามบิน CKG T3',cny:55},tickets:{desc:'สนามบิน CKG T3 เดินทางกลับไทย',cny:0}},
+      }
+    };
+    overviewDays['chengdu_return-10']=overviewDays['chengdu_return-10']||overviewDays['chengdu-10'];
+
+
+    const cityMoods={
+      chengdu:[
+        {id:'A',name:'แพนด้า & แลนด์มาร์ก',hint:'แพนด้า · วัดเหวินซู · IFS',photo:'panda'},
+        {id:'B',name:'อาร์ต คาเฟ่ & แสงเมือง',hint:'Eastern Suburb · IFS · สะพาน',photo:'creative'},
+        {id:'C',name:'เมืองเก่า & วัฒนธรรม',hint:'ศาลเจ้าสามก๊ก · จิ่นหลี่ · ซอยเก่า',photo:'jinli'},
+        {id:'D',name:'สวนจีน & ร้านชา',hint:'บ้านตู้ฝู่ · สวน · ร้านชา',photo:'garden'}
+      ],
+      xiling:[
+        {id:'A',name:'วิวสูง & ทะเลหมอก',hint:'Riyueping · จุดชมวิว',photo:'xiling-peak',photoNote:'ยอดซีหลิงมองจากเฉิงตู'},
+        {id:'B',name:'ลานหิมะ & เล่นสนุก',hint:'ลานสกี · กระเช้า',photo:'xiling-snow',photoNote:'ภาพหิมะซีหลิงต่างปี'},
+        {id:'C',name:'ชิลบนเขา & ถ่ายรูป',hint:'กระเช้า · เดินสบาย',photo:'xiling',photoNote:'ภาพป้ายรีสอร์ตซีหลิง'}
+      ],
+      chongqing:[
+        {id:'A',name:'รถไฟทะลุตึก & เมือง 8D',hint:'Liziba · Eling · TESTBED 2',photo:'liziba'},
+        {id:'B',name:'Hongyadong & แสงเมือง',hint:'ตึกไฟ · แม่น้ำ · บันไดเมือง',photo:'chongqing'},
+        {id:'C',name:'เมืองเก่า & ริมน้ำ',hint:'Ciqikou · Longmenhao',photo:'ciqikou'},
+        {id:'D',name:'พิพิธภัณฑ์ & คาเฟ่',hint:'Three Gorges · Great Hall · Eling',photo:'museumcq'}
+      ]
+    };
+    const moodRouteMap={
+      'chengdu-7':{A:'A',B:'B',C:'C',D:'D'},
+      'chengdu-6':{A:'A',B:'E',C:'B',D:'C'},
+      'chengdu_return-10':{A:'C',B:'D',C:'D',D:'B'},
+      'chongqing-10':{A:'D',B:'B',C:'C',D:'D'},
+      'chongqing-11':{A:'A',B:'D',C:'B',D:'E'}
+    };
+    const xilingMoodRoutes={
+      
+      'chengdu-7': {
+        title: 'เฉิงตูเต็มวัน เลือกตาม Mood',
+        intro: 'เที่ยวเต็มวันในเฉิงตูแบบไม่รีบเร่ง ปรับเปลี่ยนตามฟีลและสไตล์การเดินทางของ Gee × Gaeun',
+        heroPhoto: 'panda',
+        morning: 'ตื่นเช้าที่โรงแรมย่านชุนซีลู่ รับประทานอาหารเช้าพร้อมออกเดินทาง',
+        milestone: '⭐ เที่ยวเฉิงตูเต็มวันแบบอิสระ · ช่วงค่ำเตรียมสัมภาระสำหรับออกเดินทางขึ้นเขาซีหลิงพรุ่งนี้',
+        evening: 'พักผ่อนเอาแรงที่ชุนซีลู่ ชาร์จแบตกล้องและเตรียมเสื้อกันหนาวตัวหนา',
+        tomorrow: 'พรุ่งนี้ (8 ธ.ค.): ออกเดินทางแต่เช้า 08:30 น. มุ่งหน้าสู่เขาหิมะซีหลิง (Xiling Snow Mountain) และค้างคืนบนเขา!',
+        nextCity: 'xiling', nextDay: '8', nextBtnLabel: 'ดูแผนวันพรุ่งนี้ (8 ธ.ค. - ขึ้นเขาซีหลิง) →',
+        default: 'A',
+        options: [
+          {
+            id: 'A', name: 'แพนด้า & เมืองเก่า', note: 'เดินค่อนข้างมาก · ออกเช้า', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ไปศูนย์แพนด้า + DiDi กลับวัดเหวินซู + ในเมือง',cny:75},tickets:{desc:'ตั๋วเข้าศูนย์แพนด้า (¥55 × 2 ท่าน)',cny:110}},
+            stops: [
+              {time: '08:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ออกเดินทางแต่เช้าเพื่อไปถึงศูนย์แพนด้าก่อน 09:00 น.', place: 'base', transit: true},
+              {time: '09:00', title: 'ศูนย์อนุรักษ์แพนด้าเฉิงตู', cn: '成都大熊猫繁育研究基地', note: 'ชมแพนด้ากินไผ่ตอนเช้า แพนด้าแดง และเดินสวนไผ่ร่มรื่น (เผื่อ 2.5–3.5 ชม.)', place: 'panda', food: 'ไอศกรีม 3D รูปหน้าแพนด้า & ชาผลไม้สด'},
+              {time: '13:00', title: 'วัดเหวินซู & ตรอกเหวินซูฟาง', cn: '文殊院', note: 'วัดพุทธเซนสงบร่มเย็น ไหว้พระและหาอาหารกลางวันในตรอกโบราณ', place: 'wenshu', food: 'เต้าหู้มาโปเฉินหมาผัว (Chen Mapo Tofu) ต้นตำรับ & ขนมเปี๊ยวหน้าวัด'},
+              {time: '15:30', title: 'ซอยกว้างซอยแคบ (Kuanzhai Alleys)', cn: '宽窄巷子', note: 'ตรอกบ้านโบราณสมัยชิง ร้านน้ำชา ของกินพื้นเมือง และร้านของฝากน่ารัก', place: 'kuanzhai', food: 'ขนมเหนียวทอดน้ำตาลแดง Ciba & บะหมี่เย็นเสฉวน', night: 'ตรอกโคมไฟแดงสมัยชิง บรรยากาศโรแมนติกหลังฟ้ามืด'},
+              {time: '18:30', title: 'ถนนอาหารคุยซิงโหลว (Kuixinglou)', cn: '奎星楼街', note: 'มื้อค่ำสตรีทฟู้ดและร้านอาหารเสฉวนชื่อดังที่คนท้องถิ่นชื่นชอบ', place: 'kuixing', food: 'ชวนชวนเซียงหมาล่าเสียบไม้ & เกี๊ยวเสฉวน'},
+              {time: '20:30', title: 'กลับโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'พักผ่อนเอาแรงเตรียมตัวออกเดินทางขึ้นเขาซีหลิงพรุ่งนี้', place: 'base', transit: true}
+            ]
+          },
+          {
+            id: 'B', name: 'อาร์ต คาเฟ่ & แสงเมือง', note: 'เดินกลาง · ชิลล์และโรแมนติก', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ไป Eastern Suburb + DiDi หวังผิง + กลับที่พัก',cny:42},tickets:{desc:'Eastern Suburb, หวังผิง, Taikoo Li, สะพานอันซุ่น (ฟรี)',cny:0}},
+            stops: [
+              {time: '10:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ตื่นสายได้สบายๆ จิบกาแฟเช้าแบบไม่เร่งรีบ', place: 'base', transit: true},
+              {time: '10:45', title: 'Eastern Suburb Memory (东郊记忆)', cn: '东郊记忆', note: 'โรงงานหลอดอิเล็กทรอนิกส์เก่ากลายเป็นย่านศิลปะ คาเฟ่วินเทจ และกราฟิตี', place: 'creative', food: 'กาแฟ Specialty คั่วบดสด & เบเกอรีโฮมเมดในโกดังเก่า'},
+              {time: '13:30', title: 'ถนนเลียบแม่น้ำหวังผิง (Wangping Street)', cn: '望平街', note: 'เดินเล่นริมน้ำ แวะคาเฟ่ฮิปสเตอร์ ชิมของว่าง และสัมผัสฟีลคนรุ่นใหม่', place: 'wangping', food: 'ชวนชวนเซียงเสียบไม้ & เกี๊ยวเสฉวนน้ำมันพริก'},
+              {time: '16:00', title: 'IFS แพนด้าปีนตึก & Taikoo Li', cn: '成都IFS', note: 'ขึ้นชั้น 7 ถ่ายรูปคู่แพนด้าไอคอนิก แล้วเดินช้อปปิ้งสตรีทแฟชั่นและอาคารกระจกผสมโบราณ', place: 'ifs', food: 'ชานมมะลิ Chagee (霸王茶姬) & ชาผลไม้ Heytea'},
+              {time: '19:00', title: 'สะพานโบราณอันซุ่น (Anshun Bridge)', cn: '安顺廊桥', note: 'ชมไฟสีทองอร่ามสะท้อนผิวน้ำ & แวะถนนบาร์จิ่วเหยี่ยนเฉียว (Jiu Yan Qiao) จิบค็อกเทลฟังดนตรีสด', place: 'anshun', food: 'ปลาต้มผักกาดดอง Suancaiyu & คราฟต์เบียร์เฉิงตู', night: 'สะพานโบราณสีทองเปิดไฟ 18:30-22:30 น. โรแมนติกที่สุดในเมือง'},
+              {time: '21:30', title: 'กลับโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'เดินกลับหรือเรียก DiDi สั้นๆ สู่โรงแรม', place: 'base', transit: true}
+            ]
+          },
+          {
+            id: 'C', name: 'สามก๊ก & เมืองเก่า', note: 'ประวัติศาสตร์กับซอยเก่า · เดินกลาง', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi ศาลเจ้าสามก๊ก + สวนประชาชน + กลับที่พัก',cny:36},tickets:{desc:'ตั๋วเข้าศาลเจ้าสามก๊ก (¥50 × 2 ท่าน)',cny:100}},
+            stops: [
+              {time: '09:00', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'ออกเดินทางมุ่งหน้าสู่โซนประวัติศาสตร์', place: 'base', transit: true},
+              {time: '09:30', title: 'ศาลเจ้าสามก๊ก (Wuhou Shrine)', cn: '武侯祠', note: 'ศาลเจ้าเล่าปี่-ขงเบ้ง เดินชมกำแพงแดงโค้งและดงไผ่เขียวชอุ่มอันเป็นเอกลักษณ์', place: 'wuhou', food: 'เนื้อวัวสามก๊กจางเฟย (Zhangfei Beef)'},
+              {time: '12:00', title: 'ถนนโบราณจิ่นหลี่ (Jinli Old Street)', cn: '锦里古街', note: 'เดินทะลุจากศาลเจ้าเข้าสู่ถนนโคมไฟแดงสมัยสามก๊ก หาของกินกลางวันเสฉวน', place: 'jinli', food: 'บะหมี่ดันดัน (Dan Dan Mian) & ขนมถังหูลู่เคลือบน้ำตาล'},
+              {time: '14:30', title: 'โรงน้ำชาสวนประชาชน (People’s Park)', cn: '鹤鸣茶社', note: 'นั่งเก้าอี้ไม้ไผ่ริมสระน้ำ จิบชาฝาปิด และสัมผัสประสบการณ์ช่างแคะหูไม้ไผ่โบราณ (Cǎi’ěr)', place: 'tea', food: 'ชาเขียวจัสมินฝาปิด (Gaiwan Tea) & เมล็ดทานตะวันคั่วเนย'},
+              {time: '17:00', title: 'ซอยกว้างซอยแคบ (Kuanzhai Alleys)', cn: '宽窄巷子', note: 'เดินเล่นตรอกโบราณสมัยชิงยามเย็น โคมไฟเริ่มเปิดสว่าง ถ่ายรูปสวยมาก', place: 'kuanzhai', food: 'ขนม Ciba น้ำตาลแดง & เต้าหู้เหม็นทอด', night: 'ชมโชว์เปลี่ยนหน้ากากเสฉวน (Bian Lian) & โรงน้ำชาดนตรีสด'},
+              {time: '20:30', title: 'กลับโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'กลับที่พักชุนซีลู่ เตรียมจัดกระเป๋า', place: 'base', transit: true}
+            ]
+          },
+          {
+            id: 'D', name: 'สวนจีน & บทกวี', note: 'เดินสบาย · ไม่เร่งเก็บจุด', budget:{hotel:{name:'โรงแรมชุนซีลู่ (Chunxi Road)',cny:280},transit:{desc:'DiDi บ้านตู้ฝู่ + สวนประชาชน + สะพานอันซุ่น',cny:46},tickets:{desc:'ตั๋วเข้าบ้านตู้ฝู่ (¥50 × 2 ท่าน)',cny:100}},
+            stops: [
+              {time: '09:30', title: 'เริ่มจากโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'เริ่มวันแบบสโลว์ไลฟ์', place: 'base', transit: true},
+              {time: '10:00', title: 'กระท่อมมหากวีตู้ฝู่ (Du Fu Thatched Cottage)', cn: '杜甫草堂', note: 'สวนโบราณร่มรื่น สระน้ำ ศาลากลางน้ำ และประวัติศาสตร์กวีเอกของจีน', place: 'garden', food: 'จิบชาสมุนไพรในศาลาโบราณ & ขนมเปี๊ยะดอกกุ้ยฮวา'},
+              {time: '12:30', title: 'สวนสาธารณะหวนฮวาซี (Huanhuaxi Park)', cn: '浣花溪公园', note: 'เดินเชื่อมจากบ้านตู้ฝู่เข้าสู่สวนธรรมชาติริมน้ำ ชมฝูงนกน้ำและต้นไม้ใหญ่', place: 'huanhuaxi'},
+              {time: '14:30', title: 'โรงน้ำชาสวนประชาชน (People’s Park)', cn: '人民公园', note: 'นั่งจิบชาฝาปิดใต้ร่มไม้ สัมผัสวิถีชีวิตคนเฉิงตูแท้ๆ', place: 'tea', food: 'ชาเขียวจัสมินฝาปิด & ช่างแคะหูไม้ไผ่โบราณ'},
+              {time: '17:30', title: 'สะพานโบราณอันซุ่น (Anshun Bridge)', cn: '安顺廊桥', note: 'มื้อค่ำริมน้ำและชมแสงไฟสะพานทองอร่าม', place: 'anshun', food: 'ปลาต้มผักกาดดอง Suancaiyu & คราฟต์เบียร์', night: 'แสงไฟสะพานอันซุ่นเปิดยามค่ำคืน'},
+              {time: '20:30', title: 'กลับโรงแรมชุนซีลู่', cn: '春熙路商圈酒店', note: 'กลับที่พัก', place: 'base', transit: true}
+            ]
+          }
+        ],
+        caution: 'เฉิงตูเต็มวันสามารถปรับเปลี่ยนเวลาตามแรงได้ ไม่ต้องรีบเก็บทุกจุด'
+      },
+
+      'xiling-8':{
+        A:'08:30 เดินทางจากเฉิงตู → 11:30 กระเช้าขึ้นซีหลิง → 14:00 ชมวิว Riyueping (ถ้าเปิด) → 17:00 ที่พักบนเขา',
+        B:'08:30 เดินทางจากเฉิงตู → 11:30 กระเช้าขึ้นซีหลิง → 13:30 ลานสกี/กิจกรรมหิมะ → 17:00 ที่พักบนเขา',
+        C:'08:30 เดินทางจากเฉิงตู → 11:30 กระเช้าขึ้นซีหลิง → 14:00 เดินชมวิวและถ่ายรูปรอบลานหิมะ → 17:00 ที่พักบนเขา'
+      },
+      'xiling-9':{
+        A:'08:30 เช็กเอาต์ที่พัก → 09:30 ชมทะเลหมอก Riyueping → 11:30 จุดชมวิว Yinyangjie → 14:00 ลงกระเช้าและกลับเฉิงตู → 18:00 โรงแรมใกล้ Chengdu East',
+        B:'08:30 เช็กเอาต์ที่พัก → 09:30 สนุกกับกิจกรรมลานสกี → 12:30 มื้อกลางวันบนเขา → 14:00 ลงกระเช้าและกลับเฉิงตู → 18:00 โรงแรมใกล้ Chengdu East',
+        C:'08:30 เช็กเอาต์ที่พัก → 10:00 คาเฟ่และจุดชมวิวบนเขา → 12:30 มื้อกลางวันแบบไม่เร่งรีบ → 14:00 ลงกระเช้าและกลับเฉิงตู → 18:00 โรงแรมใกล้ Chengdu East'
+      }
+    };
+    const query=new URLSearchParams(location.search);
+    let savedPlan={};try{savedPlan=JSON.parse(localStorage.getItem('gee-trip-plan')||'{}')}catch{}
+    let selected=(query.get('route')||savedPlan.route7||'D').toUpperCase();if(!routes[selected])selected='D';
+    let selectedCity=query.get('city');if(!cityInfo[selectedCity])selectedCity=query.has('route')?'chengdu':null;
+    let selectedDay=query.get('day');
+    if(selectedCity&&!selectedDay){selectedDay=(selectedCity==='chengdu'&&query.has('route'))?'7':cityInfo[selectedCity].days[0][0]}
+    if(!selectedCity||!cityInfo[selectedCity].days.some(([day])=>day===selectedDay))selectedDay=selectedCity?cityInfo[selectedCity].days[0][0]:null;
+    const selectedMoods={...(savedPlan.cityMoods||{})};
+    const moodCity=city=>city==='chengdu_return'?'chengdu':city;
+    for(const city of Object.keys(cityMoods))if(!cityMoods[city].some(m=>m.id===selectedMoods[city]))delete selectedMoods[city];
+    if(query.get('mood')&&selectedCity){const city=moodCity(selectedCity),value=query.get('mood').toUpperCase();if(cityMoods[city].some(m=>m.id===value))selectedMoods[city]=value}
+    else if(query.has('route')&&selectedCity==='chengdu'&&selectedDay==='7')selectedMoods.chengdu=selected;
+    function currentMood(){const city=moodCity(selectedCity);return cityMoods[city]?.find(m=>m.id===selectedMoods[city])}
+    function updateUrl(){const url=new URL(location.href);for(const key of ['city','day','route','choice','mood','chengdu','chongqing'])url.searchParams.delete(key);if(selectedCity)url.searchParams.set('city',selectedCity);if(currentMood())url.searchParams.set('mood',currentMood().id);if(selectedDay)url.searchParams.set('day',selectedDay);history.replaceState(null,'',url)}
+    function renderOverview(){
+      const slot=`${selectedCity}-${selectedDay}`,data=overviewDays[slot],city=cityInfo[selectedCity];if(!data)return;
+      const mood=currentMood(),routeId=moodRouteMap[slot]?.[mood.id],choice=data.options?.find(x=>x.id===routeId)||data.options?.find(x=>x.id===data.default)||data.options?.[0];
+      const fixedTransfer=slot==='chengdu_return-9'||slot==='chongqing-12';
+      
+      // Determine distinct hero photo
+      const heroKey = data.heroPhoto || (selectedCity==='chengdu_return'&&selectedDay==='9'?'chengdueast':(selectedCity==='chongqing'&&selectedDay==='12'?'tfu':mood.photo));
+      const heroPhoto = photoAlbums[heroKey]?.[0]?.[0] || heroKey;
+      const photoNoteText = placeStories[heroKey]?.see || mood.photoNote || 'ภาพถ่ายสถานที่จริง';
+      
+      const stopsList = choice?.stops || data.stops || [];
+      let stepsHtml = '';
+      for (let i = 0; i < stopsList.length; i++) {
+        const s = stopsList[i];
+        const isTransit = !!s.transit;
+        const thumb = !isTransit && s.place && photoAlbums[s.place]?.[0]?.[0];
+        const photoCount = s.place && photoAlbums[s.place] ? photoAlbums[s.place].length : 2;
+        const isNight = s.time.includes('18:') || s.time.includes('19:') || s.time.includes('20:') || s.time.includes('21:');
+
+        // Badges for Food and Nightlife
+        const badges = [];
+        if (s.food) badges.push(`<span class="badge-food">⭐ อาหารต้องลอง: ${s.food}</span>`);
+        if (s.night) badges.push(`<span class="badge-night">🌙 เที่ยวกลางคืน: ${s.night}</span>`);
+        const badgeRow = badges.length ? `<div class="step-badge-row">${badges.join('')}</div>` : '';
+
+        // Grand Card HTML
+        const cardHtml = `<div class="overview-card ${isTransit?'is-transit':''}">
+          <div class="card-head">
+            <span class="card-time ${isNight?'night':''}">${s.time}</span>
+            <div class="card-title-wrap">
+              <div class="card-title">${s.title}</div>
+              ${s.cn ? `<div class="card-cn">${s.cn}</div>` : ''}
+            </div>
+          </div>
+          ${thumb ? `
+          <div class="card-media-box step-photo-btn" data-place="${s.place}" data-title="${s.title}" role="button" aria-label="เปิดดู ${photoCount} ภาพจริงและบรรยากาศของ ${s.title}">
+            <img src="assets/${thumb}.webp" alt="${s.title}" loading="lazy">
+            <div class="card-media-overlay">
+              <span class="photo-expand-pill">📷 ${photoCount} ภาพจริง & Mood ↗</span>
+              <span class="card-media-hint">แตะเพื่อขยายดูรูป & เกร็ด</span>
+            </div>
+          </div>
+          ` : ''}
+          <div class="card-details">
+            <p class="card-note">${s.note}</p>
+            ${badgeRow}
+          </div>
+        </div>`;
+
+        // If not first stop, insert a dedicated Transit Connector between i-1 and i
+        if (i > 0) {
+          const prevStop = stopsList[i-1];
+          const transit = getTransitDetails(prevStop.place, s.place);
+          if (transit) {
+            stepsHtml += `<div class="transit-connector">
+              <div class="connector-track">
+                <span class="track-dot"></span>
+                <span class="track-line"></span>
+                <span class="track-arrow">↓</span>
+                <span class="track-dot"></span>
+              </div>
+              <div class="connector-bubble">
+                <div class="connector-headline">
+                  <span class="connector-mode-pill ${transit.type}">${transit.mode}</span>
+                  <span class="connector-metrics">≈ ${transit.dist} · ${transit.time}</span>
+                </div>
+                <div class="connector-advice">${transit.detail}</div>
+                ${transit.alt ? `<div class="connector-alt">${transit.alt}</div>` : ''}
+              </div>
+            </div>`;
+          }
+        }
+
+        stepsHtml += cardHtml;
+      }
+
+      // Unified daily briefing card
+      const briefingHtml = (data.morning || data.milestone) ? `<div class="day-briefing">
+        ${data.morning ? `<div class="brief-item"><span class="brief-tag origin">🌅 จุดเริ่มวัน</span><span class="brief-text">${data.morning}</span></div>` : ''}
+        ${data.milestone ? `<div class="brief-item highlight"><span class="brief-tag milestone">⭐ กำหนดการสำคัญ</span><span class="brief-text">${data.milestone}</span></div>` : ''}
+      </div>` : '';
+
+      const nextDayBtnHtml = data.nextDay ? `<button class="next-day-btn" data-nextcity="${data.nextCity}" data-nextday="${data.nextDay}">${data.nextBtnLabel || `ดูแผนวันพรุ่งนี้ (${data.nextDay} ธ.ค.) →`}</button>` : '';
+      const nextDayHtml = data.evening ? `<div class="next-day-card">
+        <div class="next-day-header"><span class="next-day-tag">🌙 คืนนี้ & ก้าวถัดไป</span></div>
+        <div class="next-day-title">${data.evening}</div>
+        <div class="next-day-sub">${data.tomorrow}</div>
+        ${nextDayBtnHtml}
+      </div>` : '';
+
+      
+      // Budget Calculator for 2 Persons
+      const budget = choice?.budget || data.budget;
+      let budgetHtml = '';
+      if (budget) {
+        const hotelCny = budget.hotel?.cny ?? 0;
+        const hotelThb = Math.round(hotelCny * 5);
+        const transitCny = budget.transit?.cny ?? 0;
+        const transitThb = Math.round(transitCny * 5);
+        const ticketCny = budget.tickets?.cny ?? 0;
+        const ticketThb = Math.round(ticketCny * 5);
+        const totalCny = hotelCny + transitCny + ticketCny;
+        const totalThb = Math.round(totalCny * 5);
+
+        budgetHtml = `<div class="budget-card">
+          <div class="budget-header">
+            <div class="budget-title-wrap">
+              <span class="budget-tag">💰 ESTIMATED BUDGET</span>
+              <h3 class="budget-title">ประมาณการค่าใช้จ่ายวันนี้ (สำหรับ 2 ท่าน)</h3>
+            </div>
+            <div class="budget-total-badge">
+              <span class="budget-total-cny">≈ ¥${totalCny}</span>
+              <span class="budget-total-thb">(~${totalThb.toLocaleString()} บาท)</span>
+            </div>
+          </div>
+          <div class="budget-items">
+            <div class="budget-row">
+              <div class="budget-icon">🏨</div>
+              <div class="budget-desc">
+                <strong>ค่าที่พัก ${hotelCny > 0 ? '(คิดแค่ 1 ห้อง / พักคู่กัน)' : '(คืนนี้ไม่มี / เช็กเอาต์กลับไทย)'}</strong>
+                <small>${budget.hotel?.name || 'ไม่มีค่าที่พัก'} ${hotelCny > 0 ? '· 1 ห้องเตียงใหญ่/คู่' : ''}</small>
+              </div>
+              <div class="budget-cost">
+                <span class="cny">${hotelCny > 0 ? `¥${hotelCny}` : '¥0'}</span>
+                <span class="thb">${hotelCny > 0 ? `~${hotelThb.toLocaleString()} ฿` : '0 ฿'}</span>
+              </div>
+            </div>
+            <div class="budget-row">
+              <div class="budget-icon">🚖</div>
+              <div class="budget-desc">
+                <strong>ค่าเดินทาง (2 ท่าน)</strong>
+                <small>${budget.transit?.desc || 'เดินทางในเมือง'}</small>
+              </div>
+              <div class="budget-cost">
+                <span class="cny">¥${transitCny}</span>
+                <span class="thb">~${transitThb.toLocaleString()} ฿</span>
+              </div>
+            </div>
+            <div class="budget-row">
+              <div class="budget-icon">🎟️</div>
+              <div class="budget-desc">
+                <strong>ค่าเข้าสถานที่ (2 ท่าน)</strong>
+                <small>${budget.tickets?.desc || 'เข้าชมฟรี'}</small>
+              </div>
+              <div class="budget-cost">
+                <span class="cny">${ticketCny > 0 ? `¥${ticketCny}` : 'ฟรี'}</span>
+                <span class="thb">${ticketCny > 0 ? `~${ticketThb.toLocaleString()} ฿` : '0 ฿'}</span>
+              </div>
+            </div>
+          </div>
+          <div class="budget-footer">
+            <div class="budget-note">💡 ค่าที่พักคิดแค่ 1 ห้อง (พักด้วยกัน 2 คน) + ค่าเดินทางและค่าเข้าสถานที่สำหรับ 2 ท่าน (ไม่รวมอาหารและช้อปปิ้ง) · อัตราแลกเปลี่ยน 1 CNY ≈ 5.0 บาท</div>
+          </div>
+        </div>`;
+      }
+
+      $('overview').innerHTML=`<div class="overview-head"><div class="overview-photo"><img src="assets/${heroPhoto}.webp" alt="${photoNoteText}"><span>${photoNoteText} · ไม่ใช่สภาพวันเดินทาง</span></div><div class="overview-copy"><div class="eyebrow">${selectedDay} DEC · ${city.en}${fixedTransfer?' · วันเดินทาง':' · '+mood.name}</div><h2>${data.title}</h2><p>${data.intro}</p></div></div><div class="overview-section">
+        ${briefingHtml}
+        <div class="overview-route">
+          <strong>${fixedTransfer?'ลำดับการเดินทาง':choice?`แผนตาม mood · ${choice.name}`:`แผนตาม mood · ${mood.name}`}</strong>
+          ${choice?`<p class="overview-source">${choice.note} · แตะที่รูป 📷 เพื่อดูภาพมุมมองจริงและ mood ของสถานที่</p>`:''}
+          <div class="overview-line">${stepsHtml}</div>
+        </div>
+        ${budgetHtml}
+        <div class="overview-note">${data.caution}</div>
+        ${nextDayHtml}
+        <p class="overview-source">เส้นทางนี้เป็นข้อเสนอจากไฟล์ทริปและ mood ที่เลือก · เช็กเวลาเปิด การเดินทางและสภาพอากาศก่อนออกเที่ยว</p>
+      </div>`;
+
+      // Attach click listeners to all photo buttons and next day buttons in overview
+      document.querySelectorAll('.step-photo-btn').forEach(btn=>{
+        btn.addEventListener('click',()=>openLightbox(btn.dataset.place,btn.dataset.title));
+      });
+      document.querySelectorAll('.next-day-btn').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          if(btn.dataset.nextcity) selectedCity=btn.dataset.nextcity;
+          if(btn.dataset.nextday) selectedDay=btn.dataset.nextday;
+          
+    
+    renderNavigation();
+          window.scrollTo({top:0,behavior:'smooth'});
+        });
+      });
+    }
+    function renderCityStay(){
+      const mood=currentMood(),city=moodCity(selectedCity),reasons={
+        chengdu:{A:'เดินทางออกไปดูแพนด้าได้ แล้วกลับมากินข้าวและเดินโซนฮิตกลางเมือง',B:'ใกล้ IFS และ Taikoo Li; ไป Eastern Suburb หรือริมแม่น้ำด้วยรถไฟฟ้าหรือ DiDi',C:'เป็นฐานกลางเมืองสำหรับออกไปศาลเจ้าสามก๊กและซอยเก่า',D:'ออกไปโซนสวนและร้านชาได้ แล้วกลับมาหาของกินสะดวก'},
+        chengdu_return:{
+          A:'ใกล้จุดขึ้นรถไฟไปฉงชิ่งวันถัดไป; เช้าวันที่ 10 มีเวลาแวะจุดประวัติศาสตร์หรือสวนก่อนกลับมาขึ้นรถไฟ',
+          B:'ใกล้สถานี Chengdu East มาก เช้าวันที่ 10 นั่ง Metro สาย 2 เข้าชุนซีลู่ / Taikoo Li ได้ใน 15 นาที ช้อปปิ้งสบายใจแล้วกลับมาขึ้นรถไฟ',
+          C:'สะดวกกับเช้าวันย้ายเมือง; เผื่อเวลาเดินทางไป-กลับโซนเมืองเก่าและสถานีรถไฟ',
+          D:'เหมาะกับการพักผ่อนเงียบๆ ก่อนขึ้นรถไฟความเร็วสูง เช้าวันที่ 10 เดินเล่นสวนประชาชนได้สะดวก'
+        },
+        xiling:{A:'พักใกล้กระเช้าและจุดต่อขึ้นชมวิวสูง',B:'ใกล้ลานสกีและกิจกรรมที่เปิดจริง',C:'ไม่ต้องรีบลงเขา มีเวลาพักและเดินถ่ายรูป'},
+        chongqing:{A:'เดินทางไป Liziba ด้วยรถไฟฟ้า แล้วกลับมาย่านกินข้าวกลางเมือง',B:'สะดวกกับ Hongyadong และถนนอาหารยามค่ำ',C:'ใช้รถไฟฟ้าไป Ciqikou และฝั่งริมแม่น้ำ',D:'ต่อรถไปพิพิธภัณฑ์และ Eling ได้จากศูนย์กลาง'}
+      };
+      const base={
+        chengdu:{name:'Chunxi Road · ชุนซีลู่',meta:'ก่อนขึ้นซีหลิง · 2 คืน (6–8 ธ.ค.)',note:'เช็กเอาต์เช้าวันที่ 8 และวางแผนขนกระเป๋าไปโรงแรมใหม่หลังลงซีหลิง; ถ้าฝากกระเป๋าไว้ที่นี่ต้องกลับมารับ',links:`<a href="${tripSearchUrl(stayPeriods[0])}" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">ค้นหาที่พักชุนซีลู่ 6–8 ธ.ค.</span><span class="trip-arrow">↗</span></a>`},
+        chengdu_return:{name:'Chengdu East · ฝั่ง West Square',meta:'หลังลงซีหลิง · 1 คืน (9–10 ธ.ค.)',suggestion:'Vienna International Hotel (West Square)',note:'โรงแรมระบุว่าเดินจากสถานีราว 5–8 นาที; ยังไม่ได้เช็กราคาและห้องว่าง 9–10 ธ.ค. และต้องยืนยันว่าสถานีรถไฟตรงกับตั๋ว',links:'<a href="https://www.trip.com/hotels/chengdu-hotel-detail-80916797/vienna-international-hotel/" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">Vienna International Hotel</span><span class="trip-arrow">↗</span></a><a href="https://www.trip.com/hotels/chengdu-chengdu-east-railway-station/hotels-c28r2469079/" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">โรงแรมรอบ Chengdu East</span><span class="trip-arrow">↗</span></a>'},
+        xiling:{name:'โซนลานสกีซีหลิง · Yingxue Plaza',meta:'พักบนเขา · 1 คืน (8–9 ธ.ค.)',note:'ขึ้นกระเช้าตามรอบเปิดจริง; ตรวจจุดขึ้นกระเช้าของโรงแรมก่อนจอง',links:'<a href="https://us.trip.com/hotels/dayi-xiling-snow-mountain/hotels-c7716m24268413/" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">ค้นหาที่พักใกล้ซีหลิง</span><span class="trip-arrow">↗</span></a>'},
+        chongqing:{name:'Jiefangbei · เจี่ยฟ่างเป่ย',meta:'โรงแรมเดียว · 2 คืน (10–12 ธ.ค.)',note:'อยู่กลางเมือง ใกล้ร้านอาหาร; เส้นทางฉงชิ่งมีบันไดและต่างระดับ แม้ดูใกล้บนแผนที่',links:'<a href="https://www.trip.com/hotels/chongqing-liberation-stele-pedestrian-street/hotels-c4m4197113/" target="_blank" rel="noopener" class="trip-link"><span class="trip-brand">Trip<b>.com</b></span><span class="trip-btn-label">โรงแรมใกล้ Jiefangbei</span><span class="trip-arrow">↗</span></a>'}
+      }[selectedCity];
+      const transfer=selectedCity==='chengdu_return'?'<p><b>จากซีหลิง:</b> ถ้ารถกลับลง Chadianzi ให้นั่ง Metro สาย 2 ไป Chengdu East ได้โดยไม่เปลี่ยนสาย; รอบรถและจุดลงขากลับต้องยืนยันก่อนเดินทาง</p><p><b>ข้อแลกเปลี่ยน:</b> ต้องย้ายและขนกระเป๋า แต่เช้าวันขึ้นรถไฟจะอยู่ใกล้สถานี</p>':'';
+      $('city-stay').innerHTML=`<div class="city-stay-card"><div class="stay-overline">${selectedCity==='chengdu_return'?'ที่พักใหม่หลังกลับจากซีหลิง':'ฐานพักที่แนะนำสำหรับ '+mood.name}</div><strong>📍 ${base.name}</strong><span class="city-stay-meta">${base.meta}</span>${base.suggestion?`<p class="city-stay-pick"><b>โรงแรมที่แนะนำให้เช็ก:</b> ${base.suggestion}</p>`:''}<p>${reasons[selectedCity][mood.id]}</p>${transfer}<div class="city-stay-links">${base.links}</div><div class="city-stay-small">${base.note} · โปรดตรวจวันและตำแหน่งอีกครั้งก่อนจอง</div></div>`;
+    }
+    let lastMoodStripCity=null;
+    function renderNavigation(){
+      const citySub={chengdu:'ชุนซีลู่',xiling:'ภูเขาหิมะ',chengdu_return:'ใกล้ Chengdu East',chongqing:'เจี่ยฟ่างเป่ย'};
+      $('city-selector').innerHTML=['chengdu','xiling','chengdu_return','chongqing'].map((id,i)=>{const city=cityInfo[id],cardName=id==='chengdu_return'?'เฉิงตู (รอบ 2)':city.name,cardDate=`${city.days[0][0]}–${city.days.at(-1)[0]} ธ.ค.`,sub=citySub[id];return `<button class="city-card ${id===selectedCity?'active':''}" data-city="${id}" aria-pressed="${id===selectedCity}"><img src="assets/${city.image}.webp" alt="${city.photoLabel}"><span class="city-index">0${i+1}</span><span class="city-copy"><b>${cardName}</b><small>${cardDate} · ${sub}</small></span></button>`}).join('');
+      document.querySelectorAll('[data-city]').forEach(button=>button.addEventListener('click',()=>{selectedCity=button.dataset.city;selectedDay=cityInfo[selectedCity].days[0][0];renderNavigation()}));
+      const mood=currentMood(),hasCity=!!selectedCity;
+      $('city-mood-section').hidden=!hasCity;
+      if(hasCity){const city=moodCity(selectedCity),oldScroll=lastMoodStripCity===city?$('city-moods').scrollLeft:null;$('city-mood-title').textContent=selectedCity==='chengdu_return'?'mood เฉิงตูที่เลือกไว้':'เลือก mood · '+cityInfo[selectedCity].name;$('city-moods').innerHTML=cityMoods[city].map(item=>`<button class="city-mood ${item.id===mood?.id?'active':''}" data-mood="${item.id}" aria-pressed="${item.id===mood?.id}"><div class="city-mood-media"><img src="assets/${item.photo}.webp" alt="${item.photoNote||'ภาพถ่ายจริงประกอบ mood '+item.name}">${item.photoNote?`<em>${item.photoNote}</em>`:''}</div><span><b>${item.name}</b><small>${item.hint}</small></span></button>`).join('');$('city-moods').scrollLeft=oldScroll??Math.max(0,(cityMoods[city].findIndex(item=>item.id===mood?.id)-1)*167);lastMoodStripCity=city;document.querySelectorAll('[data-mood]').forEach(button=>button.addEventListener('click',()=>{selectedMoods[city]=button.dataset.mood;selected=moodCity(selectedCity)==='chengdu'?button.dataset.mood:selected;
+    
+    renderNavigation();requestAnimationFrame(()=>$('date-prompt').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'}))}))}
+      $('city-stay-section').hidden=!mood;if(mood)renderCityStay();
+      $('city-hint').hidden=!!mood;$('city-hint').textContent=!hasCity?'เลือกเมืองก่อน แล้วค่อยเลือก mood ที่อยากเที่ยว':'เลือก mood ของ'+cityInfo[selectedCity].name+'ก่อน แล้วจะเห็นย่านพักและวันที่';
+      $('date-prompt').hidden=!mood;
+      $('date-strip').hidden=!mood;
+      $('date-strip').innerHTML=mood?cityInfo[selectedCity].days.map(([day,label])=>`<button class="day ${selectedDay===day?'active':''}" data-day="${day}" aria-pressed="${selectedDay===day}"><b>${day} ธ.ค.</b><span>${label}</span></button>`).join(''):'';
+      document.querySelectorAll('#date-strip .day').forEach(button=>button.addEventListener('click',()=>{selectedDay=button.dataset.day;renderNavigation()}));
+      document.querySelectorAll('[data-day7]').forEach(el=>el.hidden=true);
+      $('overview').hidden=!mood||!selectedDay;document.querySelector('.nav').hidden=!mood||!selectedDay;
+      if(mood&&selectedDay)renderOverview();
+      updateUrl();
+    }
+    function tripSearchUrl(period){
+      const landmark=tripLandmark, [lat,lon]=places[landmark.place];
+      const filter=`50~50~${landmark.id}*50*${lat}~${lon}~${landmark.name}~${landmark.id}~2`;
+      const params=new URLSearchParams({cityId:'28',cityName:'Chengdu',checkin:period.checkin,checkout:period.checkout,crn:'1',adult:'2',listFilters:filter});
+      return `https://www.trip.com/hotels/list?${params}`;
+    }
+    function distance(a,b){const [la,lo]=places[a], [lb,ln]=places[b],rad=Math.PI/180,dlat=(lb-la)*rad,dlon=(ln-lo)*rad,h=Math.sin(dlat/2)**2+Math.cos(la*rad)*Math.cos(lb*rad)*Math.sin(dlon/2)**2;return 6371*2*Math.atan2(Math.sqrt(h),Math.sqrt(1-h))}
+    function mode(from,to,km){if(from==='panda'||to==='panda')return 'DiDi สะดวกสุด; รถไฟฟ้า + ต่อรถเป็นอีกทาง';if(km<0.6)return 'เดิน';if(km<1.5)return 'เดินหรือ DiDi';if(km<4)return 'DiDi หรือรถไฟฟ้า';return 'รถไฟฟ้าหรือ DiDi'}
+    function timeBadge(label){
+      if(label.includes('กลับ'))return {icon:'↩',className:'return',display:'กลับ'};
+      if(label.includes('ค่ำ')||label.includes('กลางคืน'))return {icon:'☾',className:'night'};
+      if(label.includes('เย็น'))return {icon:'◕',className:'evening'};
+      if(label.includes('เช้า'))return {icon:'☀',className:'day'};
+      return {icon:'☼',className:'day'};
+    }
+    let activeAlbum=[],activePlace='',activeTitle='',activeSlide=0;
+    function showSlide(index){
+      if(!activeAlbum.length)return;activeSlide=(index+activeAlbum.length)%activeAlbum.length;
+      const [photo,caption]=activeAlbum[activeSlide],story=placeStories[activePlace];
+      $('lightbox-image').src=`assets/${photo}.webp`;$('lightbox-image').alt=`${caption} ภาพ ${activeSlide+1} จาก ${activeAlbum.length}`;
+      $('lightbox-counter').textContent=`${activeSlide+1} / ${activeAlbum.length}`;$('lightbox-slide').textContent=caption;
+      $('lightbox-source').href=photoSources[photo];
+      $('lightbox-thumbs').innerHTML=activeAlbum.map(([key,label],i)=>`<button class="${i===activeSlide?'active':''}" data-slide="${i}" aria-label="ดูภาพ ${i+1}: ${label}"><img src="assets/${key}.webp" alt=""></button>`).join('');
+      document.querySelectorAll('#lightbox-thumbs button').forEach(b=>b.addEventListener('click',()=>showSlide(Number(b.dataset.slide))));
+    }
+    function openLightbox(place,title){
+      activePlace=place;activeTitle=title;activeAlbum=photoAlbums[place]||[];if(!activeAlbum.length)return;
+      const story=placeStories[place] || {};
+      $('lightbox-title').textContent=title;
+      $('lightbox-see').textContent=story.see || 'จุดท่องเที่ยวและแลนด์มาร์กสำคัญ';
+      $('lightbox-vibe').textContent=story.vibe || 'บรรยากาศตาม mood ของสถานที่';
+      $('lightbox-tip').textContent=(story.tip || 'เช็กเวลาเปิด-ปิดและการเดินทาง') + ' · ภาพถ่ายต่างวัน ใช้ดูอารมณ์สถานที่';
+      
+      const foodBox = $('lightbox-food-box');
+      if (foodBox) {
+        if (story.food) {
+          $('lightbox-food').textContent = story.food;
+          foodBox.hidden = false;
+        } else {
+          foodBox.hidden = true;
+        }
+      }
+      const nightBox = $('lightbox-night-box');
+      if (nightBox) {
+        if (story.night) {
+          $('lightbox-night').textContent = story.night;
+          nightBox.hidden = false;
+        } else {
+          nightBox.hidden = true;
+        }
+      }
+
+      showSlide(0);$('lightbox').classList.add('open');document.body.style.overflow='hidden';$('lightbox-close').focus();
+    }
+    function closeLightbox(){$('lightbox').classList.remove('open');document.body.style.overflow=''}
+    $('lightbox-close').addEventListener('click',closeLightbox);
+    $('photo-prev').addEventListener('click',()=>showSlide(activeSlide-1));$('photo-next').addEventListener('click',()=>showSlide(activeSlide+1));
+    $('lightbox').addEventListener('click',event=>{if(event.target===$('lightbox'))closeLightbox()});
+    document.addEventListener('keydown',event=>{if(!$('lightbox').classList.contains('open'))return;if(event.key==='Escape')closeLightbox();if(event.key==='ArrowLeft')showSlide(activeSlide-1);if(event.key==='ArrowRight')showSlide(activeSlide+1)});
+    let touchX=0;$('lightbox-media').addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});$('lightbox-media').addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>45)showSlide(activeSlide+(dx<0?1:-1))},{passive:true});
+    function render(key){
+      selected=key;const r=routes[key];$('hero').classList.add('switch');$('hero-image').src=`assets/${r.photo}.webp`;$('hero-image').alt=r.alt;$('hero-title').textContent=r.title;$('hero-subtitle').textContent=r.subtitle;requestAnimationFrame(()=>$('hero').classList.remove('switch'));$('mood-icon').textContent=r.icon;$('mood-title').textContent=r.mood;$('mood-detail').textContent=r.detail;$('effort').textContent=r.effort;$('warning').textContent=r.warning;$('route-count').textContent=`${r.stops.length-2} จุดเที่ยว · เวลาแบบยืดหยุ่น`;
+      if ($('day7-briefing')) {
+        $('day7-briefing').innerHTML = `<div class="day-briefing">
+          <div class="brief-item"><span class="brief-tag origin">🌅 จุดเริ่มวัน</span><span class="brief-text">ตื่นเช้าที่โรงแรมย่านชุนซีลู่ รับประทานอาหารเช้าพร้อมเดินทางตาม Mood ที่เลือก</span></div>
+          <div class="brief-item highlight"><span class="brief-tag milestone">⭐ กำหนดการสำคัญ</span><span class="brief-text">เที่ยวเฉิงตูเต็มวันแบบอิสระ · ช่วงค่ำเตรียมสัมภาระสำหรับออกเดินทางขึ้นเขาซีหลิงพรุ่งนี้</span></div>
+        </div>`;
+      }
+      $('stops').innerHTML=r.stops.map((s,i)=>{
+        const base=i===0||i===r.stops.length-1;
+        const title=i===0?`ที่พัก${stay.short}`:i===r.stops.length-1?`กลับที่พัก${stay.short}`:s[1];
+        const cn=(i===0||i===r.stops.length-1)?stay.cn:s[2];
+        const photo=stopPhotos[key][i];
+        const nearby=key==='A'&&i===4;
+        const desc=i===0?'เริ่มจากฐานพักเดียวกันทุก Route':i===r.stops.length-1?'กลับโรงแรมเดิมตามที่อยู่จริง':s[3];
+        const time=timeBadge(s[0]);
+        const from=i>0?stopPlaces[key][i-1]:null,to=stopPlaces[key][i],km=i>0?distance(from,to):null;
+        const distanceLabel=i===0?'':km<0.1?'ใกล้กัน':`≈ ${km.toFixed(1)} กม.`;
+        const travel=i===0?'':`<div class="stop-travel">↳ จากจุดก่อน · ${mode(from,to,km)}</div>`;
+        if (base) {
+          return `<div class="stop is-transit"><div class="dot">${i+1}</div><div class="stop-content"><div class="stop-meta"><span class="stop-time ${time.className}"><span class="time-icon" aria-hidden="true">${time.icon}</span>${time.display||s[0]}</span>${i>0?`<span class="stop-distance" aria-label="ระยะจากจุดก่อน ${distanceLabel}">${distanceLabel}</span>`:''}</div><div class="stop-title">${title}</div><div class="stop-cn">${cn}</div><div class="stop-desc">${desc}</div>${travel}</div></div>`;
+        }
+        const pKey = stopPlaces[key][i];
+        const pStory = placeStories[pKey] || {};
+        const badges7 = [];
+        if (pStory.food) badges7.push(`<span class="badge-food">${pStory.food.split(',')[0]}</span>`);
+        if (pStory.night && (s[0].includes('ค่ำ')||s[0].includes('เย็น'))) badges7.push(`<span class="badge-night">${pStory.night.split('&')[0]}</span>`);
+        const badgeRow7 = badges7.length ? `<div class="step-badge-row">${badges7.join('')}</div>` : '';
+
+        return `<div class="stop"><div class="dot">${i+1}</div><div class="stop-content"><div class="stop-meta"><span class="stop-time ${time.className}"><span class="time-icon" aria-hidden="true">${time.icon}</span>${time.display||s[0]}</span>${i>0?`<span class="stop-distance" aria-label="ระยะจากจุดก่อน ${distanceLabel}">${distanceLabel}</span>`:''}</div><div class="stop-title">${title}</div><div class="stop-cn">${cn}</div><div class="stop-desc">${desc}</div>${badgeRow7}${travel}</div><button class="stop-photo" data-place="${stopPlaces[key][i]}" data-title="${nearby?'ภาพย่านใกล้ถนนคุยซิงโหลว':title}" aria-label="ดูภาพ ${title} และ mood"><img src="assets/${photo}.webp" alt="ภาพถ่ายจริง ${title}" loading="lazy"><span class="photo-count">📷 ${photoAlbums[stopPlaces[key][i]] ? photoAlbums[stopPlaces[key][i]].length : 3} รูป ↗</span></button></div>`;
+      }).join('');
+      if ($('day7-next-card')) {
+        $('day7-next-card').innerHTML = `<div class="next-day-card">
+          <div class="next-day-header"><span class="next-day-tag">🌙 คืนนี้ & ก้าวถัดไป</span></div>
+          <div class="next-day-title">พักผ่อนเอาแรงที่ชุนซีลู่ ชาร์จแบตกล้องและเตรียมเสื้อกันหนาวตัวหนา</div>
+          <div class="next-day-sub">พรุ่งนี้ (8 ธ.ค.): ออกเดินทางแต่เช้า 08:30 น. มุ่งหน้าสู่เขาหิมะซีหลิง (Xiling Snow Mountain) และค้างคืนบนเขา!</div>
+          <button class="next-day-btn" data-nextcity="xiling" data-nextday="8">ดูแผนวันพรุ่งนี้ (8 ธ.ค. - ขึ้นเขาซีหลิง) →</button>
+        </div>`;
+        const nextBtn = $('day7-next-card').querySelector('.next-day-btn');
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            selectedCity = 'xiling';
+            selectedDay = '8';
+            
+    
+    renderNavigation();
+            window.scrollTo({top:0, behavior:'smooth'});
+          });
+        }
+      }
+      document.querySelectorAll('.stop-photo').forEach(button=>button.addEventListener('click',()=>openLightbox(button.dataset.place,button.dataset.title)));
+      const night=nightScenes[key];$('night-card').innerHTML=`<button class="night-card" id="night-open" aria-label="ดูภาพและบรรยากาศ ${night.title}"><img src="assets/${night.photo}.webp" alt="${night.title}"><span><em>${night.badge}</em><b>${night.title}</b><small>${night.detail}</small></span></button>`;$('night-open').addEventListener('click',()=>openLightbox(night.place,night.title));
+      updateUrl();
+    }
+    function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2400)}
+    $('save').addEventListener('click',()=>{try{localStorage.setItem('gee-trip-plan',JSON.stringify({route7:selected,cityMoods:selectedMoods,city:selectedCity,day:selectedDay}));toast('เก็บ mood และแผนที่เลือกไว้ในเครื่องนี้แล้ว')}catch{toast('เบราว์เซอร์นี้ยังบันทึกตัวเลือกไม่ได้')}});
+    $('share').addEventListener('click',async()=>{const url=location.href,dayText=selectedDay?`${selectedDay} ธ.ค.`:'',cityName=cityInfo[selectedCity]?.name||'เฉิงตู',shareTitle=`ทริป Gee × Gaeun · ${cityName} ${dayText}`.trim();if(navigator.share&&location.protocol!=='file:'&&!['localhost','127.0.0.1'].includes(location.hostname)){try{await navigator.share({title:shareTitle,url});return}catch(e){if(e.name==='AbortError')return}}try{await navigator.clipboard.writeText(url);toast('คัดลอกลิงก์แผนนี้แล้ว 📋')}catch{toast('คัดลอกลิงก์ไม่สำเร็จ')}});
+    
+    
+    // Trip Budget Calculator Engine
+    const tripDaysConfig = [
+      {
+        day: '6',
+        city: 'chengdu',
+        label: '6 ธ.ค. (เฉิงตู วันแรก)',
+        hotel: {name: 'โรงแรมชุนซีลู่', cny: 280},
+        options: [
+          {id: 'A', name: 'แลนด์มาร์ก Taikoo Li & IFS', note: 'เดินเล่นช้อปปิ้งใจกลางเมือง', transitCny: 35, ticketsCny: 0},
+          {id: 'B', name: 'วัดเหวินซู & ตรอกสงบ', note: 'ไหว้พระวัดเซนโบราณ', transitCny: 35, ticketsCny: 0},
+          {id: 'C', name: 'ซอยกว้างแคบ & จิบชา', note: 'ตรอกโบราณสมัยชิง', transitCny: 35, ticketsCny: 0},
+          {id: 'D', name: 'สะพานโบราณอันซุ่น', note: 'ชมไฟสะพานและริมน้ำ', transitCny: 35, ticketsCny: 0}
+        ]
+      },
+      {
+        day: '7',
+        city: 'chengdu',
+        label: '7 ธ.ค. (เฉิงตู เต็มวัน)',
+        hotel: {name: 'โรงแรมชุนซีลู่', cny: 280},
+        options: [
+          {id: 'A', name: '🐼 แพนด้า & วัดเหวินซู', note: 'ตั๋วศูนย์แพนด้า ¥110 + DiDi ไป-กลับ', transitCny: 75, ticketsCny: 110},
+          {id: 'B', name: '🎨 Eastern Suburb & คาเฟ่ริมน้ำ', note: 'อาร์ตสเปซ & แสงเมือง (เข้าฟรี)', transitCny: 42, ticketsCny: 0},
+          {id: 'C', name: '🏮 ศาลเจ้าสามก๊ก & จิ่นหลี่', note: 'ตั๋วศาลเจ้าสามก๊ก ¥100', transitCny: 36, ticketsCny: 100},
+          {id: 'D', name: '🍃 กระท่อมตู้ฝู่ & สวนจีน', note: 'ตั๋วบ้านตู้ฝู่ ¥100', transitCny: 46, ticketsCny: 100}
+        ]
+      },
+      {
+        day: '8',
+        city: 'xiling',
+        label: '8 ธ.ค. (ขึ้นเขาซีหลิง ค้างบนเขา)',
+        hotel: {name: 'รีสอร์ตบนเขาหิมะซีหลิง', cny: 680},
+        options: [
+          {id: 'A', name: '🏔️ บัส + กระเช้าใหญ่ + สกีลานหิมะ', note: 'ตั๋วอุทยาน ¥240 + กระเช้าไป-กลับ ¥240 + บัส ¥70', transitCny: 310, ticketsCny: 240}
+        ]
+      },
+      {
+        day: '9',
+        city: 'chengdu_return',
+        label: '9 ธ.ค. (ซีหลิง ➔ พัก Chengdu East)',
+        hotel: {name: 'Vienna Hotel West Square', cny: 240},
+        options: [
+          {id: 'A', name: '🚠 กระเช้าช่วง 2 ทะเลหมอก ➔ รถกลับเฉิงตู', note: 'กระเช้าช่วง 2 ¥160 + บัสกลับ ¥70 + Metro ¥10', transitCny: 240, ticketsCny: 0}
+        ]
+      },
+      {
+        day: '10',
+        city: 'chengdu_return',
+        label: '10 ธ.ค. (เฉิงตู ➔ รถไฟความเร็วสูง ➔ ฉงชิ่ง)',
+        hotel: {name: 'โรงแรมเจี่ยฟ่างเป่ย (คืนที่ 1)', cny: 320},
+        options: [
+          {id: 'B', name: '🚄 Taikoo Li + รถไฟหัวกระสุน Fuxinghao', note: 'ตั๋วรถไฟความเร็วสูง 2 ที่นั่ง ¥308 + Metro ¥20', transitCny: 328, ticketsCny: 0},
+          {id: 'A', name: '🚄 วัดเหวินซู + รถไฟหัวกระสุน Fuxinghao', note: 'ตั๋วรถไฟความเร็วสูง 2 ที่นั่ง ¥308 + Metro ¥20', transitCny: 328, ticketsCny: 0}
+        ]
+      },
+      {
+        day: '11',
+        city: 'chongqing',
+        label: '11 ธ.ค. (ฉงชิ่ง 8D เต็มวัน)',
+        hotel: {name: 'โรงแรมเจี่ยฟ่างเป่ย (คืนที่ 2)', cny: 320},
+        options: [
+          {id: 'B', name: '🏙️ บันไดสือปาที 18 ขั้น & หงหยาต้ง', note: 'CRT โมโนเรล + DiDi ในเมือง (เข้าชมฟรีทุกจุด)', transitCny: 48, ticketsCny: 0},
+          {id: 'A', name: '🚝 รถไฟทะลุตึก Liziba & สวนเอ๋อหลิง', note: 'CRT โมโนเรล + DiDi ในเมือง (เข้าชมฟรีทุกจุด)', transitCny: 48, ticketsCny: 0},
+          {id: 'C', name: '🏮 ตรอกโบราณฉือชี่โข่ว & กระเช้าข้ามแม่น้ำ', note: 'ตั๋วกระเช้าแยงซี 2 ท่าน ¥40 + CRT ¥52', transitCny: 52, ticketsCny: 40},
+          {id: 'D', name: '🏛️ พิพิธภัณฑ์สามผา & TESTBED 2', note: 'CRT + DiDi (เข้าชมฟรี)', transitCny: 45, ticketsCny: 0}
+        ]
+      },
+      {
+        day: '12',
+        city: 'chongqing',
+        label: '12 ธ.ค. (ฉงชิ่ง ➔ บินกลับกรุงเทพฯ)',
+        hotel: {name: 'เช็กเอาต์กลับไทย (ไม่มีค่าโรงแรม)', cny: 0},
+        options: [
+          {id: 'A', name: '🛫 DiDi สู่สนามบิน CKG T3 บิน 11:05 น.', note: 'DiDi ตรงสู่สนามบิน CKG (~35 นาที)', transitCny: 55, ticketsCny: 0}
+        ]
+      }
+    ];
+
+    // Current selections state in modal
+    let modalSelectedOptions = {
+      '6': selectedMoods.chengdu || 'B',
+      '7': selectedMoods.chengdu || 'A',
+      '8': 'A',
+      '9': 'A',
+      '10': selectedMoods.chengdu_return || 'B',
+      '11': selectedMoods.chongqing || 'B',
+      '12': 'A'
+    };
+
+    function calculateTotalBudget() {
+      let totalHotel = 0;
+      let totalTransit = 0;
+      let totalTickets = 0;
+
+      tripDaysConfig.forEach(d => {
+        totalHotel += (d.hotel?.cny || 0);
+        const selOptId = modalSelectedOptions[d.day] || d.options[0].id;
+        const opt = d.options.find(o => o.id === selOptId) || d.options[0];
+        totalTransit += (opt.transitCny || 0);
+        totalTickets += (opt.ticketsCny || 0);
+      });
+
+      const grandTotalCny = totalHotel + totalTransit + totalTickets;
+      const grandTotalThb = Math.round(grandTotalCny * 5);
+      const perPersonThb = Math.round(grandTotalThb / 2);
+
+      $('grand-total-cny').textContent = `≈ ¥${grandTotalCny.toLocaleString()}`;
+      $('grand-total-thb').textContent = `(~${grandTotalThb.toLocaleString()} บาท)`;
+      $('grand-per-person').textContent = `~${perPersonThb.toLocaleString()} ฿`;
+
+      $('cat-hotel-val').textContent = `¥${totalHotel.toLocaleString()}`;
+      $('cat-hotel-thb').textContent = `~${Math.round(totalHotel * 5).toLocaleString()} ฿`;
+
+      $('cat-transit-val').textContent = `¥${totalTransit.toLocaleString()}`;
+      $('cat-transit-thb').textContent = `~${Math.round(totalTransit * 5).toLocaleString()} ฿`;
+
+      $('cat-ticket-val').textContent = `¥${totalTickets.toLocaleString()}`;
+      $('cat-ticket-thb').textContent = `~${Math.round(totalTickets * 5).toLocaleString()} ฿`;
+    }
+
+    function renderModalDaySelectors() {
+      const container = $('modal-day-selectors');
+      if (!container) return;
+
+      container.innerHTML = tripDaysConfig.map(d => {
+        const selOptId = modalSelectedOptions[d.day] || d.options[0].id;
+        const currentOpt = d.options.find(o => o.id === selOptId) || d.options[0];
+        const daySubtotalCny = (d.hotel?.cny || 0) + (currentOpt.transitCny || 0) + (currentOpt.ticketsCny || 0);
+
+        const optionsHtml = d.options.map(opt => {
+          const isAct = (opt.id === selOptId);
+          const optCostCny = (d.hotel?.cny || 0) + opt.transitCny + opt.ticketsCny;
+          return `<button class="modal-pill-btn ${isAct ? 'active' : ''}" data-day="${d.day}" data-opt="${opt.id}">
+            <div class="modal-pill-left">
+              <span class="modal-pill-name">${opt.name}</span>
+              <span class="modal-pill-note">${opt.note}</span>
+            </div>
+            <div class="modal-pill-cost">
+              <b>¥${optCostCny}</b>
+              <small>~${Math.round(optCostCny * 5)} ฿</small>
+            </div>
+          </button>`;
+        }).join('');
+
+        return `<div class="modal-day-block">
+          <div class="modal-day-head">
+            <span class="modal-day-badge">📅 ${d.label}</span>
+            <span class="modal-day-subtotal">รวม ¥${daySubtotalCny} (~${Math.round(daySubtotalCny * 5)} ฿)</span>
+          </div>
+          <div class="modal-pills-row">
+            ${optionsHtml}
+          </div>
+        </div>`;
+      }).join('');
+
+      // Add click listeners to pill buttons
+      container.querySelectorAll('.modal-pill-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const day = btn.dataset.day;
+          const opt = btn.dataset.opt;
+          modalSelectedOptions[day] = opt;
+          calculateTotalBudget();
+          renderModalDaySelectors();
+        });
+      });
+    }
+
+    function openBudgetModal() {
+      // Sync modal selections with currently active main page moods
+      modalSelectedOptions['6'] = selectedMoods.chengdu || 'B';
+      modalSelectedOptions['7'] = selectedMoods.chengdu || 'A';
+      modalSelectedOptions['10'] = selectedMoods.chengdu_return || 'B';
+      modalSelectedOptions['11'] = selectedMoods.chongqing || 'B';
+
+      calculateTotalBudget();
+      renderModalDaySelectors();
+      $('budget-modal').hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBudgetModal() {
+      $('budget-modal').hidden = true;
+      document.body.style.overflow = '';
+    }
+
+    $('open-budget-modal').addEventListener('click', openBudgetModal);
+    $('budget-modal-close').addEventListener('click', closeBudgetModal);
+    $('budget-modal-backdrop').addEventListener('click', closeBudgetModal);
+
+    $('modal-apply-btn').addEventListener('click', () => {
+      // Apply modal choices back to main page state
+      if (modalSelectedOptions['7']) {
+        selectedMoods.chengdu = modalSelectedOptions['7'];
+      }
+      if (modalSelectedOptions['10']) {
+        selectedMoods.chengdu_return = modalSelectedOptions['10'];
+      }
+      if (modalSelectedOptions['11']) {
+        selectedMoods.chongqing = modalSelectedOptions['11'];
+      }
+      closeBudgetModal();
+      renderNavigation();
+      toast('ซิงค์โปรแกรมและคำนวณงบประมาณเรียบร้อยแล้ว ✨');
+    });
+
+    renderNavigation();
+    const initBudget = new URLSearchParams(location.search).get("budget");
+    if (initBudget === "1" || initBudget === "true") {
+      openBudgetModal();
+
+    
+
+      
+    }
+
+    const initLb = new URLSearchParams(location.search).get("lightbox");
+    if (initLb && photoAlbums[initLb]) {
+      const story = placeStories[initLb];
+      const t = initLb === "taikoo" ? "Taikoo Li & IFS แพนด้า" : (initLb === "hongyadong" ? "Hongyadong แสงไฟสีทอง" : (story ? story.vibe : "ภาพสถานที่"));
+      openLightbox(initLb, t);
+    }
+  </script>
+</body>
+</html>
