@@ -831,6 +831,50 @@
       background: #112d29;
     }
 
+    /* Choice controls and itinerary have separate visual languages. */
+    #city-mood-section{padding-top:23px}
+    .mood-selector{background:#e8eee8;border:1px solid #d3dfd4;border-radius:22px;padding:17px 0 13px;box-shadow:0 8px 24px #1b493315}
+    .mood-selector-top{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:0 17px}
+    .flow-number{font-size:10px;font-weight:900;letter-spacing:.045em;color:#306b4d;text-transform:uppercase}
+    .flow-action{font-size:10px;color:#6c806f}
+    .mood-selector h3{margin:7px 17px 0;font-size:22px;line-height:1.2;color:#173e39;letter-spacing:-.04em}
+    .mood-selector p{margin:5px 17px 14px;color:#5c7464;font-size:11px;line-height:1.45}
+    .mood-selector .city-moods{margin:0;gap:9px;padding:0 17px 3px;scroll-padding-left:17px}
+    .mood-selector .city-mood{flex:0 0 182px;min-height:112px;border:1.5px solid #b9cdbd;border-radius:15px;background:#fff;box-shadow:none;display:flex;flex-direction:column;justify-content:space-between;padding:12px 12px 11px;color:#173e39;transition:background .16s ease,transform .16s ease,border-color .16s ease}
+    .mood-selector .city-mood:active{transform:scale(.98)}
+    .mood-selector .city-mood.active{background:#173e39;border-color:#173e39;box-shadow:0 5px 12px #173e3926;color:#fff}
+    .mood-choice-top{display:flex;align-items:center;justify-content:space-between;gap:9px}
+    .mood-selector .city-mood .mood-choice-top{display:flex;padding:0}
+    .mood-selector .city-mood .mood-symbol,.mood-selector .city-mood .mood-select-mark{padding:0}
+    .mood-symbol{font-size:21px;line-height:1}
+    .mood-select-mark{width:20px;height:20px;border-radius:50%;border:1.5px solid #95b09d;display:grid;place-items:center;font-size:13px;color:transparent}
+    .city-mood.active .mood-select-mark{background:#dff1e1;border-color:#dff1e1;color:#17623b}
+    .mood-selector .city-mood .mood-copy{display:block;padding:0}
+    .mood-selector .city-mood b{font-size:14px;line-height:1.28;color:inherit}
+    .mood-selector .city-mood small{font-size:10px;line-height:1.35;color:#5d7464;margin-top:4px}
+    .mood-selector .city-mood.active small{color:#c9dfd0}
+    .mood-swipe-hint{margin:9px 17px 0;text-align:right;color:#6b806f;font-size:10px}
+    .overview-route{margin-top:18px;padding-top:17px;border-top:4px solid #173e39}
+    .overview-photo{height:165px}
+    .itinerary-kicker{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:10px;font-weight:850;color:#337052;letter-spacing:.04em}
+    .itinerary-kicker span:last-child{font-weight:650;color:#738478;letter-spacing:0}
+    .itinerary-title{font-size:21px;line-height:1.2;color:#173e39;margin:8px 0 3px;letter-spacing:-.035em}
+    .itinerary-sub{font-size:11px;line-height:1.45;color:#64786a;margin:0 0 16px}
+    .overview-route .overview-line{margin-top:0}
+    .photo-expand-pill{font-size:10px}
+    .overview-card{display:grid;grid-template-columns:minmax(0,1fr) 88px;grid-template-areas:"head media" "details media";column-gap:11px;row-gap:4px;padding:11px 11px 11px 12px;border-radius:15px;box-shadow:0 2px 9px #173e390d}
+    .overview-card.is-transit{display:block;padding:10px 12px;background:#f7f9f6}
+    .overview-card .card-head{grid-area:head;align-items:flex-start;gap:7px;margin:0}
+    .overview-card .card-time{font-size:10px;padding:4px 6px;box-shadow:none}
+    .overview-card .card-title{font-size:12.5px;line-height:1.32}
+    .overview-card .card-cn{font-size:10px}
+    .overview-card .card-media-box{grid-area:media;display:block;width:88px;height:88px;margin:0;border:0;border-radius:10px;box-shadow:none}
+    .overview-card .card-details{grid-area:details;font-size:10.5px;line-height:1.4}
+    .overview-card .card-note{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden}
+    .photo-mini-mark{position:absolute;right:5px;bottom:5px;display:grid;place-items:center;width:21px;height:21px;background:#163d36e8;color:#fff;border-radius:6px;font-size:14px}
+    .card-more{margin-top:5px}.card-more summary{color:#2b694a;font-size:10px;font-weight:800;cursor:pointer;list-style:none}.card-more summary::-webkit-details-marker{display:none}.card-more summary:after{content:' ▾'}.card-more[open] summary:after{content:' ▴'}.card-more p{margin:6px 0 0}.card-more .step-badge-row{margin-top:6px}
+    .overview-card.is-transit .card-details{margin-top:4px}
+    @media(max-width:360px){.mood-selector .city-mood{flex-basis:160px}.mood-selector .city-mood b{font-size:13px}.flow-action{font-size:9px}.overview-card{grid-template-columns:minmax(0,1fr) 76px}.overview-card .card-media-box{width:76px;height:76px}.overview-card .card-title{font-size:12px}}
   </style>
 </head>
 <body>
@@ -839,7 +883,7 @@
     <div class="intro"><div class="eyebrow">Our China Trip · Dec 2026</div><h1>ทริปนี้ไปเมืองไหนกัน?</h1><div class="sub">เลือกเมือง → เลือก mood → ดูย่านพัก → เลือกวัน</div></div>
     <div class="city-selector" id="city-selector" aria-label="เลือกเมือง"></div>
     <div class="city-hint" id="city-hint">เลือกเมืองที่อยากดูก่อน แล้ววันที่ของเมืองนั้นจะปรากฏ</div>
-    <section class="section" id="city-mood-section" hidden><div class="heading"><h3 id="city-mood-title">เลือก mood</h3><span>ปัดซ้ายดูเพิ่ม →</span></div><div class="city-moods" id="city-moods"></div></section>
+    <section class="section" id="city-mood-section" hidden><div class="mood-selector"><div class="mood-selector-top"><span class="flow-number">ตัวเลือก · MOOD</span><span class="flow-action">แตะเพื่อเปลี่ยนแผน</span></div><h3 id="city-mood-title">เลือก Mood</h3><p>เลือกฟีลที่อยากเที่ยว แล้วสถานที่ในแผนจะเปลี่ยนตาม</p><div class="city-moods" id="city-moods" aria-label="ตัวเลือก Mood"></div><div class="mood-swipe-hint">← ปัดดู Mood เพิ่ม →</div></div></section>
     <section class="section" id="city-stay-section" hidden><div class="heading"><h3>ย่านพักที่ใช้เป็นฐาน</h3><span>ตามเมือง</span></div><div id="city-stay"></div></section>
     <div class="date-prompt" id="date-prompt" hidden><span>ขั้นต่อไป</span><strong>เลือกวันที่เที่ยว ↓</strong></div>
     <div class="date-strip" id="date-strip" aria-label="เลือกวันที่ในเมือง" hidden></div>
@@ -1444,6 +1488,12 @@
         {id:'D',name:'พิพิธภัณฑ์ & คาเฟ่',hint:'Three Gorges · Great Hall · Eling',photo:'museumcq'}
       ]
     };
+    const moodSymbols={chengdu:{A:'🐼',B:'🎨',C:'🏮',D:'🍵'},xiling:{A:'🏔️',B:'❄️',C:'☕'},chongqing:{A:'🚝',B:'🌃',C:'🏮',D:'🏛️'}};
+    const moodFeel={
+      chengdu:{A:'ไฮไลต์เมือง · คึกคัก',B:'ศิลปะกลางวัน · แสงเมืองกลางคืน',C:'เรื่องเล่าเมืองเก่า · เดินซอย',D:'สวนร่มรื่น · จิบชาแบบช้า ๆ'},
+      xiling:{A:'เน้นวิวสูง · ลุ้นทะเลหมอก',B:'เล่นสนุก · กิจกรรมหิมะ',C:'สบาย ๆ · ถ่ายรูปบนเขา'},
+      chongqing:{A:'เมืองหลายชั้น · รถไฟและวิว',B:'แสงไฟริมน้ำ · คืนคึกคัก',C:'ตรอกเก่า · เดินริมน้ำ',D:'ศิลปะเมือง · คาเฟ่และพิพิธภัณฑ์'}
+    };
     const moodRouteMap={
       'chengdu-7':{A:'A',B:'B',C:'C',D:'D'},
       'chengdu-6':{A:'A',B:'E',C:'B',D:'C'},
@@ -1543,7 +1593,7 @@
       const fixedTransfer=slot==='chengdu_return-9'||slot==='chongqing-12';
       
       // Determine distinct hero photo
-      const heroKey = data.heroPhoto || (selectedCity==='chengdu_return'&&selectedDay==='9'?'chengdueast':(selectedCity==='chongqing'&&selectedDay==='12'?'tfu':mood.photo));
+      const heroKey = slot==='chengdu-7' ? mood.photo : (data.heroPhoto || (selectedCity==='chengdu_return'&&selectedDay==='9'?'chengdueast':(selectedCity==='chongqing'&&selectedDay==='12'?'tfu':mood.photo)));
       const heroPhoto = photoAlbums[heroKey]?.[0]?.[0] || heroKey;
       const photoNoteText = placeStories[heroKey]?.see || mood.photoNote || 'ภาพถ่ายสถานที่จริง';
       
@@ -1572,17 +1622,14 @@
             </div>
           </div>
           ${thumb ? `
-          <div class="card-media-box step-photo-btn" data-place="${s.place}" data-title="${s.title}" role="button" aria-label="เปิดดู ${photoCount} ภาพจริงและบรรยากาศของ ${s.title}">
+          <button class="card-media-box step-photo-btn" type="button" data-place="${s.place}" data-title="${s.title}" aria-label="เปิดดู ${photoCount} ภาพจริงของ ${s.title}">
             <img src="assets/${thumb}.webp" alt="${s.title}" loading="lazy">
-            <div class="card-media-overlay">
-              <span class="photo-expand-pill">📷 ${photoCount} ภาพจริง & Mood ↗</span>
-              <span class="card-media-hint">แตะเพื่อขยายดูรูป & เกร็ด</span>
-            </div>
-          </div>
+            <span class="photo-mini-mark" aria-hidden="true">↗</span>
+          </button>
           ` : ''}
           <div class="card-details">
             <p class="card-note">${s.note}</p>
-            ${badgeRow}
+            ${thumb ? `<details class="card-more"><summary>ดูรายละเอียด</summary><p>${s.note}</p>${badgeRow}</details>` : ''}
           </div>
         </div>`;
 
@@ -1628,79 +1675,14 @@
       </div>` : '';
 
       
-      // Budget Calculator for 2 Persons
-      const budget = choice?.budget || data.budget;
-      let budgetHtml = '';
-      if (budget) {
-        const hotelCny = budget.hotel?.cny ?? 0;
-        const hotelThb = Math.round(hotelCny * 5);
-        const transitCny = budget.transit?.cny ?? 0;
-        const transitThb = Math.round(transitCny * 5);
-        const ticketCny = budget.tickets?.cny ?? 0;
-        const ticketThb = Math.round(ticketCny * 5);
-        const totalCny = hotelCny + transitCny + ticketCny;
-        const totalThb = Math.round(totalCny * 5);
-
-        budgetHtml = `<div class="budget-card">
-          <div class="budget-header">
-            <div class="budget-title-wrap">
-              <span class="budget-tag">💰 ESTIMATED BUDGET</span>
-              <h3 class="budget-title">ประมาณการค่าใช้จ่ายวันนี้ (สำหรับ 2 ท่าน)</h3>
-            </div>
-            <div class="budget-total-badge">
-              <span class="budget-total-cny">≈ ¥${totalCny}</span>
-              <span class="budget-total-thb">(~${totalThb.toLocaleString()} บาท)</span>
-            </div>
-          </div>
-          <div class="budget-items">
-            <div class="budget-row">
-              <div class="budget-icon">🏨</div>
-              <div class="budget-desc">
-                <strong>ค่าที่พัก ${hotelCny > 0 ? '(คิดแค่ 1 ห้อง / พักคู่กัน)' : '(คืนนี้ไม่มี / เช็กเอาต์กลับไทย)'}</strong>
-                <small>${budget.hotel?.name || 'ไม่มีค่าที่พัก'} ${hotelCny > 0 ? '· 1 ห้องเตียงใหญ่/คู่' : ''}</small>
-              </div>
-              <div class="budget-cost">
-                <span class="cny">${hotelCny > 0 ? `¥${hotelCny}` : '¥0'}</span>
-                <span class="thb">${hotelCny > 0 ? `~${hotelThb.toLocaleString()} ฿` : '0 ฿'}</span>
-              </div>
-            </div>
-            <div class="budget-row">
-              <div class="budget-icon">🚖</div>
-              <div class="budget-desc">
-                <strong>ค่าเดินทาง (2 ท่าน)</strong>
-                <small>${budget.transit?.desc || 'เดินทางในเมือง'}</small>
-              </div>
-              <div class="budget-cost">
-                <span class="cny">¥${transitCny}</span>
-                <span class="thb">~${transitThb.toLocaleString()} ฿</span>
-              </div>
-            </div>
-            <div class="budget-row">
-              <div class="budget-icon">🎟️</div>
-              <div class="budget-desc">
-                <strong>ค่าเข้าสถานที่ (2 ท่าน)</strong>
-                <small>${budget.tickets?.desc || 'เข้าชมฟรี'}</small>
-              </div>
-              <div class="budget-cost">
-                <span class="cny">${ticketCny > 0 ? `¥${ticketCny}` : 'ฟรี'}</span>
-                <span class="thb">${ticketCny > 0 ? `~${ticketThb.toLocaleString()} ฿` : '0 ฿'}</span>
-              </div>
-            </div>
-          </div>
-          <div class="budget-footer">
-            <div class="budget-note">💡 ค่าที่พักคิดแค่ 1 ห้อง (พักด้วยกัน 2 คน) + ค่าเดินทางและค่าเข้าสถานที่สำหรับ 2 ท่าน (ไม่รวมอาหารและช้อปปิ้ง) · อัตราแลกเปลี่ยน 1 CNY ≈ 5.0 บาท</div>
-          </div>
-        </div>`;
-      }
-
       $('overview').innerHTML=`<div class="overview-head"><div class="overview-photo"><img src="assets/${heroPhoto}.webp" alt="${photoNoteText}"><span>${photoNoteText} · ไม่ใช่สภาพวันเดินทาง</span></div><div class="overview-copy"><div class="eyebrow">${selectedDay} DEC · ${city.en}${fixedTransfer?' · วันเดินทาง':' · '+mood.name}</div><h2>${data.title}</h2><p>${data.intro}</p></div></div><div class="overview-section">
         ${briefingHtml}
         <div class="overview-route">
-          <strong>${fixedTransfer?'ลำดับการเดินทาง':choice?`แผนตาม mood · ${choice.name}`:`แผนตาม mood · ${mood.name}`}</strong>
-          ${choice?`<p class="overview-source">${choice.note} · แตะที่รูป 📷 เพื่อดูภาพมุมมองจริงและ mood ของสถานที่</p>`:''}
+          <div class="itinerary-kicker"><span>แผนเที่ยว · สถานที่จริง</span><span>แตะรูปดูเพิ่มได้</span></div>
+          <h3 class="itinerary-title">${fixedTransfer?'ลำดับการเดินทาง':'สถานที่ที่จะแวะ'}</h3>
+          <p class="itinerary-sub">${fixedTransfer?'เรียงตามช่วงเวลาและการต่อรถ':`ตาม Mood ${mood.name}${choice?' · '+choice.note:''}`}</p>
           <div class="overview-line">${stepsHtml}</div>
         </div>
-        ${budgetHtml}
         <div class="overview-note">${data.caution}</div>
         ${nextDayHtml}
         <p class="overview-source">เส้นทางนี้เป็นข้อเสนอจากไฟล์ทริปและ mood ที่เลือก · เช็กเวลาเปิด การเดินทางและสภาพอากาศก่อนออกเที่ยว</p>
@@ -1749,7 +1731,7 @@
       document.querySelectorAll('[data-city]').forEach(button=>button.addEventListener('click',()=>{selectedCity=button.dataset.city;selectedDay=cityInfo[selectedCity].days[0][0];renderNavigation()}));
       const mood=currentMood(),hasCity=!!selectedCity;
       $('city-mood-section').hidden=!hasCity;
-      if(hasCity){const city=moodCity(selectedCity),oldScroll=lastMoodStripCity===city?$('city-moods').scrollLeft:null;$('city-mood-title').textContent=selectedCity==='chengdu_return'?'mood เฉิงตูที่เลือกไว้':'เลือก mood · '+cityInfo[selectedCity].name;$('city-moods').innerHTML=cityMoods[city].map(item=>`<button class="city-mood ${item.id===mood?.id?'active':''}" data-mood="${item.id}" aria-pressed="${item.id===mood?.id}"><div class="city-mood-media"><img src="assets/${item.photo}.webp" alt="${item.photoNote||'ภาพถ่ายจริงประกอบ mood '+item.name}">${item.photoNote?`<em>${item.photoNote}</em>`:''}</div><span><b>${item.name}</b><small>${item.hint}</small></span></button>`).join('');$('city-moods').scrollLeft=oldScroll??Math.max(0,(cityMoods[city].findIndex(item=>item.id===mood?.id)-1)*167);lastMoodStripCity=city;document.querySelectorAll('[data-mood]').forEach(button=>button.addEventListener('click',()=>{selectedMoods[city]=button.dataset.mood;selected=moodCity(selectedCity)==='chengdu'?button.dataset.mood:selected;
+      if(hasCity){const city=moodCity(selectedCity),oldScroll=lastMoodStripCity===city?$('city-moods').scrollLeft:null;$('city-mood-title').textContent=selectedCity==='chengdu_return'?'Mood เฉิงตู (ใช้ร่วมกัน)':'Mood · '+cityInfo[selectedCity].name;$('city-moods').innerHTML=cityMoods[city].map(item=>`<button class="city-mood ${item.id===mood?.id?'active':''}" data-mood="${item.id}" aria-pressed="${item.id===mood?.id}" aria-label="เลือก Mood ${item.name}"><span class="mood-choice-top"><span class="mood-symbol" aria-hidden="true">${moodSymbols[city][item.id]}</span><span class="mood-select-mark" aria-hidden="true">✓</span></span><span class="mood-copy"><b>${item.name}</b><small>${moodFeel[city][item.id]}</small></span></button>`).join('');$('city-moods').scrollLeft=oldScroll??Math.max(0,(cityMoods[city].findIndex(item=>item.id===mood?.id)-1)*167);lastMoodStripCity=city;document.querySelectorAll('[data-mood]').forEach(button=>button.addEventListener('click',()=>{selectedMoods[city]=button.dataset.mood;selected=moodCity(selectedCity)==='chengdu'?button.dataset.mood:selected;
     
     renderNavigation();requestAnimationFrame(()=>$('date-prompt').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'}))}))}
       $('city-stay-section').hidden=!mood;if(mood)renderCityStay();
